@@ -1,0 +1,53 @@
+@mixin grid-row ($var) {
+  @for $i from 1 through $var {
+    .brick--#{$i} {
+      width: ((($grid-brick-width+$grid-gutter)*$i) - (2*$grid-brick-padding-rtl))-$grid-gutter;
+      max-width: ((($grid-brick-width+$grid-gutter)*$i) - (2*$grid-brick-padding-rtl))-$grid-gutter;
+      flex-basis: ((($grid-brick-width+$grid-gutter)*$i) - (2*$grid-brick-padding-rtl))-$grid-gutter;
+    }
+
+    .unigrid--col.brick--#{$i},
+    .unigrid--row.brick--#{$i},
+    .brick--img.brick--#{$i},
+    img.brick--#{$i}{
+      width: (($grid-brick-width+$grid-gutter)*$i)-$grid-gutter;
+      max-width: (($grid-brick-width+$grid-gutter)*$i)-$grid-gutter;
+      flex-basis: (($grid-brick-width+$grid-gutter)*$i)-$grid-gutter;
+    }
+
+    .prepend--#{$i} {
+      margin-left: ((($grid-brick-width+$grid-gutter)*$i) + $grid-half-gutter);
+    }
+    .first.prepend--#{$i},
+    .brick:first-child.prepend--#{$i}{
+      margin-left: ((($grid-brick-width+$grid-gutter)*$i));
+    }
+
+    .append--#{$i} {
+      margin-right: ((($grid-brick-width+$grid-gutter)*$i) + $grid-half-gutter);
+    }
+    .last.append--#{$i},
+    .brick:last-child.append--#{$i}{
+      margin-right: ((($grid-brick-width+$grid-gutter)*$i));
+    }
+  }
+}
+
+.unigrid--row {
+  width: (($grid-brick-width+$grid-gutter)*$grid)-$grid-gutter;
+
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.brick.unigrid--row > .brick {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@include grid-row($grid);

@@ -1,0 +1,75 @@
+@mixin grid-col ($var) {
+  @for $i from 1 through $var {
+    .brick--col--#{$i} {
+      height: ((($grid-brick-height+$grid-gutter)*$i) - (2*$grid-brick-padding-ttb))-$grid-gutter;
+      max-height: ((($grid-brick-height+$grid-gutter)*$i) - (2*$grid-brick-padding-ttb))-$grid-gutter;
+      flex-basis: ((($grid-brick-height+$grid-gutter)*$i) - (2*$grid-brick-padding-ttb))-$grid-gutter;
+
+      width: 100%;
+    }
+
+    .unigrid--row.brick--col--#{$i} {
+      height: (($grid-brick-height+$grid-gutter)*$i)-$grid-gutter;
+      max-height: (($grid-brick-height+$grid-gutter)*$i)-$grid-gutter;
+      flex-basis: (($grid-brick-height+$grid-gutter)*$i)-$grid-gutter;
+
+      width: 100%;
+    }
+
+    .unigrid--col > .brick.prepend--col--#{$i} {
+      margin-top: ((($grid-brick-height+$grid-gutter)*$i) + $grid-half-gutter);
+    }
+    .brick.unigrid--col > .brick:first-child.prepend--col--#{$i},
+    .brick.unigrid--col > .brick.first.prepend--col--#{$i} {
+      margin-top: (($grid-brick-height+$grid-gutter)*$i);
+    }
+
+    .unigrid--col > .brick.append--col--#{$i} {
+      margin-bottom: ((($grid-brick-height+$grid-gutter)*$i) + $grid-half-gutter);
+    }
+
+    .brick.unigrid--col > .brick:last-child.append--col--#{$i},
+    .brick.unigrid--col > .brick.last.append--col--#{$i} {
+      margin-bottom: (($grid-brick-height+$grid-gutter)*$i);
+    }
+  }
+}
+
+.unigrid--col {
+  height: 100%;
+  width: 100%;
+
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.unigrid--col > .brick {
+  margin: $grid-half-gutter 0;
+  padding: $grid-brick-padding-ttb $grid-brick-padding-rtl;
+
+  max-width: calc(100% - #{2*$grid-brick-padding-rtl});
+}
+
+.unigrid--col > .brick.unigrid--row {
+  padding: 0;
+
+  max-width: 100%;
+}
+
+.brick.unigrid--col > .brick:first-child,
+.brick.unigrid--col > .brick.first {
+  margin-top: 0;
+}
+
+.brick.unigrid--col > .brick:last-child,
+.brick.unigrid--col > .brick.last {
+  margin-bottom: 0;
+}
+
+@include grid-col($grid);

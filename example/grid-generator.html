@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>blueprint.grid</title>
+    <meta name="description" content="grid">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="http://codepen.io/tdascoli/pen/OWjYGL.css" />
+    <link rel="stylesheet" href="unigrid-generator.css"/>
+    <link rel="stylesheet" href="example.css"/>
+
+</head>
+<body class="grid-generator">
+<div class="toolbar">
+    <a id="hamburger" class="c-hamburger c-hamburger--htx">
+        <span>toggle menu</span>
+    </a>
+</div>
+
+<div class="wrap">
+
+    <h2>
+        Grid-Generator
+    </h2>
+    <p>
+        <a href="index.html">Back to Index</a>
+    </p>
+
+    <div class="card card-narrow golden-ratio--row">
+        <div class="row--small">
+            <div class="form-group">
+                <label for="grid">Grid</label>
+                <input type="number" class="form-control" id="grid" value="24" />
+            </div>
+            <div class="form-group">
+                <label for="grid-gutter">Gutter (px)</label>
+                <input type="number" class="form-control" id="grid-gutter" value="10" />
+            </div>
+            <div class="form-group">
+                <label for="brick-padding">Padding (px)</label>
+                <input type="number" class="form-control" id="brick-padding" value="4" />
+            </div>
+            <div class="form-group">
+                <label for="brick-width">Width (px)</label>
+                <input type="number" class="form-control" id="brick-width" value="30" />
+            </div>
+            <div class="form-group">
+                <label for="total-width">Total Width (px)</label>
+                <input type="number" class="form-control" id="total-width" />
+            </div>
+            <div>
+                <button id="generate">Run</button>
+                <button id="reload">Reload</button>
+            </div>
+        </div>
+        <textarea id="vars" class="row--tall form-control" style="height: 120px;"></textarea>
+    </div>
+
+    <div class="card card-narrow show-border" id="show-grid">
+        <div class="grid unigrid--row"></div>
+
+        <div class="demo1"></div>
+
+        <div class="demo2"></div>
+        <hr/>
+        <div class="demo3 unigrid--row"></div>
+        <div class="demo4 unigrid--row"></div>
+    </div>
+
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+<!-- example.js -->
+<script src="util.js"></script>
+<script src="generator.js"></script>
+</body>
+</html>

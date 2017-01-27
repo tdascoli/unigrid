@@ -1,0 +1,180 @@
+/* ==== CSS for modules using a PIFA form ==== */
+
+/* == Positioning labels beneath their form fields ==
+All labels should be displayed left of their form fields.
+The surrounding division has to clear the floating though. */
+
+.form-group,
+.pifa-form div {
+  clear: both;
+}
+
+.form-group label,
+.pifa-form label {
+  width: calc(30% - #{2 * $form-padding});
+
+  float: left;
+
+  padding: $form-padding;
+}
+
+/* == Styling obligatory fields  ==
+The class pifa-obligatory is set to all divisions containing an obligatory field.
+In this case ' *' is appended to any label describing an obligatory field.
+Unfortunately this doesn't seem to work in IE though.*/
+.pifa-obligatory .pifa-field-lbl:after {
+  content: ' *';
+}
+
+/*
+gov.uk: dont indicate obligatory fields, indicate OPTIONAL fields!
+.form-group label:after,
+.pifa-field-lbl:after {
+  content: ' (optional)';
+}
+
+.pifa-obligatory .pifa-field-lbl:after {
+  content: '';
+}
+*/
+
+.checkbox_wrapper {
+  display: inline-block;
+  padding: 0;
+  width: 100%;
+}
+.checkbox_wrapper input {
+  float: left;
+
+  font-size: $font-size-base;
+}
+.checkbox_wrapper label {
+  width: auto;
+
+  padding: 0 $form-padding;
+}
+
+/* == Styling fields according to their field types ==
+In order to style fields according to their field types a class pifa-field-<n>
+is set to all form fields where <n> is its type id. */
+
+.form-control,
+/* INPUTTEXT */
+.pifa-field-1 input,
+/* TEXTAREA */
+.pifa-field-2 input,
+/* INPUTPASSWORD */
+.pifa-field-3 input,
+/* SELECT */
+.pifa-field-6 input,
+/* SELECTMULTI */
+.pifa-field-7 input,
+/* DATEPICKER */
+.pifa-field-8 input,
+/* INPUTFILE */
+.pifa-field-9 input,
+/* BUTTON */
+.pifa-field-15 span,
+ /* INPUTRADIO */
+.pifa-field-4 span,
+ /* INPUTCHECKBOX */
+.pifa-field-5 span {
+  width: calc(70% - #{2 * ($form-border-width + $form-padding)});
+
+  float: left;
+
+  padding: $form-padding;
+  border: $form-border-width solid $form-border-color;
+
+  font-size: $font-size-base;
+}
+
+/* BUTTONSUBMIT */
+.pifa-field-13,
+  /* BUTTONRESET */
+.pifa-field-14 {
+  padding: $form-padding 0;
+
+  display: inline-block;
+}
+
+/* BUTTONSUBMIT */
+.pifa-field-13 input,
+  /* BUTTONRESET */
+.pifa-field-14 input,
+input[type='submit'],
+input[type='button'],
+button {
+  float: none;
+  width: auto;
+
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+
+  background-color: #e6e6e6;
+
+  -webkit-box-shadow: 0 4px 0 0 #adadad !important;
+  -moz-box-shadow: 0 4px 0 0 #adadad !important;
+  box-shadow: 0 4px 0 0 #adadad !important;
+  transition: 0.1s;
+}
+/* BUTTONSUBMIT */
+.pifa-field-13 input,
+input[type='submit'],
+button[type='submit']{
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+
+  -webkit-box-shadow: 0 4px 0 0 #23527c !important;
+  -moz-box-shadow: 0 4px 0 0 #23527c !important;
+  box-shadow: 0 4px 0 0 #23527c !important;
+  font-weight: bold;
+}
+
+/* INPUTRADIO */
+.pifa-field-4 span,
+/* INPUTCHECKBOX */
+.pifa-field-5 span {
+  border: none;
+  padding: 0;
+}
+
+/* PROCESSBAR */
+.pifa-field-10 {}
+
+/* SLIDER */
+.pifa-field-11 {}
+
+/* CAPTCHA */
+/*.pifa-field-12 {}*/
+
+/* MATRIX */
+.pifa-field-16 {}
+
+/* PARA */
+.pifa-field-17 {}
+
+/* INPUTHIDDEN */
+.pifa-field-18 {}
+
+/* BUTTONIMAGE */
+.pifa-field-21 {}
+
+/* == Styling fields with erroneous data  ==
+The class pifa-error is set to all divisions containing a field with erroneous
+data. */
+
+div.pifa-error {border: 1px solid red;}
