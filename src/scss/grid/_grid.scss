@@ -1,18 +1,12 @@
 .brick {
   margin: $grid-half-gutter;
   padding: $grid-brick-padding-ttb $grid-brick-padding-rtl;
-
-  flex-basis: ($grid-brick-width - (2 * $grid-brick-padding-rtl));
-  max-width: ($grid-brick-width - (2 * $grid-brick-padding-rtl));
 }
 
 img.brick,
 .brick--img {
   margin: $grid-half-gutter;
   padding: 0;
-
-  flex-basis: $grid-brick-width;
-  max-width: $grid-brick-width;
 
   height: 100%;
 }
@@ -30,4 +24,24 @@ img.brick,
 .brick:last-child,
 .brick.last {
   margin-right: 0;
+}
+
+.brick--inverse {
+  background: $default-color-inverse;
+  color: $default-color;
+}
+
+.brick--hide,
+.brick-mobile--show {
+  display: none;
+}
+.brick--show {
+  display: flex;
+}
+
+.container {
+  max-width: (($grid-brick-width+$grid-gutter)*$grid)-$grid-gutter;
+  height: 100%;
+
+  margin: 0 auto;
 }

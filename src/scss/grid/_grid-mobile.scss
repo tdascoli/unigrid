@@ -1,0 +1,160 @@
+/*------------------------------------*\
+  #MOBILE-GRID-ROW
+\*------------------------------------*/
+
+@mixin grid-mobile-row ($var) {
+  @for $i from 1 through $var {
+
+    $grid-item: (1/$mobile-grid)*$i;
+
+    .brick-mobile--#{$i} {
+      flex-basis: calc(#{percentage($grid-item)} - #{(2 * $grid-brick-padding-rtl) + $grid-gutter});
+      max-width: calc(#{percentage($grid-item)} - #{(2 * $grid-brick-padding-rtl) + $grid-gutter});
+      width: calc(#{percentage($grid-item)} - #{(2 * $grid-brick-padding-rtl) + $grid-gutter});
+    }
+
+    .unigrid--col.brick-mobile--#{$i},
+    .unigrid--row.brick-mobile--#{$i},
+    .brick--img.brick-mobile--#{$i},
+    img.brick-mobile--#{$i}{
+      width: calc(#{percentage($grid-item)} - #{$grid-gutter});
+      max-width: calc(#{percentage($grid-item)} - #{$grid-gutter});
+      flex-basis: calc(#{percentage($grid-item)} - #{$grid-gutter});
+    }
+
+    .prepend-mobile--#{$i},
+    .first.prepend-mobile--#{$i},
+    .brick:first-child.prepend-mobile--#{$i}{
+      margin-left: calc(#{percentage($grid-item)} + #{$grid-half-gutter});
+    }
+
+    .append-mobile--#{$i},
+    .last.append-mobile--#{$i},
+    .brick:last-child.append-mobile--#{$i}{
+      margin-right: calc(#{percentage($grid-item)} + #{$grid-half-gutter});
+    }
+  }
+}
+
+@media #{$media-phone} {
+
+  .brick {
+    margin: $grid-half-gutter;
+    padding: $grid-brick-padding-ttb $grid-brick-padding-rtl;
+
+    flex-basis: calc(100% - #{(2 * $grid-brick-padding-rtl) + $grid-gutter});
+    max-width: calc(100% - #{(2 * $grid-brick-padding-rtl) + $grid-gutter});
+    width: calc(100% - #{(2 * $grid-brick-padding-rtl) + $grid-gutter});
+  }
+
+  img.brick,
+  .brick--img {
+    margin: $grid-half-gutter;
+    padding: 0;
+
+    height: 100%;
+  }
+
+  .brick:first-child,
+  .brick.first {
+    margin-left: $grid-half-gutter;
+  }
+
+  .brick:last-child,
+  .brick.last {
+    margin-right: $grid-half-gutter;
+  }
+
+  .brick-mobile--hide {
+    display: none;
+  }
+  .brick-mobile--show {
+    display: flex;
+  }
+
+  .container {
+    max-width: 100%;
+    height: 100%;
+
+    margin: 0;
+  }
+
+  .unigrid--row {
+    width: 100%;
+
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+  }
+
+  @include grid-mobile-row($mobile-grid);
+}
+
+/*------------------------------------*\
+  #MOBILE-GRID-COLUMN
+\*------------------------------------*/
+
+@mixin grid-mobile-col ($var) {
+  @for $i from 1 through $var {
+    .brick-mobile--col--#{$i} {
+      height: ((($mobile-grid-brick-height+$grid-gutter)*$i) - (2*$grid-brick-padding-ttb))-$grid-gutter;
+      max-height: ((($mobile-grid-brick-height+$grid-gutter)*$i) - (2*$grid-brick-padding-ttb))-$grid-gutter;
+      flex-basis: ((($mobile-grid-brick-height+$grid-gutter)*$i) - (2*$grid-brick-padding-ttb))-$grid-gutter;
+
+      display: flex;
+    }
+
+    .unigrid--row.brick-mobile--col--#{$i} {
+      height: (($mobile-grid-brick-height+$grid-gutter)*$i)-$grid-gutter;
+      max-height: (($mobile-grid-brick-height+$grid-gutter)*$i)-$grid-gutter;
+      flex-basis: (($mobile-grid-brick-height+$grid-gutter)*$i)-$grid-gutter;
+
+      display: flex;
+    }
+
+    /*
+
+    .unigrid--col > .brick.prepend--col--#{$i} {
+      margin-top: ((($grid-brick-height+$grid-gutter)*$i) + $grid-half-gutter);
+    }
+    .brick.unigrid--col > .brick:first-child.prepend--col--#{$i},
+    .brick.unigrid--col > .brick.first.prepend--col--#{$i} {
+      margin-top: (($grid-brick-height+$grid-gutter)*$i);
+    }
+
+    .unigrid--col > .brick.append--col--#{$i} {
+      margin-bottom: ((($grid-brick-height+$grid-gutter)*$i) + $grid-half-gutter);
+    }
+
+    .brick.unigrid--col > .brick:last-child.append--col--#{$i},
+    .brick.unigrid--col > .brick.last.append--col--#{$i} {
+      margin-bottom: (($grid-brick-height+$grid-gutter)*$i);
+    }
+    */
+  }
+}
+
+@media #{$media-phone} {
+
+  .unigrid--col > .brick {
+    margin: $grid-half-gutter;
+    padding: $grid-brick-padding-ttb $grid-brick-padding-rtl;
+
+    display: block;
+  }
+
+  .unigrid--col > .brick.unigrid--row {
+    margin: $grid-half-gutter 0;
+
+    height: 100%;
+    max-height: 100%;
+  }
+
+
+  @include grid-mobile-col($mobile-grid);
+
+}

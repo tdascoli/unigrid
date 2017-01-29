@@ -1,20 +1,25 @@
-@import "https://fonts.googleapis.com/css?family=Montserrat";
 .show-border .brick {
   background-color: rgba(204, 204, 204, 0.5); }
 
 .show-border .content {
   color: #fff;
   background-color: #cccccc;
-  height: 100%; }
+  height: 100%;
+  width: 100%; }
 
 .grid,
-.col-grid {
+.col-grid,
+.mobile-grid,
+.mobile-col-grid {
   height: 100%;
   position: absolute;
-  display: none; }
+  display: none;
+  z-index: 1030; }
 
 .show-grid.grid,
-.show-grid.col-grid {
+.show-grid.col-grid,
+.show-grid.mobile-grid,
+.show-grid.mobile-col-grid {
   display: flex; }
 
 .grid .brick {
@@ -24,8 +29,8 @@
   height: 100%;
   padding-top: 0;
   padding-bottom: 0;
-  max-width: 22px;
-  flex-basis: 22px;
+  max-width: 26px;
+  flex-basis: 26px;
   background: none; }
   .grid .brick div {
     border-right: 1px solid orange;
@@ -38,8 +43,8 @@
   border-bottom: 1px solid red;
   max-width: 100%;
   padding: 3px 0;
-  max-height: 22px;
-  flex-basis: 22px;
+  max-height: 26px;
+  flex-basis: 26px;
   background: none; }
   .col-grid .brick div {
     border-top: 1px solid orange;
@@ -48,8 +53,40 @@
     height: calc(100% - 2px);
     line-height: 1; }
 
+.mobile-grid .brick {
+  border-right: 1px solid red;
+  border-left: 1px solid red;
+  padding: 3px;
+  height: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+  max-width: calc(8.33333% - 12px);
+  flex-basis: calc(8.33333% - 12px);
+  background: none; }
+  .mobile-grid .brick div {
+    border-right: 1px solid orange;
+    border-left: 1px solid orange;
+    font-size: 0.75em;
+    height: 100%; }
+
+.mobile-col-grid .brick {
+  border-top: 1px solid red;
+  border-bottom: 1px solid red;
+  max-width: 100%;
+  padding: 3px 0;
+  max-height: 26px;
+  flex-basis: 26px;
+  background: none; }
+  .mobile-col-grid .brick div {
+    border-top: 1px solid orange;
+    border-bottom: 1px solid orange;
+    font-size: 0.75em;
+    height: calc(100% - 2px);
+    line-height: 1;
+    width: 100%; }
+
 body {
-  font-family: 'Montserrat';
+  font-family: 'Helvetica Neue';
   background: #f5f5f5; }
 
 .wrap {
@@ -63,11 +100,10 @@ body {
   background-color: #fff; }
 
 .card-narrow {
-  width: 950px; }
+  width: 908px; }
 
 .content {
   color: #000;
-  font-family: 'Montserrat';
   font-size: 12px;
   margin: 0;
   height: inherit; }
@@ -300,8 +336,12 @@ body {
   bottom: 0;
   transform: translateX(-4px) translateY(-2px) rotate(45deg); }
 
-#hamburger-col-grid {
-  margin-top: 10px; }
+#hamburger-grid {
+  margin-top: 72px; }
+
+#hamburger-col-grid,
+#show-border {
+  margin-top: 4px; }
 
 .grid-generator .form-group label {
   width: calc(50% - 8px); }

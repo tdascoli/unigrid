@@ -14,10 +14,10 @@ html {
   font-size: 100.01%; }
 
 body {
-  font-size: 16px;
+  font-size: 14px;
   color: #333;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 26px; }
+  line-height: 23px; }
 
 /*
 h1, h2, h3, h4, h5, h6 {
@@ -214,7 +214,7 @@ gov.uk: dont indicate obligatory fields, indicate OPTIONAL fields!
 
 .checkbox_wrapper input {
   float: left;
-  font-size: 16px; }
+  font-size: 14px; }
 
 .checkbox_wrapper label {
   width: auto;
@@ -238,7 +238,7 @@ is set to all form fields where <n> is its type id. */
   float: left;
   padding: 4px;
   border: 2px solid #333;
-  font-size: 16px; }
+  font-size: 14px; }
 
 /* BUTTONSUBMIT */
 .pifa-field-13,
@@ -360,16 +360,22 @@ div.pifa-error {
 .show-border .content {
   color: #fff;
   background-color: #cccccc;
-  height: 100%; }
+  height: 100%;
+  width: 100%; }
 
 .grid,
-.col-grid {
+.col-grid,
+.mobile-grid,
+.mobile-col-grid {
   height: 100%;
   position: absolute;
-  display: none; }
+  display: none;
+  z-index: 1030; }
 
 .show-grid.grid,
-.show-grid.col-grid {
+.show-grid.col-grid,
+.show-grid.mobile-grid,
+.show-grid.mobile-col-grid {
   display: flex; }
 
 .grid .brick {
@@ -379,8 +385,8 @@ div.pifa-error {
   height: 100%;
   padding-top: 0;
   padding-bottom: 0;
-  max-width: 22px;
-  flex-basis: 22px;
+  max-width: 26px;
+  flex-basis: 26px;
   background: none; }
   .grid .brick div {
     border-right: 1px solid orange;
@@ -393,8 +399,8 @@ div.pifa-error {
   border-bottom: 1px solid red;
   max-width: 100%;
   padding: 3px 0;
-  max-height: 22px;
-  flex-basis: 22px;
+  max-height: 26px;
+  flex-basis: 26px;
   background: none; }
   .col-grid .brick div {
     border-top: 1px solid orange;
@@ -402,5 +408,37 @@ div.pifa-error {
     font-size: 0.75em;
     height: calc(100% - 2px);
     line-height: 1; }
+
+.mobile-grid .brick {
+  border-right: 1px solid red;
+  border-left: 1px solid red;
+  padding: 3px;
+  height: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+  max-width: calc(8.33333% - 12px);
+  flex-basis: calc(8.33333% - 12px);
+  background: none; }
+  .mobile-grid .brick div {
+    border-right: 1px solid orange;
+    border-left: 1px solid orange;
+    font-size: 0.75em;
+    height: 100%; }
+
+.mobile-col-grid .brick {
+  border-top: 1px solid red;
+  border-bottom: 1px solid red;
+  max-width: 100%;
+  padding: 3px 0;
+  max-height: 26px;
+  flex-basis: 26px;
+  background: none; }
+  .mobile-col-grid .brick div {
+    border-top: 1px solid orange;
+    border-bottom: 1px solid orange;
+    font-size: 0.75em;
+    height: calc(100% - 2px);
+    line-height: 1;
+    width: 100%; }
 
 /*# sourceMappingURL=unigrid-generator.css.map */

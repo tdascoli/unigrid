@@ -68,8 +68,8 @@ $(function () {
     $('.grid').css('height',cardHeight-(2*padding));
 
     // generate col grid
-    var cardWidth=$('#show-grid').innerWidth();
     $('.col-grid').css('width',cardWidth);
+    $('.col-grid').css('height',cardHeight);
     $('.col-grid').append('<div class="brick brick--col--1"><div>1</div></div>');
     var colGridHeight=$('.brick--col--1').outerHeight(true);
     var colGrid=cardHeight/colGridHeight;
@@ -77,4 +77,31 @@ $(function () {
         $('.col-grid').append('<div class="brick brick--col--1"><div>' + i + '</div></div>');
     }
     // end generate col grid
+
+    // generate mobile row grid
+    var mobileGrid = 12;
+    var mobileTeiler=getTeiler(mobileGrid);
+    for (i = 1; i <= mobileGrid; i++) {
+        $('.mobile-grid').append('<div class="brick"><div>' + i + '</div></div>');
+    }
+    mobileTeiler.forEach(function(teiler){
+        $('.mobile-demo1').append('<div class="mobile-demo-'+teiler+' unigrid--row"></div><hr />');
+        for (i = 1; i <= (mobileGrid / teiler); i++) {
+            $('.mobile-demo-'+teiler).append('<div class="brick brick--'+(2*teiler)+' brick-mobile--'+teiler+'"><div class="content">'+teiler+'</div></div>');
+        }
+    });
+
+    $('.mobile-grid').css('height',cardHeight);
+    // end generate mobile row grid
+
+    // generate mobile col grid
+    $('.mobile-col-grid').css('width',cardWidth);
+    $('.mobile-col-grid').css('height',cardHeight);
+    $('.mobile-col-grid').append('<div class="brick brick-mobile--col--1 test"><div>1</div></div>');
+    var colMobileGridHeight=$('.brick-mobile--col--1').outerHeight(true);
+    var colMobileGrid=cardHeight/colMobileGridHeight;
+    for (i = 2; i <= colMobileGrid; i++) {
+        $('.mobile-col-grid').append('<div class="brick brick-mobile--col--1"><div>' + i + '</div></div>');
+    }
+    // end generate mobile col grid
 });

@@ -72,4 +72,14 @@
   margin-bottom: 0;
 }
 
+hr.brick--col {
+  background: $default-color-inverse;
+
+  height: ($grid-brick-height+$grid-gutter);
+  max-height: ($grid-brick-height+$grid-gutter);
+  flex-basis: ($grid-brick-height+$grid-gutter);
+
+  width: 100%;
+}
+
 @include grid-col($grid);

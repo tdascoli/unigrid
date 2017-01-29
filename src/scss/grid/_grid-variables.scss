@@ -1,0 +1,15 @@
+//* vars.grid */
+
+$grid: 24;
+$grid-gutter: 4px;
+$grid-half-gutter: ($grid-gutter/2);
+$grid-brick-padding-ttb: 4px;
+$grid-brick-padding-rtl: 4px;
+$grid-brick-width: 34px;
+$grid-brick-height: 34px;
+
+//* vars.mobile.grid */
+
+$mobile-grid: 12;
+$mobile-grid-width: (1/$mobile-grid)*100%;
+$mobile-grid-brick-height: $grid-brick-height;

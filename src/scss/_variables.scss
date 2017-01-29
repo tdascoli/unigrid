@@ -1,16 +1,21 @@
 //* variables */
 
-@import '_grid-variables';
+@import 'grid/_grid-variables';
+
+//* vars.colors */
+$default-color-inverse: #000;
+$default-color: #fff;
 
 //* vars.responsive */
 $media-phone: "only screen and (max-width : 767px)";
-$media-tablet: "only screen and (min-width: 768px) and (max-width: 992px)";
+$media-tablet: "only screen and (min-width: 768px)";
+$media-desktop: "only screen and (min-width: 1024px)";
 
 //* vars.golden-ratio */
 $phi: 1.61803398875;
-$golden-ratio: percentage(0.61803398875);
-$golden-ratio-tall: $golden-ratio;
-$golden-ratio-small: 100 - $golden-ratio;
+$golden-ratio: 0.61803398875;
+$golden-ratio-tall: percentage($golden-ratio);
+$golden-ratio-small: 100 - percentage($golden-ratio);
 
 //* vars.typo */
 $path-to-fonts:'./';
@@ -24,7 +29,7 @@ $font-family-serif:       Georgia, "Times New Roman", Times, serif;
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base:        $font-family-sans-serif;
 
-$font-size-base:          16px;
+$font-size-base:          14px;
 $font-size-large:         ceil((1.25 * $font-size-base));
 $font-size-small:         ceil((0.85 * $font-size-base));
 
@@ -50,3 +55,7 @@ $form-half-gutter: ($form-gutter/2);
 $form-padding: $grid-brick-padding-rtl;
 $form-border-width: 2px;
 $form-border-color: $text-color;
+
+//* vars.navbar */
+$navbar-default-background: $default-color-inverse;
+$navbar-default-color: $default-color;
