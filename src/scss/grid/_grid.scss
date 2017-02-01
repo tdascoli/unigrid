@@ -76,6 +76,12 @@ hr {
   .brick.last {
     margin-right: 0;
   }
+
+  // DIN A2 and more
+  .unigrid--row > .unigrid--col.brick:last-child,
+  .unigrid--row > .unigrid--col.brick.last {
+    margin-left: $grid-half-gutter;
+  }
 }
 
 

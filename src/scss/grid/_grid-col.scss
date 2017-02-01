@@ -21,27 +21,16 @@
 
 .unigrid--col > img.brick,
 .unigrid--col > .brick--img {
-  margin: $grid-half-gutter;
   padding: 0;
 
   width: auto;
 }
 
-.unigrid--col > .brick.unigrid--row {
+.unigrid--col > .unigrid--row {
   padding: 0;
   margin: 0;
 
   max-width: 100%;
-}
-
-.brick.unigrid--col > .brick:first-child,
-.brick.unigrid--col > .brick.first {
-  margin-top: 0;
-}
-
-.brick.unigrid--col > .brick:last-child,
-.brick.unigrid--col > .brick.last {
-  margin-bottom: 0;
 }
 
 hr.brick--col {

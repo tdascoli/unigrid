@@ -41,6 +41,7 @@
 
 @mixin grid-col ($var) {
   @for $i from 1 through $var {
+
     .brick--col--#{$i} {
       height: (($grid-brick-height+$grid-gutter)*$i)-(2*$grid-brick-padding-ttb)-$grid-gutter;
       max-height: (($grid-brick-height+$grid-gutter)*$i)-(2*$grid-brick-padding-ttb)-$grid-gutter;
@@ -49,13 +50,19 @@
       width: 100%;
     }
 
-    .unigrid--row.brick--col--#{$i} {
+    .brick--col--#{$i}.unigrid--row {
+      height: (($grid-brick-height+$grid-gutter)*$i);
+      max-height: (($grid-brick-height+$grid-gutter)*$i);
+      flex-basis: (($grid-brick-height+$grid-gutter)*$i);
+    }
+
+    /*.unigrid--row.brick--col--#{$i} {
       height: (($grid-brick-height+$grid-gutter)*$i);
       max-height: (($grid-brick-height+$grid-gutter)*$i);
       flex-basis: (($grid-brick-height+$grid-gutter)*$i);
 
       width: 100%;
-    }
+    }*/
 
     .brick--col--#{$i} > img.brick,
     .unigrid--col > img.brick--col--#{$i},

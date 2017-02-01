@@ -449,4 +449,24 @@ div.pifa-error {
     line-height: 1;
     width: 100%; }
 
+/*
+.brick:first-child {
+  background-color: green;
+}
+
+.brick:last-child{
+  background-color: blue;
+}
+
+.brick:only-child {
+  background-color: blueviolet;
+}
+
+.rulers .brick:first-child,
+.rulers .brick:last-child,
+.rulers .brick:only-child {
+  background-color: transparent;
+}
+*/
+
 /*# sourceMappingURL=unigrid-generator.css.map */

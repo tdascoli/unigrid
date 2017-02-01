@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>unigrid</title>
     <meta name="description" content="grid">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="unigrid.css"/>
     <link rel="stylesheet" href="example.css"/>
@@ -35,7 +35,7 @@
             </div>
             <div class="brick brick--6">
                 <div class="navbar-nav">
-                    <a href="index.html">Index</a>, <a href="din.html">DIN</a>, <a href="example.html">Example</a>, <a href="unigrid-mobile.html">Mobile</a>
+                    <a href="index.html">Index</a>, <a href="din.html">DIN</a>, <a href="example.html">Example</a>, <a href="mobile.html">Mobile</a>
                 </div>
             </div>
         </div>
@@ -47,43 +47,47 @@
 <div class="container">
 
     <div class="show-border" id="show-grid">
-        <div class="grid unigrid--row"></div>
-        <div class="col-grid unigrid--col"></div>
+        <div class="rulers">
+            <div class="grid unigrid--row"></div>
+            <div class="col-grid unigrid--col"></div>
+            <div class="mobile-grid unigrid--row"></div>
+            <div class="mobile-col-grid unigrid--col"></div>
+        </div>
 
         <!-- 17,5 Hoch -->
         <div class="unigrid--col">
-            <div class="brick brick--col--17">
+            <div class="brick brick--col--17 brick-mobile--col--8">
                 <div class="content">A0</div>
             </div>
         </div>
 
         <div class="unigrid--col">
-            <div class="brick brick--col--18 unigrid--row">
-                <div class="brick brick--12">
+            <div class="brick brick--col--18 brick-mobile--col--8 unigrid--row">
+                <div class="brick brick--12 brick-mobile--6">
                     <div class="content">A1</div>
                 </div>
-                <div class="brick brick--12 unigrid--col">
-                    <div class="brick brick--col--9">
+                <div class="brick brick--12 brick-mobile--6 unigrid--col">
+                    <div class="brick brick--col--9 brick-mobile--col--4">
                         <div class="content">A2</div>
                     </div>
-                    <div class="brick brick--col--9 unigrid--row">
-                        <div class="brick brick--6">
+                    <div class="brick brick--col--9 brick-mobile--col--4 unigrid--row">
+                        <div class="brick brick--6 brick-mobile--6">
                             <div class="content">A3</div>
                         </div>
-                        <div class="brick brick--6 unigrid--col">
-                            <div class="brick brick--col--4">
+                        <div class="brick brick--6 brick-mobile--6 unigrid--col">
+                            <div class="brick brick--col--4 brick-mobile--col--2">
                                 <div class="content">A4</div>
                             </div>
-                            <div class="brick brick--col--5 unigrid--row">
-                                <div class="brick brick--3">
+                            <div class="brick brick--col--5 brick-mobile--col--2 unigrid--row">
+                                <div class="brick brick--3 brick-mobile--6">
                                     <div class="content">A5</div>
                                 </div>
-                                <div class="brick brick--3 unigrid--col">
-                                    <div class="brick brick--col--2">
+                                <div class="brick brick--3 brick-mobile--6 unigrid--col">
+                                    <div class="brick brick--col--2 brick-mobile--col--1">
                                         <div class="content">A6</div>
                                     </div>
-                                    <div class="brick brick--col--3 unigrid--row">
-                                        <div class="brick brick--2">
+                                    <div class="brick brick--col--3 brick-mobile--col--1 unigrid--row">
+                                        <div class="brick brick--2 brick-mobile--6">
                                             <div class="content">A7</div>
                                         </div>
                                     </div>
