@@ -1,3 +1,7 @@
+/*------------------------------------*\
+  #GRID-BRICK
+\*------------------------------------*/
+
 .brick {
   margin: $grid-half-gutter;
   padding: $grid-brick-padding-ttb $grid-brick-padding-rtl;
@@ -5,24 +9,14 @@
   min-height: ($grid-brick-height - $grid-gutter - $grid-brick-padding-ttb);
 }
 
-// todo img not perfect...
-img.brick,
-.brick--img {
-  margin: $grid-half-gutter;
-  padding: 0;
-
-  height: 100%;
-}
-
-.brick img {
-  width: 100%;
-  display: block;
-}
-
 .brick--inverse {
   background: $default-color-inverse;
   color: $default-color;
 }
+
+/*------------------------------------*\
+  #GRID-BRICK VISIBILITY
+\*------------------------------------*/
 
 .brick--hide,
 .brick-mobile--show {
@@ -31,6 +25,29 @@ img.brick,
 .brick--show {
   display: flex;
 }
+
+/*------------------------------------*\
+  #GRID-BRICK IMAGES
+\*------------------------------------*/
+
+.brick > img {
+  width: 100%;
+  height: 100%;
+}
+
+.unigrid--col > .brick > img {
+  width: auto;
+}
+
+img.brick,
+.brick--img {
+  margin: $grid-half-gutter;
+  padding: 0;
+}
+
+/*------------------------------------*\
+  #GRID-BRICK MISC
+\*------------------------------------*/
 
 hr {
   margin: ((($grid-brick-height + $grid-gutter)/2) - $grid-hr-border) 0;
@@ -45,6 +62,10 @@ hr {
   margin: 0 auto;
 }
 
+/*------------------------------------*\
+  #GRID-BRICK FIRST/LAST
+\*------------------------------------*/
+
 @media #{$media-desktop} {
   .brick:first-child,
   .brick.first {
@@ -56,5 +77,10 @@ hr {
     margin-right: 0;
   }
 }
+
+
+/*------------------------------------*\
+  #GRID-BRICK ORDER
+\*------------------------------------*/
 
 @include grid-order($grid);

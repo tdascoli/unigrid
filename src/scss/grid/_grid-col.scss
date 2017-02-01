@@ -19,6 +19,14 @@
   max-width: calc(100% - #{2*$grid-brick-padding-rtl});
 }
 
+.unigrid--col > img.brick,
+.unigrid--col > .brick--img {
+  margin: $grid-half-gutter;
+  padding: 0;
+
+  width: auto;
+}
+
 .unigrid--col > .brick.unigrid--row {
   padding: 0;
   margin: 0;
@@ -33,10 +41,6 @@
 
 .brick.unigrid--col > .brick:last-child,
 .brick.unigrid--col > .brick.last {
-  margin-bottom: 0;
-}
-
-.last--col > .brick {
   margin-bottom: 0;
 }
 

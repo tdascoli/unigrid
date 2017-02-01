@@ -10,9 +10,4 @@
   align-content: flex-start;
 }
 
-.brick.unigrid--row > .brick {
-  //margin-top: 0;
-  //margin-bottom: 0;
-}
-
 @include grid-row($grid);

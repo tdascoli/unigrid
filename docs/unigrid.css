@@ -424,25 +424,21 @@ div.pifa-error {
 /*------------------------------------*\
   #GRID-MIXINS_MISC
 \*------------------------------------*/
+/*------------------------------------*\
+  #GRID-BRICK
+\*------------------------------------*/
 .brick {
   margin: 2px;
   padding: 4px 4px;
   min-height: 26px; }
 
-img.brick,
-.brick--img {
-  margin: 2px;
-  padding: 0;
-  height: 100%; }
-
-.brick img {
-  width: 100%;
-  display: block; }
-
 .brick--inverse {
   background: #000;
   color: #fff; }
 
+/*------------------------------------*\
+  #GRID-BRICK VISIBILITY
+\*------------------------------------*/
 .brick--hide,
 .brick-mobile--show {
   display: none; }
@@ -450,6 +446,24 @@ img.brick,
 .brick--show {
   display: flex; }
 
+/*------------------------------------*\
+  #GRID-BRICK IMAGES
+\*------------------------------------*/
+.brick > img {
+  width: 100%;
+  height: 100%; }
+
+.unigrid--col > .brick > img {
+  width: auto; }
+
+img.brick,
+.brick--img {
+  margin: 2px;
+  padding: 0; }
+
+/*------------------------------------*\
+  #GRID-BRICK MISC
+\*------------------------------------*/
 hr {
   margin: 18px 0;
   border: 1px solid #000000; }
@@ -459,6 +473,9 @@ hr {
   height: 100%;
   margin: 0 auto; }
 
+/*------------------------------------*\
+  #GRID-BRICK FIRST/LAST
+\*------------------------------------*/
 @media only screen and (min-width: 1024px) {
   .brick:first-child,
   .brick.first {
@@ -467,6 +484,9 @@ hr {
   .brick:last-child,
   .brick.last {
     margin-right: 0; } }
+/*------------------------------------*\
+  #GRID-BRICK ORDER
+\*------------------------------------*/
 .order--1 {
   order: 1; }
 
@@ -1236,6 +1256,12 @@ img.brick--24 {
   padding: 4px 4px;
   max-width: calc(100% - 8px); }
 
+.unigrid--col > img.brick,
+.unigrid--col > .brick--img {
+  margin: 2px;
+  padding: 0;
+  width: auto; }
+
 .unigrid--col > .brick.unigrid--row {
   padding: 0;
   margin: 0;
@@ -1247,9 +1273,6 @@ img.brick--24 {
 
 .brick.unigrid--col > .brick:last-child,
 .brick.unigrid--col > .brick.last {
-  margin-bottom: 0; }
-
-.last--col > .brick {
   margin-bottom: 0; }
 
 hr.brick--col {
@@ -1270,6 +1293,13 @@ hr.brick--col {
   max-height: 38px;
   flex-basis: 38px;
   width: 100%; }
+
+.brick--col--1 > img.brick,
+.unigrid--col > img.brick--col--1,
+.unigrid--col > .brick--img.brick--col--1 {
+  height: 34px;
+  max-height: 34px;
+  flex-basis: 34px; }
 
 .unigrid--col > .brick.prepend--col--1,
 .brick.unigrid--col > .brick:first-child.prepend--col--1,
@@ -1293,6 +1323,13 @@ hr.brick--col {
   flex-basis: 76px;
   width: 100%; }
 
+.brick--col--2 > img.brick,
+.unigrid--col > img.brick--col--2,
+.unigrid--col > .brick--img.brick--col--2 {
+  height: 72px;
+  max-height: 72px;
+  flex-basis: 72px; }
+
 .unigrid--col > .brick.prepend--col--2,
 .brick.unigrid--col > .brick:first-child.prepend--col--2,
 .brick.unigrid--col > .brick.first.prepend--col--2 {
@@ -1314,6 +1351,13 @@ hr.brick--col {
   max-height: 114px;
   flex-basis: 114px;
   width: 100%; }
+
+.brick--col--3 > img.brick,
+.unigrid--col > img.brick--col--3,
+.unigrid--col > .brick--img.brick--col--3 {
+  height: 110px;
+  max-height: 110px;
+  flex-basis: 110px; }
 
 .unigrid--col > .brick.prepend--col--3,
 .brick.unigrid--col > .brick:first-child.prepend--col--3,
@@ -1337,6 +1381,13 @@ hr.brick--col {
   flex-basis: 152px;
   width: 100%; }
 
+.brick--col--4 > img.brick,
+.unigrid--col > img.brick--col--4,
+.unigrid--col > .brick--img.brick--col--4 {
+  height: 148px;
+  max-height: 148px;
+  flex-basis: 148px; }
+
 .unigrid--col > .brick.prepend--col--4,
 .brick.unigrid--col > .brick:first-child.prepend--col--4,
 .brick.unigrid--col > .brick.first.prepend--col--4 {
@@ -1358,6 +1409,13 @@ hr.brick--col {
   max-height: 190px;
   flex-basis: 190px;
   width: 100%; }
+
+.brick--col--5 > img.brick,
+.unigrid--col > img.brick--col--5,
+.unigrid--col > .brick--img.brick--col--5 {
+  height: 186px;
+  max-height: 186px;
+  flex-basis: 186px; }
 
 .unigrid--col > .brick.prepend--col--5,
 .brick.unigrid--col > .brick:first-child.prepend--col--5,
@@ -1381,6 +1439,13 @@ hr.brick--col {
   flex-basis: 228px;
   width: 100%; }
 
+.brick--col--6 > img.brick,
+.unigrid--col > img.brick--col--6,
+.unigrid--col > .brick--img.brick--col--6 {
+  height: 224px;
+  max-height: 224px;
+  flex-basis: 224px; }
+
 .unigrid--col > .brick.prepend--col--6,
 .brick.unigrid--col > .brick:first-child.prepend--col--6,
 .brick.unigrid--col > .brick.first.prepend--col--6 {
@@ -1402,6 +1467,13 @@ hr.brick--col {
   max-height: 266px;
   flex-basis: 266px;
   width: 100%; }
+
+.brick--col--7 > img.brick,
+.unigrid--col > img.brick--col--7,
+.unigrid--col > .brick--img.brick--col--7 {
+  height: 262px;
+  max-height: 262px;
+  flex-basis: 262px; }
 
 .unigrid--col > .brick.prepend--col--7,
 .brick.unigrid--col > .brick:first-child.prepend--col--7,
@@ -1425,6 +1497,13 @@ hr.brick--col {
   flex-basis: 304px;
   width: 100%; }
 
+.brick--col--8 > img.brick,
+.unigrid--col > img.brick--col--8,
+.unigrid--col > .brick--img.brick--col--8 {
+  height: 300px;
+  max-height: 300px;
+  flex-basis: 300px; }
+
 .unigrid--col > .brick.prepend--col--8,
 .brick.unigrid--col > .brick:first-child.prepend--col--8,
 .brick.unigrid--col > .brick.first.prepend--col--8 {
@@ -1446,6 +1525,13 @@ hr.brick--col {
   max-height: 342px;
   flex-basis: 342px;
   width: 100%; }
+
+.brick--col--9 > img.brick,
+.unigrid--col > img.brick--col--9,
+.unigrid--col > .brick--img.brick--col--9 {
+  height: 338px;
+  max-height: 338px;
+  flex-basis: 338px; }
 
 .unigrid--col > .brick.prepend--col--9,
 .brick.unigrid--col > .brick:first-child.prepend--col--9,
@@ -1469,6 +1555,13 @@ hr.brick--col {
   flex-basis: 380px;
   width: 100%; }
 
+.brick--col--10 > img.brick,
+.unigrid--col > img.brick--col--10,
+.unigrid--col > .brick--img.brick--col--10 {
+  height: 376px;
+  max-height: 376px;
+  flex-basis: 376px; }
+
 .unigrid--col > .brick.prepend--col--10,
 .brick.unigrid--col > .brick:first-child.prepend--col--10,
 .brick.unigrid--col > .brick.first.prepend--col--10 {
@@ -1490,6 +1583,13 @@ hr.brick--col {
   max-height: 418px;
   flex-basis: 418px;
   width: 100%; }
+
+.brick--col--11 > img.brick,
+.unigrid--col > img.brick--col--11,
+.unigrid--col > .brick--img.brick--col--11 {
+  height: 414px;
+  max-height: 414px;
+  flex-basis: 414px; }
 
 .unigrid--col > .brick.prepend--col--11,
 .brick.unigrid--col > .brick:first-child.prepend--col--11,
@@ -1513,6 +1613,13 @@ hr.brick--col {
   flex-basis: 456px;
   width: 100%; }
 
+.brick--col--12 > img.brick,
+.unigrid--col > img.brick--col--12,
+.unigrid--col > .brick--img.brick--col--12 {
+  height: 452px;
+  max-height: 452px;
+  flex-basis: 452px; }
+
 .unigrid--col > .brick.prepend--col--12,
 .brick.unigrid--col > .brick:first-child.prepend--col--12,
 .brick.unigrid--col > .brick.first.prepend--col--12 {
@@ -1534,6 +1641,13 @@ hr.brick--col {
   max-height: 494px;
   flex-basis: 494px;
   width: 100%; }
+
+.brick--col--13 > img.brick,
+.unigrid--col > img.brick--col--13,
+.unigrid--col > .brick--img.brick--col--13 {
+  height: 490px;
+  max-height: 490px;
+  flex-basis: 490px; }
 
 .unigrid--col > .brick.prepend--col--13,
 .brick.unigrid--col > .brick:first-child.prepend--col--13,
@@ -1557,6 +1671,13 @@ hr.brick--col {
   flex-basis: 532px;
   width: 100%; }
 
+.brick--col--14 > img.brick,
+.unigrid--col > img.brick--col--14,
+.unigrid--col > .brick--img.brick--col--14 {
+  height: 528px;
+  max-height: 528px;
+  flex-basis: 528px; }
+
 .unigrid--col > .brick.prepend--col--14,
 .brick.unigrid--col > .brick:first-child.prepend--col--14,
 .brick.unigrid--col > .brick.first.prepend--col--14 {
@@ -1578,6 +1699,13 @@ hr.brick--col {
   max-height: 570px;
   flex-basis: 570px;
   width: 100%; }
+
+.brick--col--15 > img.brick,
+.unigrid--col > img.brick--col--15,
+.unigrid--col > .brick--img.brick--col--15 {
+  height: 566px;
+  max-height: 566px;
+  flex-basis: 566px; }
 
 .unigrid--col > .brick.prepend--col--15,
 .brick.unigrid--col > .brick:first-child.prepend--col--15,
@@ -1601,6 +1729,13 @@ hr.brick--col {
   flex-basis: 608px;
   width: 100%; }
 
+.brick--col--16 > img.brick,
+.unigrid--col > img.brick--col--16,
+.unigrid--col > .brick--img.brick--col--16 {
+  height: 604px;
+  max-height: 604px;
+  flex-basis: 604px; }
+
 .unigrid--col > .brick.prepend--col--16,
 .brick.unigrid--col > .brick:first-child.prepend--col--16,
 .brick.unigrid--col > .brick.first.prepend--col--16 {
@@ -1622,6 +1757,13 @@ hr.brick--col {
   max-height: 646px;
   flex-basis: 646px;
   width: 100%; }
+
+.brick--col--17 > img.brick,
+.unigrid--col > img.brick--col--17,
+.unigrid--col > .brick--img.brick--col--17 {
+  height: 642px;
+  max-height: 642px;
+  flex-basis: 642px; }
 
 .unigrid--col > .brick.prepend--col--17,
 .brick.unigrid--col > .brick:first-child.prepend--col--17,
@@ -1645,6 +1787,13 @@ hr.brick--col {
   flex-basis: 684px;
   width: 100%; }
 
+.brick--col--18 > img.brick,
+.unigrid--col > img.brick--col--18,
+.unigrid--col > .brick--img.brick--col--18 {
+  height: 680px;
+  max-height: 680px;
+  flex-basis: 680px; }
+
 .unigrid--col > .brick.prepend--col--18,
 .brick.unigrid--col > .brick:first-child.prepend--col--18,
 .brick.unigrid--col > .brick.first.prepend--col--18 {
@@ -1666,6 +1815,13 @@ hr.brick--col {
   max-height: 722px;
   flex-basis: 722px;
   width: 100%; }
+
+.brick--col--19 > img.brick,
+.unigrid--col > img.brick--col--19,
+.unigrid--col > .brick--img.brick--col--19 {
+  height: 718px;
+  max-height: 718px;
+  flex-basis: 718px; }
 
 .unigrid--col > .brick.prepend--col--19,
 .brick.unigrid--col > .brick:first-child.prepend--col--19,
@@ -1689,6 +1845,13 @@ hr.brick--col {
   flex-basis: 760px;
   width: 100%; }
 
+.brick--col--20 > img.brick,
+.unigrid--col > img.brick--col--20,
+.unigrid--col > .brick--img.brick--col--20 {
+  height: 756px;
+  max-height: 756px;
+  flex-basis: 756px; }
+
 .unigrid--col > .brick.prepend--col--20,
 .brick.unigrid--col > .brick:first-child.prepend--col--20,
 .brick.unigrid--col > .brick.first.prepend--col--20 {
@@ -1710,6 +1873,13 @@ hr.brick--col {
   max-height: 798px;
   flex-basis: 798px;
   width: 100%; }
+
+.brick--col--21 > img.brick,
+.unigrid--col > img.brick--col--21,
+.unigrid--col > .brick--img.brick--col--21 {
+  height: 794px;
+  max-height: 794px;
+  flex-basis: 794px; }
 
 .unigrid--col > .brick.prepend--col--21,
 .brick.unigrid--col > .brick:first-child.prepend--col--21,
@@ -1733,6 +1903,13 @@ hr.brick--col {
   flex-basis: 836px;
   width: 100%; }
 
+.brick--col--22 > img.brick,
+.unigrid--col > img.brick--col--22,
+.unigrid--col > .brick--img.brick--col--22 {
+  height: 832px;
+  max-height: 832px;
+  flex-basis: 832px; }
+
 .unigrid--col > .brick.prepend--col--22,
 .brick.unigrid--col > .brick:first-child.prepend--col--22,
 .brick.unigrid--col > .brick.first.prepend--col--22 {
@@ -1755,6 +1932,13 @@ hr.brick--col {
   flex-basis: 874px;
   width: 100%; }
 
+.brick--col--23 > img.brick,
+.unigrid--col > img.brick--col--23,
+.unigrid--col > .brick--img.brick--col--23 {
+  height: 870px;
+  max-height: 870px;
+  flex-basis: 870px; }
+
 .unigrid--col > .brick.prepend--col--23,
 .brick.unigrid--col > .brick:first-child.prepend--col--23,
 .brick.unigrid--col > .brick.first.prepend--col--23 {
@@ -1776,6 +1960,13 @@ hr.brick--col {
   max-height: 912px;
   flex-basis: 912px;
   width: 100%; }
+
+.brick--col--24 > img.brick,
+.unigrid--col > img.brick--col--24,
+.unigrid--col > .brick--img.brick--col--24 {
+  height: 908px;
+  max-height: 908px;
+  flex-basis: 908px; }
 
 .unigrid--col > .brick.prepend--col--24,
 .brick.unigrid--col > .brick:first-child.prepend--col--24,

@@ -57,6 +57,14 @@
       width: 100%;
     }
 
+    .brick--col--#{$i} > img.brick,
+    .unigrid--col > img.brick--col--#{$i},
+    .unigrid--col > .brick--img.brick--col--#{$i} {
+      height: (($grid-brick-height+$grid-gutter)*$i)-$grid-gutter;
+      max-height: (($grid-brick-height+$grid-gutter)*$i)-$grid-gutter;
+      flex-basis: (($grid-brick-height+$grid-gutter)*$i)-$grid-gutter;
+    }
+
     .unigrid--col > .brick.prepend--col--#{$i},
     .brick.unigrid--col > .brick:first-child.prepend--col--#{$i},
     .brick.unigrid--col > .brick.first.prepend--col--#{$i} {
