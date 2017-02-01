@@ -415,18 +415,19 @@ div.pifa-error {
   background-color: #333;
   color: white; }
 
+/*------------------------------------*\
+  #GRID-MIXINS_REGULAR
+\*------------------------------------*/
+/*------------------------------------*\
+  #GRID-MIXINS_MOBILE
+\*------------------------------------*/
+/*------------------------------------*\
+  #GRID-MIXINS_MISC
+\*------------------------------------*/
 .brick {
   margin: 2px;
   padding: 4px 4px;
   min-height: 26px; }
-
-.brick:first-child,
-.brick.first {
-  margin-left: 0; }
-
-.brick:last-child,
-.brick.last {
-  margin-right: 0; }
 
 img.brick,
 .brick--img {
@@ -457,6 +458,86 @@ hr {
   max-width: 908px;
   height: 100%;
   margin: 0 auto; }
+
+@media only screen and (min-width: 1024px) {
+  .brick:first-child,
+  .brick.first {
+    margin-left: 0; }
+
+  .brick:last-child,
+  .brick.last {
+    margin-right: 0; } }
+.order--1 {
+  order: 1; }
+
+.order--2 {
+  order: 2; }
+
+.order--3 {
+  order: 3; }
+
+.order--4 {
+  order: 4; }
+
+.order--5 {
+  order: 5; }
+
+.order--6 {
+  order: 6; }
+
+.order--7 {
+  order: 7; }
+
+.order--8 {
+  order: 8; }
+
+.order--9 {
+  order: 9; }
+
+.order--10 {
+  order: 10; }
+
+.order--11 {
+  order: 11; }
+
+.order--12 {
+  order: 12; }
+
+.order--13 {
+  order: 13; }
+
+.order--14 {
+  order: 14; }
+
+.order--15 {
+  order: 15; }
+
+.order--16 {
+  order: 16; }
+
+.order--17 {
+  order: 17; }
+
+.order--18 {
+  order: 18; }
+
+.order--19 {
+  order: 19; }
+
+.order--20 {
+  order: 20; }
+
+.order--21 {
+  order: 21; }
+
+.order--22 {
+  order: 22; }
+
+.order--23 {
+  order: 23; }
+
+.order--24 {
+  order: 24; }
 
 .unigrid--row {
   width: 908px;
@@ -1168,6 +1249,9 @@ img.brick--24 {
 .brick.unigrid--col > .brick.last {
   margin-bottom: 0; }
 
+.last--col > .brick {
+  margin-bottom: 0; }
+
 hr.brick--col {
   background: #000;
   height: 38px;
@@ -1190,12 +1274,12 @@ hr.brick--col {
 .unigrid--col > .brick.prepend--col--1,
 .brick.unigrid--col > .brick:first-child.prepend--col--1,
 .brick.unigrid--col > .brick.first.prepend--col--1 {
-  margin-top: 38px; }
+  margin-top: 40px; }
 
 .unigrid--col > .brick.append--col--1,
 .brick.unigrid--col > .brick:last-child.append--col--1,
 .brick.unigrid--col > .brick.last.append--col--1 {
-  margin-bottom: 38px; }
+  margin-bottom: 40px; }
 
 .brick--col--2 {
   height: 64px;
@@ -1212,12 +1296,12 @@ hr.brick--col {
 .unigrid--col > .brick.prepend--col--2,
 .brick.unigrid--col > .brick:first-child.prepend--col--2,
 .brick.unigrid--col > .brick.first.prepend--col--2 {
-  margin-top: 76px; }
+  margin-top: 78px; }
 
 .unigrid--col > .brick.append--col--2,
 .brick.unigrid--col > .brick:last-child.append--col--2,
 .brick.unigrid--col > .brick.last.append--col--2 {
-  margin-bottom: 76px; }
+  margin-bottom: 78px; }
 
 .brick--col--3 {
   height: 102px;
@@ -1234,12 +1318,12 @@ hr.brick--col {
 .unigrid--col > .brick.prepend--col--3,
 .brick.unigrid--col > .brick:first-child.prepend--col--3,
 .brick.unigrid--col > .brick.first.prepend--col--3 {
-  margin-top: 114px; }
+  margin-top: 116px; }
 
 .unigrid--col > .brick.append--col--3,
 .brick.unigrid--col > .brick:last-child.append--col--3,
 .brick.unigrid--col > .brick.last.append--col--3 {
-  margin-bottom: 114px; }
+  margin-bottom: 116px; }
 
 .brick--col--4 {
   height: 140px;
@@ -1256,12 +1340,12 @@ hr.brick--col {
 .unigrid--col > .brick.prepend--col--4,
 .brick.unigrid--col > .brick:first-child.prepend--col--4,
 .brick.unigrid--col > .brick.first.prepend--col--4 {
-  margin-top: 152px; }
+  margin-top: 154px; }
 
 .unigrid--col > .brick.append--col--4,
 .brick.unigrid--col > .brick:last-child.append--col--4,
 .brick.unigrid--col > .brick.last.append--col--4 {
-  margin-bottom: 152px; }
+  margin-bottom: 154px; }
 
 .brick--col--5 {
   height: 178px;
@@ -1278,12 +1362,12 @@ hr.brick--col {
 .unigrid--col > .brick.prepend--col--5,
 .brick.unigrid--col > .brick:first-child.prepend--col--5,
 .brick.unigrid--col > .brick.first.prepend--col--5 {
-  margin-top: 190px; }
+  margin-top: 192px; }
 
 .unigrid--col > .brick.append--col--5,
 .brick.unigrid--col > .brick:last-child.append--col--5,
 .brick.unigrid--col > .brick.last.append--col--5 {
-  margin-bottom: 190px; }
+  margin-bottom: 192px; }
 
 .brick--col--6 {
   height: 216px;
@@ -1300,12 +1384,12 @@ hr.brick--col {
 .unigrid--col > .brick.prepend--col--6,
 .brick.unigrid--col > .brick:first-child.prepend--col--6,
 .brick.unigrid--col > .brick.first.prepend--col--6 {
-  margin-top: 228px; }
+  margin-top: 230px; }
 
 .unigrid--col > .brick.append--col--6,
 .brick.unigrid--col > .brick:last-child.append--col--6,
 .brick.unigrid--col > .brick.last.append--col--6 {
-  margin-bottom: 228px; }
+  margin-bottom: 230px; }
 
 .brick--col--7 {
   height: 254px;
@@ -1322,12 +1406,12 @@ hr.brick--col {
 .unigrid--col > .brick.prepend--col--7,
 .brick.unigrid--col > .brick:first-child.prepend--col--7,
 .brick.unigrid--col > .brick.first.prepend--col--7 {
-  margin-top: 266px; }
+  margin-top: 268px; }
 
 .unigrid--col > .brick.append--col--7,
 .brick.unigrid--col > .brick:last-child.append--col--7,
 .brick.unigrid--col > .brick.last.append--col--7 {
-  margin-bottom: 266px; }
+  margin-bottom: 268px; }
 
 .brick--col--8 {
   height: 292px;
@@ -1344,12 +1428,12 @@ hr.brick--col {
 .unigrid--col > .brick.prepend--col--8,
 .brick.unigrid--col > .brick:first-child.prepend--col--8,
 .brick.unigrid--col > .brick.first.prepend--col--8 {
-  margin-top: 304px; }
+  margin-top: 306px; }
 
 .unigrid--col > .brick.append--col--8,
 .brick.unigrid--col > .brick:last-child.append--col--8,
 .brick.unigrid--col > .brick.last.append--col--8 {
-  margin-bottom: 304px; }
+  margin-bottom: 306px; }
 
 .brick--col--9 {
   height: 330px;
@@ -1366,12 +1450,12 @@ hr.brick--col {
 .unigrid--col > .brick.prepend--col--9,
 .brick.unigrid--col > .brick:first-child.prepend--col--9,
 .brick.unigrid--col > .brick.first.prepend--col--9 {
-  margin-top: 342px; }
+  margin-top: 344px; }
 
 .unigrid--col > .brick.append--col--9,
 .brick.unigrid--col > .brick:last-child.append--col--9,
 .brick.unigrid--col > .brick.last.append--col--9 {
-  margin-bottom: 342px; }
+  margin-bottom: 344px; }
 
 .brick--col--10 {
   height: 368px;
@@ -1388,12 +1472,12 @@ hr.brick--col {
 .unigrid--col > .brick.prepend--col--10,
 .brick.unigrid--col > .brick:first-child.prepend--col--10,
 .brick.unigrid--col > .brick.first.prepend--col--10 {
-  margin-top: 380px; }
+  margin-top: 382px; }
 
 .unigrid--col > .brick.append--col--10,
 .brick.unigrid--col > .brick:last-child.append--col--10,
 .brick.unigrid--col > .brick.last.append--col--10 {
-  margin-bottom: 380px; }
+  margin-bottom: 382px; }
 
 .brick--col--11 {
   height: 406px;
@@ -1410,12 +1494,12 @@ hr.brick--col {
 .unigrid--col > .brick.prepend--col--11,
 .brick.unigrid--col > .brick:first-child.prepend--col--11,
 .brick.unigrid--col > .brick.first.prepend--col--11 {
-  margin-top: 418px; }
+  margin-top: 420px; }
 
 .unigrid--col > .brick.append--col--11,
 .brick.unigrid--col > .brick:last-child.append--col--11,
 .brick.unigrid--col > .brick.last.append--col--11 {
-  margin-bottom: 418px; }
+  margin-bottom: 420px; }
 
 .brick--col--12 {
   height: 444px;
@@ -1432,12 +1516,12 @@ hr.brick--col {
 .unigrid--col > .brick.prepend--col--12,
 .brick.unigrid--col > .brick:first-child.prepend--col--12,
 .brick.unigrid--col > .brick.first.prepend--col--12 {
-  margin-top: 456px; }
+  margin-top: 458px; }
 
 .unigrid--col > .brick.append--col--12,
 .brick.unigrid--col > .brick:last-child.append--col--12,
 .brick.unigrid--col > .brick.last.append--col--12 {
-  margin-bottom: 456px; }
+  margin-bottom: 458px; }
 
 .brick--col--13 {
   height: 482px;
@@ -1454,12 +1538,12 @@ hr.brick--col {
 .unigrid--col > .brick.prepend--col--13,
 .brick.unigrid--col > .brick:first-child.prepend--col--13,
 .brick.unigrid--col > .brick.first.prepend--col--13 {
-  margin-top: 494px; }
+  margin-top: 496px; }
 
 .unigrid--col > .brick.append--col--13,
 .brick.unigrid--col > .brick:last-child.append--col--13,
 .brick.unigrid--col > .brick.last.append--col--13 {
-  margin-bottom: 494px; }
+  margin-bottom: 496px; }
 
 .brick--col--14 {
   height: 520px;
@@ -1476,12 +1560,12 @@ hr.brick--col {
 .unigrid--col > .brick.prepend--col--14,
 .brick.unigrid--col > .brick:first-child.prepend--col--14,
 .brick.unigrid--col > .brick.first.prepend--col--14 {
-  margin-top: 532px; }
+  margin-top: 534px; }
 
 .unigrid--col > .brick.append--col--14,
 .brick.unigrid--col > .brick:last-child.append--col--14,
 .brick.unigrid--col > .brick.last.append--col--14 {
-  margin-bottom: 532px; }
+  margin-bottom: 534px; }
 
 .brick--col--15 {
   height: 558px;
@@ -1498,12 +1582,12 @@ hr.brick--col {
 .unigrid--col > .brick.prepend--col--15,
 .brick.unigrid--col > .brick:first-child.prepend--col--15,
 .brick.unigrid--col > .brick.first.prepend--col--15 {
-  margin-top: 570px; }
+  margin-top: 572px; }
 
 .unigrid--col > .brick.append--col--15,
 .brick.unigrid--col > .brick:last-child.append--col--15,
 .brick.unigrid--col > .brick.last.append--col--15 {
-  margin-bottom: 570px; }
+  margin-bottom: 572px; }
 
 .brick--col--16 {
   height: 596px;
@@ -1520,12 +1604,12 @@ hr.brick--col {
 .unigrid--col > .brick.prepend--col--16,
 .brick.unigrid--col > .brick:first-child.prepend--col--16,
 .brick.unigrid--col > .brick.first.prepend--col--16 {
-  margin-top: 608px; }
+  margin-top: 610px; }
 
 .unigrid--col > .brick.append--col--16,
 .brick.unigrid--col > .brick:last-child.append--col--16,
 .brick.unigrid--col > .brick.last.append--col--16 {
-  margin-bottom: 608px; }
+  margin-bottom: 610px; }
 
 .brick--col--17 {
   height: 634px;
@@ -1542,12 +1626,12 @@ hr.brick--col {
 .unigrid--col > .brick.prepend--col--17,
 .brick.unigrid--col > .brick:first-child.prepend--col--17,
 .brick.unigrid--col > .brick.first.prepend--col--17 {
-  margin-top: 646px; }
+  margin-top: 648px; }
 
 .unigrid--col > .brick.append--col--17,
 .brick.unigrid--col > .brick:last-child.append--col--17,
 .brick.unigrid--col > .brick.last.append--col--17 {
-  margin-bottom: 646px; }
+  margin-bottom: 648px; }
 
 .brick--col--18 {
   height: 672px;
@@ -1564,12 +1648,12 @@ hr.brick--col {
 .unigrid--col > .brick.prepend--col--18,
 .brick.unigrid--col > .brick:first-child.prepend--col--18,
 .brick.unigrid--col > .brick.first.prepend--col--18 {
-  margin-top: 684px; }
+  margin-top: 686px; }
 
 .unigrid--col > .brick.append--col--18,
 .brick.unigrid--col > .brick:last-child.append--col--18,
 .brick.unigrid--col > .brick.last.append--col--18 {
-  margin-bottom: 684px; }
+  margin-bottom: 686px; }
 
 .brick--col--19 {
   height: 710px;
@@ -1586,12 +1670,12 @@ hr.brick--col {
 .unigrid--col > .brick.prepend--col--19,
 .brick.unigrid--col > .brick:first-child.prepend--col--19,
 .brick.unigrid--col > .brick.first.prepend--col--19 {
-  margin-top: 722px; }
+  margin-top: 724px; }
 
 .unigrid--col > .brick.append--col--19,
 .brick.unigrid--col > .brick:last-child.append--col--19,
 .brick.unigrid--col > .brick.last.append--col--19 {
-  margin-bottom: 722px; }
+  margin-bottom: 724px; }
 
 .brick--col--20 {
   height: 748px;
@@ -1608,12 +1692,12 @@ hr.brick--col {
 .unigrid--col > .brick.prepend--col--20,
 .brick.unigrid--col > .brick:first-child.prepend--col--20,
 .brick.unigrid--col > .brick.first.prepend--col--20 {
-  margin-top: 760px; }
+  margin-top: 762px; }
 
 .unigrid--col > .brick.append--col--20,
 .brick.unigrid--col > .brick:last-child.append--col--20,
 .brick.unigrid--col > .brick.last.append--col--20 {
-  margin-bottom: 760px; }
+  margin-bottom: 762px; }
 
 .brick--col--21 {
   height: 786px;
@@ -1630,12 +1714,12 @@ hr.brick--col {
 .unigrid--col > .brick.prepend--col--21,
 .brick.unigrid--col > .brick:first-child.prepend--col--21,
 .brick.unigrid--col > .brick.first.prepend--col--21 {
-  margin-top: 798px; }
+  margin-top: 800px; }
 
 .unigrid--col > .brick.append--col--21,
 .brick.unigrid--col > .brick:last-child.append--col--21,
 .brick.unigrid--col > .brick.last.append--col--21 {
-  margin-bottom: 798px; }
+  margin-bottom: 800px; }
 
 .brick--col--22 {
   height: 824px;
@@ -1652,12 +1736,12 @@ hr.brick--col {
 .unigrid--col > .brick.prepend--col--22,
 .brick.unigrid--col > .brick:first-child.prepend--col--22,
 .brick.unigrid--col > .brick.first.prepend--col--22 {
-  margin-top: 836px; }
+  margin-top: 838px; }
 
 .unigrid--col > .brick.append--col--22,
 .brick.unigrid--col > .brick:last-child.append--col--22,
 .brick.unigrid--col > .brick.last.append--col--22 {
-  margin-bottom: 836px; }
+  margin-bottom: 838px; }
 
 .brick--col--23 {
   height: 862px;
@@ -1674,12 +1758,12 @@ hr.brick--col {
 .unigrid--col > .brick.prepend--col--23,
 .brick.unigrid--col > .brick:first-child.prepend--col--23,
 .brick.unigrid--col > .brick.first.prepend--col--23 {
-  margin-top: 874px; }
+  margin-top: 876px; }
 
 .unigrid--col > .brick.append--col--23,
 .brick.unigrid--col > .brick:last-child.append--col--23,
 .brick.unigrid--col > .brick.last.append--col--23 {
-  margin-bottom: 874px; }
+  margin-bottom: 876px; }
 
 .brick--col--24 {
   height: 900px;
@@ -1696,29 +1780,21 @@ hr.brick--col {
 .unigrid--col > .brick.prepend--col--24,
 .brick.unigrid--col > .brick:first-child.prepend--col--24,
 .brick.unigrid--col > .brick.first.prepend--col--24 {
-  margin-top: 912px; }
+  margin-top: 914px; }
 
 .unigrid--col > .brick.append--col--24,
 .brick.unigrid--col > .brick:last-child.append--col--24,
 .brick.unigrid--col > .brick.last.append--col--24 {
-  margin-bottom: 912px; }
+  margin-bottom: 914px; }
 
-/*------------------------------------*\
-  #MOBILE-GRID-ROW
-\*------------------------------------*/
 @media only screen and (max-width: 767px) {
+  /*------------------------------------*\
+    #MOBILE-GRID-ROW
+  \*------------------------------------*/
   .brick {
     max-width: 100%;
     width: 100%;
     flex-basis: 100%; }
-
-  .brick:first-child,
-  .brick.first {
-    margin-left: 2px; }
-
-  .brick:last-child,
-  .brick.last {
-    margin-right: 2px; }
 
   .brick-mobile--hide {
     display: none; }
@@ -2128,16 +2204,18 @@ hr.brick--col {
   .append-mobile--12,
   .last.append-mobile--12,
   .brick:last-child.append-mobile--12 {
-    margin-right: calc(100% + 2px) !important; } }
-/*------------------------------------*\
-  #MOBILE-GRID-COLUMN
-\*------------------------------------*/
-@media only screen and (max-width: 767px) {
+    margin-right: calc(100% + 2px) !important; }
+
+  /*------------------------------------*\
+    #MOBILE-GRID-COLUMN
+  \*------------------------------------*/
   .unigrid--col > .unigrid--row {
     height: 100%;
-    max-height: 100%; }
+    max-height: 100%;
+    flex-basis: 100%; }
 
   .unigrid--col > .brick {
+    margin: 2px;
     max-width: calc(100% - 12px); }
 
   .brick-mobile--col--1 {
@@ -2450,6 +2528,45 @@ hr.brick--col {
   .unigrid--col > .brick.append--col--12,
   .brick.unigrid--col > .brick:last-child.append--col--12,
   .brick.unigrid--col > .brick.last.append--col--12 {
-    margin-bottom: 458px; } }
+    margin-bottom: 458px; }
+
+  /*------------------------------------*\
+    #MOBILE-GRID-ORDER
+  \*------------------------------------*/
+  .order-mobile--1 {
+    order: 1; }
+
+  .order-mobile--2 {
+    order: 2; }
+
+  .order-mobile--3 {
+    order: 3; }
+
+  .order-mobile--4 {
+    order: 4; }
+
+  .order-mobile--5 {
+    order: 5; }
+
+  .order-mobile--6 {
+    order: 6; }
+
+  .order-mobile--7 {
+    order: 7; }
+
+  .order-mobile--8 {
+    order: 8; }
+
+  .order-mobile--9 {
+    order: 9; }
+
+  .order-mobile--10 {
+    order: 10; }
+
+  .order-mobile--11 {
+    order: 11; }
+
+  .order-mobile--12 {
+    order: 12; } }
 
 /*# sourceMappingURL=unigrid.css.map */

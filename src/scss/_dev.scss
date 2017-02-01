@@ -29,15 +29,11 @@
   z-index: 1030;
 }
 
-.mobile-col-grid > .brick:first-child,
-.mobile-col-grid > .brick.first {
+.mobile-col-grid > .brick {
   margin-left: 0;
-}
-
-.mobile-col-grid > .brick:last-child,
-.mobile-col-grid > .brick.last {
   margin-right: 0;
 }
+
 .show-grid.grid,
 .show-grid.col-grid,
 .show-grid.mobile-grid,

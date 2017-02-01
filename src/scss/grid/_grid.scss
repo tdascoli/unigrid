@@ -5,16 +5,7 @@
   min-height: ($grid-brick-height - $grid-gutter - $grid-brick-padding-ttb);
 }
 
-.brick:first-child,
-.brick.first {
-  margin-left: 0;
-}
-
-.brick:last-child,
-.brick.last {
-  margin-right: 0;
-}
-
+// todo img not perfect...
 img.brick,
 .brick--img {
   margin: $grid-half-gutter;
@@ -53,3 +44,17 @@ hr {
 
   margin: 0 auto;
 }
+
+@media #{$media-desktop} {
+  .brick:first-child,
+  .brick.first {
+    margin-left: 0;
+  }
+
+  .brick:last-child,
+  .brick.last {
+    margin-right: 0;
+  }
+}
+
+@include grid-order($grid);

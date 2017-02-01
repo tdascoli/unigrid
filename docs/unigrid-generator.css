@@ -376,12 +376,8 @@ div.pifa-error {
   display: none;
   z-index: 1030; }
 
-.mobile-col-grid > .brick:first-child,
-.mobile-col-grid > .brick.first {
-  margin-left: 0; }
-
-.mobile-col-grid > .brick:last-child,
-.mobile-col-grid > .brick.last {
+.mobile-col-grid > .brick {
+  margin-left: 0;
   margin-right: 0; }
 
 .show-grid.grid,
