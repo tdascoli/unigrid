@@ -6,8 +6,13 @@
   color: #fff;
   background-color: rgba(204, 204, 204, 1);
 
+  min-height: ($grid-brick-height - $grid-brick-padding-ttb - $grid-gutter);
   height: 100%;
   width: 100%;
+}
+
+.show-border .unigrid--col .content {
+  background-color: rgba(139, 0, 0, 0.75);
 }
 
 
@@ -22,6 +27,16 @@
   display: none;
 
   z-index: 1030;
+}
+
+.mobile-col-grid > .brick:first-child,
+.mobile-col-grid > .brick.first {
+  margin-left: 0;
+}
+
+.mobile-col-grid > .brick:last-child,
+.mobile-col-grid > .brick.last {
+  margin-right: 0;
 }
 .show-grid.grid,
 .show-grid.col-grid,

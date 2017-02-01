@@ -70,6 +70,7 @@ $(function () {
     // generate col grid
     $('.col-grid').css('width',cardWidth);
     $('.col-grid').css('height',cardHeight);
+    $('.col-grid').css('max-height',cardHeight);
     $('.col-grid').append('<div class="brick brick--col--1"><div>1</div></div>');
     var colGridHeight=$('.brick--col--1').outerHeight(true);
     var colGrid=cardHeight/colGridHeight;
@@ -92,16 +93,19 @@ $(function () {
     });
 
     $('.mobile-grid').css('height',cardHeight);
+    $('.mobile-grid').css('max-height',cardHeight);
     // end generate mobile row grid
 
     // generate mobile col grid
-    $('.mobile-col-grid').css('width',cardWidth);
-    $('.mobile-col-grid').css('height',cardHeight);
     $('.mobile-col-grid').append('<div class="brick brick-mobile--col--1 test"><div>1</div></div>');
     var colMobileGridHeight=$('.brick-mobile--col--1').outerHeight(true);
     var colMobileGrid=cardHeight/colMobileGridHeight;
     for (i = 2; i <= colMobileGrid; i++) {
         $('.mobile-col-grid').append('<div class="brick brick-mobile--col--1"><div>' + i + '</div></div>');
     }
+
+    $('.mobile-col-grid').css('width',cardWidth);
+    $('.mobile-col-grid').css('height',cardHeight);
+    $('.mobile-col-grid').css('max-height',cardHeight);
     // end generate mobile col grid
 });

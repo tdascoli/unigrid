@@ -1,6 +1,8 @@
 @mixin grid-row ($var) {
   @for $i from 1 through $var {
     .brick--#{$i} {
+      min-height: ($mobile-grid-brick-height - (2*$grid-brick-padding-ttb));
+
       width: ((($grid-brick-width+$grid-gutter)*$i) - (2*$grid-brick-padding-rtl))-$grid-gutter;
       max-width: ((($grid-brick-width+$grid-gutter)*$i) - (2*$grid-brick-padding-rtl))-$grid-gutter;
       flex-basis: ((($grid-brick-width+$grid-gutter)*$i) - (2*$grid-brick-padding-rtl))-$grid-gutter;
@@ -46,8 +48,8 @@
 }
 
 .brick.unigrid--row > .brick {
-  margin-top: 0;
-  margin-bottom: 0;
+  //margin-top: 0;
+  //margin-bottom: 0;
 }
 
 @include grid-row($grid);

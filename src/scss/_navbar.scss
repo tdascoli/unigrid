@@ -20,7 +20,6 @@ body {
   a,
   a:visited {
     color: $navbar-default-color;
-    padding: $grid-brick-padding-ttb $grid-brick-padding-rtl;
   }
 
   a.is-active {
@@ -31,13 +30,9 @@ body {
 @media #{$media-phone} {
   .navbar-nav {
 
-    line-height: 1.0;
+    line-height: 1.25;
 
-    a,
-    a:visited,
-    a.is-active {
-      font-size: 0.68em;
-    }
+    font-size: 0.68em;
   }
 }
 

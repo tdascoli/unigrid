@@ -360,8 +360,12 @@ div.pifa-error {
 .show-border .content {
   color: #fff;
   background-color: #cccccc;
+  min-height: 26px;
   height: 100%;
   width: 100%; }
+
+.show-border .unigrid--col .content {
+  background-color: rgba(139, 0, 0, 0.75); }
 
 .grid,
 .col-grid,
@@ -371,6 +375,14 @@ div.pifa-error {
   position: absolute;
   display: none;
   z-index: 1030; }
+
+.mobile-col-grid > .brick:first-child,
+.mobile-col-grid > .brick.first {
+  margin-left: 0; }
+
+.mobile-col-grid > .brick:last-child,
+.mobile-col-grid > .brick.last {
+  margin-right: 0; }
 
 .show-grid.grid,
 .show-grid.col-grid,

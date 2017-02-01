@@ -1,5 +1,5 @@
 $(function () {
-    $('#show-border').click(function () {
+    $('.show-border').click(function () {
         $(this).toggleClass('is-active');
         $('#show-grid').toggleClass('show-border');
     });

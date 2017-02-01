@@ -1,6 +1,18 @@
 .brick {
   margin: $grid-half-gutter;
   padding: $grid-brick-padding-ttb $grid-brick-padding-rtl;
+
+  min-height: ($grid-brick-height - $grid-gutter - $grid-brick-padding-ttb);
+}
+
+.brick:first-child,
+.brick.first {
+  margin-left: 0;
+}
+
+.brick:last-child,
+.brick.last {
+  margin-right: 0;
 }
 
 img.brick,
@@ -16,16 +28,6 @@ img.brick,
   display: block;
 }
 
-.brick:first-child,
-.brick.first {
-  margin-left: 0;
-}
-
-.brick:last-child,
-.brick.last {
-  margin-right: 0;
-}
-
 .brick--inverse {
   background: $default-color-inverse;
   color: $default-color;
@@ -37,6 +39,12 @@ img.brick,
 }
 .brick--show {
   display: flex;
+}
+
+hr {
+  margin: ((($grid-brick-height + $grid-gutter)/2) - $grid-hr-border) 0;
+
+  border: $grid-hr-border solid #000000;
 }
 
 .container {

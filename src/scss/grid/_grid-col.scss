@@ -1,33 +1,20 @@
 @mixin grid-col ($var) {
   @for $i from 1 through $var {
     .brick--col--#{$i} {
-      height: ((($grid-brick-height+$grid-gutter)*$i) - (2*$grid-brick-padding-ttb))-$grid-gutter;
-      max-height: ((($grid-brick-height+$grid-gutter)*$i) - (2*$grid-brick-padding-ttb))-$grid-gutter;
-      flex-basis: ((($grid-brick-height+$grid-gutter)*$i) - (2*$grid-brick-padding-ttb))-$grid-gutter;
+      height: (($grid-brick-height+$grid-gutter)*$i);
+      max-height: (($grid-brick-height+$grid-gutter)*$i);
+      flex-basis: (($grid-brick-height+$grid-gutter)*$i);
 
       width: 100%;
     }
 
-    .unigrid--row.brick--col--#{$i} {
-      height: (($grid-brick-height+$grid-gutter)*$i)-$grid-gutter;
-      max-height: (($grid-brick-height+$grid-gutter)*$i)-$grid-gutter;
-      flex-basis: (($grid-brick-height+$grid-gutter)*$i)-$grid-gutter;
-
-      width: 100%;
-    }
-
-    .unigrid--col > .brick.prepend--col--#{$i} {
-      margin-top: ((($grid-brick-height+$grid-gutter)*$i) + $grid-half-gutter);
-    }
+    .unigrid--col > .brick.prepend--col--#{$i},
     .brick.unigrid--col > .brick:first-child.prepend--col--#{$i},
     .brick.unigrid--col > .brick.first.prepend--col--#{$i} {
       margin-top: (($grid-brick-height+$grid-gutter)*$i);
     }
 
-    .unigrid--col > .brick.append--col--#{$i} {
-      margin-bottom: ((($grid-brick-height+$grid-gutter)*$i) + $grid-half-gutter);
-    }
-
+    .unigrid--col > .brick.append--col--#{$i},
     .brick.unigrid--col > .brick:last-child.append--col--#{$i},
     .brick.unigrid--col > .brick.last.append--col--#{$i} {
       margin-bottom: (($grid-brick-height+$grid-gutter)*$i);
@@ -36,7 +23,7 @@
 }
 
 .unigrid--col {
-  height: 100%;
+  max-height: 100%;
   width: 100%;
 
   padding: 0;
@@ -58,6 +45,7 @@
 
 .unigrid--col > .brick.unigrid--row {
   padding: 0;
+  margin: 0;
 
   max-width: 100%;
 }
