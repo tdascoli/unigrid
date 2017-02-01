@@ -1176,6 +1176,12 @@ hr.brick--col {
   width: 100%; }
 
 .brick--col--1 {
+  height: 26px;
+  max-height: 26px;
+  flex-basis: 26px;
+  width: 100%; }
+
+.unigrid--row.brick--col--1 {
   height: 38px;
   max-height: 38px;
   flex-basis: 38px;
@@ -1192,6 +1198,12 @@ hr.brick--col {
   margin-bottom: 38px; }
 
 .brick--col--2 {
+  height: 64px;
+  max-height: 64px;
+  flex-basis: 64px;
+  width: 100%; }
+
+.unigrid--row.brick--col--2 {
   height: 76px;
   max-height: 76px;
   flex-basis: 76px;
@@ -1208,6 +1220,12 @@ hr.brick--col {
   margin-bottom: 76px; }
 
 .brick--col--3 {
+  height: 102px;
+  max-height: 102px;
+  flex-basis: 102px;
+  width: 100%; }
+
+.unigrid--row.brick--col--3 {
   height: 114px;
   max-height: 114px;
   flex-basis: 114px;
@@ -1224,6 +1242,12 @@ hr.brick--col {
   margin-bottom: 114px; }
 
 .brick--col--4 {
+  height: 140px;
+  max-height: 140px;
+  flex-basis: 140px;
+  width: 100%; }
+
+.unigrid--row.brick--col--4 {
   height: 152px;
   max-height: 152px;
   flex-basis: 152px;
@@ -1240,6 +1264,12 @@ hr.brick--col {
   margin-bottom: 152px; }
 
 .brick--col--5 {
+  height: 178px;
+  max-height: 178px;
+  flex-basis: 178px;
+  width: 100%; }
+
+.unigrid--row.brick--col--5 {
   height: 190px;
   max-height: 190px;
   flex-basis: 190px;
@@ -1256,6 +1286,12 @@ hr.brick--col {
   margin-bottom: 190px; }
 
 .brick--col--6 {
+  height: 216px;
+  max-height: 216px;
+  flex-basis: 216px;
+  width: 100%; }
+
+.unigrid--row.brick--col--6 {
   height: 228px;
   max-height: 228px;
   flex-basis: 228px;
@@ -1272,6 +1308,12 @@ hr.brick--col {
   margin-bottom: 228px; }
 
 .brick--col--7 {
+  height: 254px;
+  max-height: 254px;
+  flex-basis: 254px;
+  width: 100%; }
+
+.unigrid--row.brick--col--7 {
   height: 266px;
   max-height: 266px;
   flex-basis: 266px;
@@ -1288,6 +1330,12 @@ hr.brick--col {
   margin-bottom: 266px; }
 
 .brick--col--8 {
+  height: 292px;
+  max-height: 292px;
+  flex-basis: 292px;
+  width: 100%; }
+
+.unigrid--row.brick--col--8 {
   height: 304px;
   max-height: 304px;
   flex-basis: 304px;
@@ -1304,6 +1352,12 @@ hr.brick--col {
   margin-bottom: 304px; }
 
 .brick--col--9 {
+  height: 330px;
+  max-height: 330px;
+  flex-basis: 330px;
+  width: 100%; }
+
+.unigrid--row.brick--col--9 {
   height: 342px;
   max-height: 342px;
   flex-basis: 342px;
@@ -1320,6 +1374,12 @@ hr.brick--col {
   margin-bottom: 342px; }
 
 .brick--col--10 {
+  height: 368px;
+  max-height: 368px;
+  flex-basis: 368px;
+  width: 100%; }
+
+.unigrid--row.brick--col--10 {
   height: 380px;
   max-height: 380px;
   flex-basis: 380px;
@@ -1336,6 +1396,12 @@ hr.brick--col {
   margin-bottom: 380px; }
 
 .brick--col--11 {
+  height: 406px;
+  max-height: 406px;
+  flex-basis: 406px;
+  width: 100%; }
+
+.unigrid--row.brick--col--11 {
   height: 418px;
   max-height: 418px;
   flex-basis: 418px;
@@ -1352,6 +1418,12 @@ hr.brick--col {
   margin-bottom: 418px; }
 
 .brick--col--12 {
+  height: 444px;
+  max-height: 444px;
+  flex-basis: 444px;
+  width: 100%; }
+
+.unigrid--row.brick--col--12 {
   height: 456px;
   max-height: 456px;
   flex-basis: 456px;
@@ -1368,6 +1440,12 @@ hr.brick--col {
   margin-bottom: 456px; }
 
 .brick--col--13 {
+  height: 482px;
+  max-height: 482px;
+  flex-basis: 482px;
+  width: 100%; }
+
+.unigrid--row.brick--col--13 {
   height: 494px;
   max-height: 494px;
   flex-basis: 494px;
@@ -1384,6 +1462,12 @@ hr.brick--col {
   margin-bottom: 494px; }
 
 .brick--col--14 {
+  height: 520px;
+  max-height: 520px;
+  flex-basis: 520px;
+  width: 100%; }
+
+.unigrid--row.brick--col--14 {
   height: 532px;
   max-height: 532px;
   flex-basis: 532px;
@@ -1400,6 +1484,12 @@ hr.brick--col {
   margin-bottom: 532px; }
 
 .brick--col--15 {
+  height: 558px;
+  max-height: 558px;
+  flex-basis: 558px;
+  width: 100%; }
+
+.unigrid--row.brick--col--15 {
   height: 570px;
   max-height: 570px;
   flex-basis: 570px;
@@ -1416,6 +1506,12 @@ hr.brick--col {
   margin-bottom: 570px; }
 
 .brick--col--16 {
+  height: 596px;
+  max-height: 596px;
+  flex-basis: 596px;
+  width: 100%; }
+
+.unigrid--row.brick--col--16 {
   height: 608px;
   max-height: 608px;
   flex-basis: 608px;
@@ -1432,6 +1528,12 @@ hr.brick--col {
   margin-bottom: 608px; }
 
 .brick--col--17 {
+  height: 634px;
+  max-height: 634px;
+  flex-basis: 634px;
+  width: 100%; }
+
+.unigrid--row.brick--col--17 {
   height: 646px;
   max-height: 646px;
   flex-basis: 646px;
@@ -1448,6 +1550,12 @@ hr.brick--col {
   margin-bottom: 646px; }
 
 .brick--col--18 {
+  height: 672px;
+  max-height: 672px;
+  flex-basis: 672px;
+  width: 100%; }
+
+.unigrid--row.brick--col--18 {
   height: 684px;
   max-height: 684px;
   flex-basis: 684px;
@@ -1464,6 +1572,12 @@ hr.brick--col {
   margin-bottom: 684px; }
 
 .brick--col--19 {
+  height: 710px;
+  max-height: 710px;
+  flex-basis: 710px;
+  width: 100%; }
+
+.unigrid--row.brick--col--19 {
   height: 722px;
   max-height: 722px;
   flex-basis: 722px;
@@ -1480,6 +1594,12 @@ hr.brick--col {
   margin-bottom: 722px; }
 
 .brick--col--20 {
+  height: 748px;
+  max-height: 748px;
+  flex-basis: 748px;
+  width: 100%; }
+
+.unigrid--row.brick--col--20 {
   height: 760px;
   max-height: 760px;
   flex-basis: 760px;
@@ -1496,6 +1616,12 @@ hr.brick--col {
   margin-bottom: 760px; }
 
 .brick--col--21 {
+  height: 786px;
+  max-height: 786px;
+  flex-basis: 786px;
+  width: 100%; }
+
+.unigrid--row.brick--col--21 {
   height: 798px;
   max-height: 798px;
   flex-basis: 798px;
@@ -1512,6 +1638,12 @@ hr.brick--col {
   margin-bottom: 798px; }
 
 .brick--col--22 {
+  height: 824px;
+  max-height: 824px;
+  flex-basis: 824px;
+  width: 100%; }
+
+.unigrid--row.brick--col--22 {
   height: 836px;
   max-height: 836px;
   flex-basis: 836px;
@@ -1528,6 +1660,12 @@ hr.brick--col {
   margin-bottom: 836px; }
 
 .brick--col--23 {
+  height: 862px;
+  max-height: 862px;
+  flex-basis: 862px;
+  width: 100%; }
+
+.unigrid--row.brick--col--23 {
   height: 874px;
   max-height: 874px;
   flex-basis: 874px;
@@ -1544,6 +1682,12 @@ hr.brick--col {
   margin-bottom: 874px; }
 
 .brick--col--24 {
+  height: 900px;
+  max-height: 900px;
+  flex-basis: 900px;
+  width: 100%; }
+
+.unigrid--row.brick--col--24 {
   height: 912px;
   max-height: 912px;
   flex-basis: 912px;
