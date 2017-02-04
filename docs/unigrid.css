@@ -563,6 +563,9 @@ hr {
 .order--24 {
   order: 24; }
 
+/*------------------------------------*\
+  #GRID-ROW
+\*------------------------------------*/
 .unigrid--row {
   width: 908px;
   padding: 0;
@@ -1249,6 +1252,9 @@ img.brick--24 {
 .brick:last-child.append--24 {
   margin-right: 912px; }
 
+/*------------------------------------*\
+  #GRID-COL
+\*------------------------------------*/
 .unigrid--col {
   max-height: 100%;
   width: 100%;

@@ -17,3 +17,12 @@ $mobile-grid-brick-height: $grid-brick-height;
 //* vars.grid divers */
 
 $grid-hr-border: 1px;
+
+//* vars.colors */
+$default-color-inverse: #000;
+$default-color: #fff;
+
+//* vars.responsive */
+$media-phone: "only screen and (max-width : 767px)";
+$media-tablet: "only screen and (min-width: 768px)";
+$media-desktop: "only screen and (min-width: 1024px)";
