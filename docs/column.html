@@ -10,24 +10,39 @@
     <link rel="stylesheet" href="example.css"/>
 </head>
 <body>
-<div class="toolbar">
-    <a id="hamburger-grid" class="c-hamburger c-hamburger--htx">
-        <span>toggle menu</span>
-    </a>
 
-    <a id="hamburger-col-grid" class="c-hamburger c-hamburger--htx">
-        <span>toggle menu</span>
-    </a>
-</div>
+<nav class="navbar navbar-default navbar-fixed">
+    <div class="container unigrid--row">
 
-<div class="wrap">
+        <div class="brick brick--12 brick-mobile--6">
+            <div class="navbar-brand">
+                <a href="index.html">Unigrid</a>
+            </div>
+        </div>
+        <div class="brick brick--12 brick-mobile--6 unigrid--row">
+            <div class="brick brick--6">
+                <div class="navbar-nav">
+                    <div class="navbar-nav">
+                        Toggle <a href="#" id="hamburger-grid">Vertical</a> / <a href="#" id="hamburger-col-grid">Horizontal</a> Grid<br />
+                        <a href="#" class="show-border">Toggle Border</a><br/>
+                    </div>
+                </div>
+            </div>
+            <div class="brick brick--6">
+                <div class="navbar-nav">
+                    <a href="index.html">Index</a>, <a href="unigrid.html">Unigrid</a>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container footer-fixed">
 
     <h2>
         Column-Grid
     </h2>
-    <p>
-        <button id="show-border">Toggle Border</button> <a href="index.html">Back to Grid</a>
-    </p>
     <div class="card card-narrow show-border" id="show-grid">
         <div class="grid unigrid--row"></div>
         <div class="col-grid unigrid--col"></div>
@@ -120,6 +135,12 @@
         </div>
     </div>
 </div>
+
+<footer class="footer footer-default">
+    <div class="container">
+        <span>Made with &hearts; by tdascoli</span>
+    </div>
+</footer>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
