@@ -2,16 +2,16 @@
 @import '_variables';
 
 // typo
-@import '_typography';
+@import 'typography/_typography';
 
-// piktos
-@import '_piktos';
-
-// form
-@import '_form';
+// navbar
+@import 'core/_navbar';
 
 // golden-ratio
-@import '_golden-ratio';
+@import 'core/_golden-ratio';
+
+// form
+@import 'forms/_forms';
 
 // grid-dev
 @import '_dev';

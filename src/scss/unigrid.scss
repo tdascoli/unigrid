@@ -2,19 +2,19 @@
 @import '_variables';
 
 // typo
-@import '_typography';
+@import 'typography/_typography';
 
 // navbar
-@import '_navbar';
-
-// piktos
-@import '_piktos';
-
-// form
-@import '_form';
+@import 'core/_navbar';
 
 // golden-ratio
-@import '_golden-ratio';
+@import 'core/_golden-ratio';
+
+// piktos
+@import 'piktos/_piktos';
+
+// form
+@import 'forms/_forms';
 
 // grid
-@import '_unigrid';
+@import 'grid/_unigrid';

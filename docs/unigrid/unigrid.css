@@ -1,3 +1,18 @@
+/*------------------------------------*\
+  #VARIABLES
+\*------------------------------------*/
+/*------------------------------------*\
+  #VARIABLES-CORE
+\*------------------------------------*/
+/*------------------------------------*\
+  #VARIABLES-TYPO
+\*------------------------------------*/
+/*------------------------------------*\
+  #VARIABLES-FORMS
+\*------------------------------------*/
+/*------------------------------------*\
+  #VARIABLES-PIKTOS
+\*------------------------------------*/
 /* --------------------------------------------------------------
 
    _typography.scss
@@ -19,21 +34,32 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 23px; }
 
-/*
 h1, h2, h3, h4, h5, h6 {
-  font-weight:normal;
-}
-h1 { font-size:$font-size-h1;line-height:1;margin-bottom:0.5em;}
-h2 { font-size:$font-size-h2;margin-bottom:0.75em;}
-h3 { font-size:$font-size-h3;line-height:1;margin-bottom:1em;}
-h4 { font-size:$font-size-h4;line-height:1.25;margin-bottom:1.25em;}
-h5 { font-size:$font-size-h5;font-weight:bold;margin-bottom:1.5em;}
-h6 { font-size:$font-size-h6;font-weight:bold;}
+  padding-top: 0.5em;
+  padding-bottom: 0.25em;
+  margin: 0; }
+
+h1 {
+  font-size: 3em; }
+
+h2 {
+  font-size: 2em; }
+
+h3 {
+  font-size: 1.5em; }
+
+h4 {
+  font-size: 1.2em; }
+
+h5 {
+  font-size: 1em; }
+
+h6 {
+  font-size: 1em; }
 
 h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {
-  margin:0;
-}
-*/
+  margin: 0; }
+
 /*
 p {
   -webkit-margin-before: $paragraph-margin;
@@ -101,59 +127,107 @@ body {
   color: #fff;
   height: 34px; }
 
+/* column
+  $color-rare: #A58E4A;
+*/
+.golden-ratio--column {
+  display: flex;
+  flex-direction: column;
+  height: 100%; }
+
+.golden-ratio--column .column--tall {
+  height: 61.8034%;
+  width: 100%;
+  display: block; }
+
+.golden-ratio--column .column--small {
+  height: 38.1966%;
+  width: 100%;
+  display: block; }
+
+/* row */
+.golden-ratio--row {
+  display: flex;
+  flex-direction: row;
+  height: 100%; }
+
+.row--flex-height {
+  height: auto; }
+
+.golden-ratio--row .row--tall {
+  width: 61.8034%;
+  height: 100%;
+  display: block; }
+
+.golden-ratio--row .row--small {
+  width: 38.1966%;
+  height: 100%;
+  display: block; }
+
+.row--small:first-of-type,
+.row--tall:first-of-type {
+  margin-right: 1em; }
+
+.gold {
+  background-color: gold; }
+
+.black {
+  background-color: #333;
+  color: white; }
+
 /*------------------------------------*\
   #PIKTOS
 \*------------------------------------*/
 .pikto-before::before {
-  content: url("./upload/piktos/pikto-frage.png");
+  content: url("../upload/piktos/pikto-frage.png");
   margin-right: 0.2em;
   vertical-align: middle; }
 
 .pikto-after::after,
 .pikto::after {
-  content: url("./upload/piktos/pikto-frage.png");
+  content: url("../upload/piktos/pikto-frage.png");
   margin-left: 0.2em;
   vertical-align: middle; }
 
 .pikto--default.pikto-before::before,
 .pikto--default.pikto-after::after {
-  content: url("./upload/piktos/pikto-frage.png"); }
+  content: url("../upload/piktos/pikto-frage.png"); }
 
 .pikto--ai.pikto-before::before,
 .pikto--ai.pikto-after::after,
 .pikto[href$='.ai']::after {
-  content: url("./upload/piktos/pikto-ai.png"); }
+  content: url("../upload/piktos/pikto-ai.png"); }
 
 .pikto--audio.pikto-before::before,
 .pikto--audio.pikto-after::after,
 .pikto[href$='.wav']::after,
 .pikto[href$='.mp3']::after {
-  content: url("./upload/piktos/pikto-audio.png"); }
+  content: url("../upload/piktos/pikto-audio.png"); }
 
 .pikto--image.pikto-before::before,
 .pikto--image.pikto-after::after {
-  content: url("./upload/piktos/pikto-bild.png"); }
+  content: url("../upload/piktos/pikto-bild.png"); }
 
 .pikto--mail.pikto-before::before,
 .pikto--mail.pikto-after::after,
 .pikto[href^='mailto:']::after {
-  content: url("./upload/piktos/pikto-brief.png"); }
+  content: url("../upload/piktos/pikto-brief.png"); }
 
 .pikto--emf.pikto-before::before,
 .pikto--emf.pikto-after::after,
 .pikto[href$='.emf']::after {
-  content: url("./upload/piktos/pikto-emf.png"); }
+  content: url("../upload/piktos/pikto-emf.png"); }
 
 .pikto--eps.pikto-before::before,
 .pikto--eps.pikto-after::after,
 .pikto[href$='.eps']::after {
-  content: url("./upload/piktos/pikto-eps.png"); }
+  content: url("../upload/piktos/pikto-eps.png"); }
 
 .pikto--excel.pikto-before::before,
 .pikto--excel.pikto-after::after,
 .pikto[href$='.xls']::after,
 .pikto[href$='.xlsx']::after {
-  content: url("./upload/piktos/pikto-excel.png"); }
+  content: url("../upload/piktos/pikto-excel.png"); }
 
 .pikto--video.pikto-before::before,
 .pikto--video.pikto-after::after,
@@ -162,79 +236,79 @@ body {
 .pikto[href$='.mpg']::after,
 .pikto[href$='.mpeg']::after,
 .pikto[href$='.wmv']::after {
-  content: url("./upload/piktos/pikto-film.png"); }
+  content: url("../upload/piktos/pikto-film.png"); }
 
 .pikto--gif.pikto-before::before,
 .pikto--gif.pikto-after::after,
 .pikto[href$='.gif']::after {
-  content: url("./upload/piktos/pikto-gif.png"); }
+  content: url("../upload/piktos/pikto-gif.png"); }
 
 .pikto--indd.pikto-before::before,
 .pikto--indd.pikto-after::after,
 .pikto[href$='.indd']::after {
-  content: url("./upload/piktos/pikto-indd.png"); }
+  content: url("../upload/piktos/pikto-indd.png"); }
 
 .pikto--link-intern.pikto-before::before,
 .pikto--link-intern.pikto-after::after,
 .pikto[href^='http']::after {
-  content: url("./upload/piktos/pikto-linkintern.png"); }
+  content: url("../upload/piktos/pikto-linkintern.png"); }
 
 .pikto--link.pikto-before::before,
 .pikto--link.pikto-after::after,
 .pikto[target='_blank']::after {
-  content: url("./upload/piktos/pikto-internet.png"); }
+  content: url("../upload/piktos/pikto-internet.png"); }
 
 .pikto--jpg.pikto-before::before,
 .pikto--jpg.pikto-after::after,
 .pikto[href$='.jpg']::after,
 .pikto[href$='.jpeg']::after {
-  content: url("./upload/piktos/pikto-jpg.png"); }
+  content: url("../upload/piktos/pikto-jpg.png"); }
 
 .pikto--pdf.pikto-before::before,
 .pikto--pdf.pikto-after::after,
 .pikto[href$='.pdf']::after {
-  content: url("./upload/piktos/pikto-pdf.png"); }
+  content: url("../upload/piktos/pikto-pdf.png"); }
 
 .pikto--png.pikto-before::before,
 .pikto--png.pikto-after::after,
 .pikto[href$='.png']::after {
-  content: url("./upload/piktos/pikto-png.png"); }
+  content: url("../upload/piktos/pikto-png.png"); }
 
 .pikto--ppt.pikto-before::before,
 .pikto--ppt.pikto-after::after,
 .pikto[href$='.ppt']::after,
 .pikto[href$='.pptx']::after {
-  content: url("./upload/piktos/pikto-powerpoint.png"); }
+  content: url("../upload/piktos/pikto-powerpoint.png"); }
 
 .pikto--psd.pikto-before::before,
 .pikto--psd.pikto-after::after,
 .pikto[href$='.psd']::after {
-  content: url("./upload/piktos/pikto-psd.png"); }
+  content: url("../upload/piktos/pikto-psd.png"); }
 
 .pikto--qt.pikto-before::before,
 .pikto--qt.pikto-after::after {
-  content: url("./upload/piktos/pikto-quicktime.png"); }
+  content: url("../upload/piktos/pikto-quicktime.png"); }
 
 .pikto--swf.pikto-before::before,
 .pikto--swf.pikto-after::after,
 .pikto[href$='.swf']::after {
-  content: url("./upload/piktos/pikto-swf.png"); }
+  content: url("../upload/piktos/pikto-swf.png"); }
 
 .pikto--tif.pikto-before::before,
 .pikto--tif.pikto-after::after,
 .pikto[href$='.tif']::after {
-  content: url("./upload/piktos/pikto-tif.png"); }
+  content: url("../upload/piktos/pikto-tif.png"); }
 
 .pikto--word.pikto-before::before,
 .pikto--word.pikto-after::after,
 .pikto[href$='.doc']::after,
 .pikto[href$='.docx']::after {
-  content: url("./upload/piktos/pikto-word.png"); }
+  content: url("../upload/piktos/pikto-word.png"); }
 
 .pikto--zip.pikto-before::before,
 .pikto--zip.pikto-after::after,
 .pikto[href$='.zip']::after {
-  content: url("./upload/piktos/pikto-zip.png"); }
+  content: url("../upload/piktos/pikto-zip.png"); }
 
 /* ==== CSS for modules using a PIFA form ==== */
 /* == Positioning labels beneath their form fields ==
@@ -246,7 +320,7 @@ The surrounding division has to clear the floating though. */
 
 .form-group label,
 .pifa-form label {
-  width: calc(30% - 8px);
+  width: calc(38.1966% - 8px);
   float: left;
   padding: 4px; }
 
@@ -295,7 +369,7 @@ is set to all form fields where <n> is its type id. */
 .pifa-field-15 span,
 .pifa-field-4 span,
 .pifa-field-5 span {
-  width: calc(70% - 12px);
+  width: calc(61.8034% - 12px);
   float: left;
   padding: 4px;
   border: 2px solid #333;
@@ -366,54 +440,6 @@ The class pifa-error is set to all divisions containing a field with erroneous
 data. */
 div.pifa-error {
   border: 1px solid red; }
-
-/* column
-  $color-rare: #A58E4A;
-*/
-.golden-ratio--column {
-  display: flex;
-  flex-direction: column;
-  height: 100%; }
-
-.golden-ratio--column .column--tall {
-  height: 61.8034%;
-  width: 100%;
-  display: block; }
-
-.golden-ratio--column .column--small {
-  height: 38.1966%;
-  width: 100%;
-  display: block; }
-
-/* row */
-.golden-ratio--row {
-  display: flex;
-  flex-direction: row;
-  height: 100%; }
-
-.row--flex-height {
-  height: auto; }
-
-.golden-ratio--row .row--tall {
-  width: 61.8034%;
-  height: 100%;
-  display: block; }
-
-.golden-ratio--row .row--small {
-  width: 38.1966%;
-  height: 100%;
-  display: block; }
-
-.row--small:first-of-type,
-.row--tall:first-of-type {
-  margin-right: 1em; }
-
-.gold {
-  background-color: gold; }
-
-.black {
-  background-color: #333;
-  color: white; }
 
 /*------------------------------------*\
   #GRID-MIXINS_REGULAR

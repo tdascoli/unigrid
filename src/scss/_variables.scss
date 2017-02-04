@@ -1,6 +1,6 @@
-//* variables */
-
-@import 'grid/_grid-variables';
+/*------------------------------------*\
+  #VARIABLES
+\*------------------------------------*/
 
 //* vars.colors */
 $default-color-inverse: #000;
@@ -11,51 +11,9 @@ $media-phone: "only screen and (max-width : 767px)";
 $media-tablet: "only screen and (min-width: 768px)";
 $media-desktop: "only screen and (min-width: 1024px)";
 
-//* vars.golden-ratio */
-$phi: 1.61803398875;
-$golden-ratio: 0.61803398875;
-$golden-ratio-tall: percentage($golden-ratio);
-$golden-ratio-small: 100 - percentage($golden-ratio);
-
-//* vars.typo */
-$path-to-fonts:'./';
-$path-to-piktos:'./upload';
-
-//## Font, line-height, and color for body text, headings, and more.
-
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-serif:       Georgia, "Times New Roman", Times, serif;
-//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
-$font-family-base:        $font-family-sans-serif;
-
-$font-size-base:          14px;
-$font-size-large:         ceil((1.25 * $font-size-base));
-$font-size-small:         ceil((0.85 * $font-size-base));
-
-$font-size-h1:            3em;
-$font-size-h2:            2em;
-$font-size-h3:            1.5em;
-$font-size-h4:            1.2em;
-$font-size-h5:            1em;
-$font-size-h6:            1em;
-
-//** Unit-less `line-height` for use in components like buttons.
-$line-height-base:        $phi;
-$line-height-computed:    ceil(($font-size-base * $line-height-base));
-$paragraph-margin:        ceil((($golden-ratio-small/100) * $line-height-computed));
-//$overall-text-height:     ($paragraph-margin * 1px) + $line-height-computed;
-
-$text-color:            #333;
-
-
-//* vars.forms */
-$form-gutter: $grid-gutter;
-$form-half-gutter: ($form-gutter/2);
-$form-padding: $grid-brick-padding-rtl;
-$form-border-width: 2px;
-$form-border-color: $text-color;
-
-//* vars.navbar */
-$navbar-default-background: $default-color-inverse;
-$navbar-default-color: $default-color;
+//* vars.import */
+@import 'core/_core-variables';
+@import 'grid/_grid-variables';
+@import 'typography/_typography-variables';
+@import 'forms/_forms-variables';
+@import 'piktos/_piktos-variables';

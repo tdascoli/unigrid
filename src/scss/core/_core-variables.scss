@@ -1,0 +1,13 @@
+/*------------------------------------*\
+  #VARIABLES-CORE
+\*------------------------------------*/
+
+//* vars.golden-ratio */
+$phi: 1.61803398875;
+$golden-ratio: 0.61803398875;
+$golden-ratio-tall: percentage($golden-ratio);
+$golden-ratio-small: 100 - percentage($golden-ratio);
+
+//* vars.navbar */
+$navbar-default-background: $default-color-inverse;
+$navbar-default-color: $default-color;
