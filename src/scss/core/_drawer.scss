@@ -1,0 +1,57 @@
+@media #{$media-phone} {
+
+  .drawer {
+    position: fixed;
+    right: 0;
+
+    height: 100%;
+    width: 300px;
+
+    margin-right: -300px;
+
+    display: block;
+
+    top: 0;
+
+    z-index: 1035;
+  }
+
+  .drawer-controls {
+    float: left;
+    margin-left: -($hamburger-button-width);
+    padding-top: 10px;
+    height: 100%;
+    position: relative;
+    width: $hamburger-button-width;
+    z-index: 500;
+  }
+
+  .drawer-contents {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+
+    background-color: $drawer-background;
+    color: $text-color;
+    border-left: $drawer-border;
+  }
+
+  .fold {
+    margin-left: 0;
+  }
+
+  .folding {
+    height: 100%;
+    -webkit-transition-property: margin-right;
+    transition-property: margin-right;
+    -webkit-transition-duration: .35s;
+    transition-duration: .35s;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease
+  }
+
+  .fold.open {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

@@ -4,8 +4,14 @@
 // typo
 @import 'typography/_typography';
 
+// core
+@import 'core/_core';
+
 // navbar
 @import 'core/_navbar';
+// hamburger/drawer
+@import 'core/_hamburger';
+@import 'core/_drawer';
 
 // golden-ratio
 @import 'core/_golden-ratio';

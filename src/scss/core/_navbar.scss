@@ -8,32 +8,16 @@ body {
   margin-bottom: -($grid-half-gutter);
 }
 
+.navbar > .container {
+  display: flex;
+}
+
 .navbar-default {
   background: $navbar-default-background;
 
   color: $navbar-default-color;
 
   height: ((2*$grid-brick-height)+$grid-gutter);
-}
-
-.navbar-nav {
-  a,
-  a:visited {
-    color: $navbar-default-color;
-  }
-
-  a.is-active {
-    background: darkgrey;
-  }
-}
-
-@media #{$media-phone} {
-  .navbar-nav {
-
-    line-height: 1.25;
-
-    font-size: 0.68em;
-  }
 }
 
 .navbar-fixed {
@@ -46,26 +30,58 @@ body {
   margin-top: (((2*$grid-brick-height)+$grid-gutter) - $grid-half-gutter);
 }
 
-.navbar-header,
-.navbar-content {
-  margin-top: (((2*$grid-brick-height) - ((2*$grid-brick-height) * $golden-ratio))/2);
-
-  height: calc(100% - #{(((2*$grid-brick-height) - ((2*$grid-brick-height) * $golden-ratio))/2)});
-  width: 50%;
+.navbar-header {
+  width: $golden-ratio-small;
 
   display: inline-block;
 }
 
-.navbar-brand {
-  font-size: (((2*$grid-brick-height)+$grid-gutter) * $golden-ratio);
+.navbar-header + div {
+  width: calc(#{$golden-ratio-tall} - #{$hamburger-button-width});
+
+  display: inline-block;
+}
+
+.navbar .c-hamburger {
+  margin: auto 0;
+}
+
+a.navbar-brand {
+  font-size: $navbar-brand-font-size;
   font-weight: 700;
 
-  padding: (((2*$grid-brick-height) - ((2*$grid-brick-height) * $golden-ratio))/2) 0;
+  color: $navbar-default-color;
+  text-decoration: none;
 
-  a {
+  display: inline-block;
+  line-height: normal;
+}
+
+.navbar-nav {
+  list-style-type: none;
+
+  a,
+  a:visited {
     color: $navbar-default-color;
-    text-decoration: none;
   }
+
+  a.is-active {
+    background: darkgrey;
+  }
+}
+
+.nav > li {
+  margin: $grid-half-gutter;
+
+  display: inline-block;
+}
+
+.nav > li:first-child {
+  margin-left: 0;
+}
+
+.nav > li:last-child {
+  margin-right: 0;
 }
 
 //* footer */
@@ -89,4 +105,47 @@ body {
   color: $navbar-default-color;
 
   height: $grid-brick-height;
+}
+
+//* mobile */
+
+@media #{$media-phone} {
+
+  .navbar-header {
+    width: calc(100% - #{$hamburger-button-width});
+    margin-top: (((2*$grid-brick-height) - ((2*$grid-brick-height) * $golden-ratio))/2);
+  }
+
+  a.navbar-brand {
+    font-size: ceil($navbar-brand-font-size * $golden-ratio);
+  }
+
+  .navbar-nav {
+    a,
+    a:visited {
+      color: black;
+    }
+
+    a.is-active {
+      background: darkgrey;
+    }
+  }
+
+  .nav > li,
+  .nav > li:first-child,
+  .nav > li:last-child{
+    margin: $grid-half-gutter;
+
+    display: block;
+  }
+
+  .navbar .c-hamburger {
+    margin: auto 0;
+  }
+
+  .navbar-header + div {
+    width: 300px;
+
+    display: block;
+  }
 }

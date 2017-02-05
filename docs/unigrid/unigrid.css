@@ -66,6 +66,12 @@ p {
   -webkit-margin-after: 0;
 }
 */
+/*------------------------------------*\
+  #CORE
+\*------------------------------------*/
+ul.no-bullets {
+  list-style-type: none; }
+
 body {
   margin: 0; }
 
@@ -73,21 +79,14 @@ body {
   z-index: 1035;
   margin-bottom: -2px; }
 
+.navbar > .container {
+  display: flex; }
+
 .navbar-default {
   background: #000;
   color: #fff;
   height: 72px; }
 
-.navbar-nav a,
-.navbar-nav a:visited {
-  color: #fff; }
-.navbar-nav a.is-active {
-  background: darkgrey; }
-
-@media only screen and (max-width: 767px) {
-  .navbar-nav {
-    line-height: 1.25;
-    font-size: 0.68em; } }
 .navbar-fixed {
   width: 100%;
   position: fixed;
@@ -96,20 +95,42 @@ body {
 .navbar-fixed + .container {
   margin-top: 70px; }
 
-.navbar-header,
-.navbar-content {
-  margin-top: 12.98684px;
-  height: calc(100% - 12.98684px);
-  width: 50%;
+.navbar-header {
+  width: 38.1966%;
   display: inline-block; }
 
-.navbar-brand {
-  font-size: 44.49845px;
+.navbar-header + div {
+  width: calc(61.8034% - 48px);
+  display: inline-block; }
+
+.navbar .c-hamburger {
+  margin: auto 0; }
+
+a.navbar-brand {
+  font-size: 45px;
   font-weight: 700;
-  padding: 12.98684px 0; }
-  .navbar-brand a {
-    color: #fff;
-    text-decoration: none; }
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  line-height: normal; }
+
+.navbar-nav {
+  list-style-type: none; }
+  .navbar-nav a,
+  .navbar-nav a:visited {
+    color: #fff; }
+  .navbar-nav a.is-active {
+    background: darkgrey; }
+
+.nav > li {
+  margin: 2px;
+  display: inline-block; }
+
+.nav > li:first-child {
+  margin-left: 0; }
+
+.nav > li:last-child {
+  margin-right: 0; }
 
 .footer {
   margin-top: -2px; }
@@ -127,6 +148,298 @@ body {
   color: #fff;
   height: 34px; }
 
+@media only screen and (max-width: 767px) {
+  .navbar-header {
+    width: calc(100% - 48px);
+    margin-top: 12.98684px; }
+
+  a.navbar-brand {
+    font-size: 28px; }
+
+  .navbar-nav a,
+  .navbar-nav a:visited {
+    color: black; }
+  .navbar-nav a.is-active {
+    background: darkgrey; }
+
+  .nav > li,
+  .nav > li:first-child,
+  .nav > li:last-child {
+    margin: 2px;
+    display: block; }
+
+  .navbar .c-hamburger {
+    margin: auto 0; }
+
+  .navbar-header + div {
+    width: 300px;
+    display: block; } }
+/* -----------------------------------------------------------------------------
+
+  HAMBURGER ICONS COMPONENT
+
+----------------------------------------------------------------------------- */
+/**
+ * Toggle Switch Globals
+ *
+ * All switches should take on the class `c-hamburger` as well as their
+ * variant that will give them unique properties. This class is an overview
+ * class that acts as a reset for all versions of the icon.
+ */
+.c-hamburger {
+  display: none;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  font-size: 0;
+  text-indent: -9999px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s; }
+
+@media only screen and (max-width: 767px) {
+  .c-hamburger {
+    display: block; } }
+.c-hamburger:focus {
+  outline: none; }
+
+.c-hamburger span {
+  display: block;
+  position: absolute;
+  top: 22px;
+  left: 8px;
+  right: 8px;
+  height: 4px;
+  background: white; }
+
+.c-hamburger span::before,
+.c-hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  content: ""; }
+
+.c-hamburger span::before {
+  top: -10px; }
+
+.c-hamburger span::after {
+  bottom: -10px; }
+
+/**
+ * Style 1
+ *
+ * Rotating hamburger icon (rot), that simply rotates 90 degrees when activated.
+ * Nothing too fancy, simple transition.
+ */
+.c-hamburger--rot {
+  background-color: black; }
+
+.c-hamburger--rot span {
+  transition: transform 0.3s; }
+
+/* active state, i.e. menu open */
+.drawer.open .c-hamburger--rot,
+.c-hamburger--rot.is-active {
+  background-color: black; }
+
+.drawer.open .c-hamburger--rot span,
+.c-hamburger--rot.is-active span {
+  transform: rotate(90deg); }
+
+/**
+ * Style 2
+ *
+ * Hamburger to "x" (htx). Takes on a hamburger shape, bars slide
+ * down to center and transform into an "x".
+ */
+.c-hamburger--htx {
+  background-color: black; }
+
+.c-hamburger--htx span {
+  transition: background 0s 0.3s; }
+
+.c-hamburger--htx span::before,
+.c-hamburger--htx span::after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s; }
+
+.c-hamburger--htx span::before {
+  transition-property: top, transform; }
+
+.c-hamburger--htx span::after {
+  transition-property: bottom, transform; }
+
+/* active state, i.e. menu open */
+.drawer.open .c-hamburger--htx,
+.c-hamburger--htx.is-active {
+  background-color: black; }
+
+.drawer.open .c-hamburger--htx span,
+.c-hamburger--htx.is-active span {
+  background: none; }
+
+.drawer.open .c-hamburger--htx span::before,
+.c-hamburger--htx.is-active span::before {
+  top: 0;
+  transform: rotate(45deg); }
+
+.drawer.open .c-hamburger--htx span::after,
+.c-hamburger--htx.is-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg); }
+
+.drawer.open .c-hamburger--htx span::before,
+.drawer.open .c-hamburger--htx span::after,
+.c-hamburger--htx.is-active span::before,
+.c-hamburger--htx.is-active span::after {
+  transition-delay: 0s, 0.3s; }
+
+/**
+ * Style 3
+ *
+ * Hamburger to left-arrow (htla). Hamburger menu transforms to a left-pointing
+ * arrow. Usually indicates an off canvas menu sliding in from left that
+ * will be close on re-click of the icon.
+ */
+.c-hamburger--htla {
+  background-color: black; }
+
+.c-hamburger--htla span {
+  transition: transform 0.3s; }
+
+.c-hamburger--htla span::before {
+  transform-origin: top right;
+  transition: transform 0.3s, width 0.3s, top 0.3s; }
+
+.c-hamburger--htla span::after {
+  transform-origin: bottom right;
+  transition: transform 0.3s, width 0.3s, bottom 0.3s; }
+
+/* active state, i.e. menu open */
+.drawer.open .c-hamburger--htla,
+.c-hamburger--htla.is-active {
+  background-color: black; }
+
+.drawer.open .c-hamburger--htla span,
+.c-hamburger--htla.is-active span {
+  transform: rotate(180deg); }
+
+.drawer.open .c-hamburger--htla span::before,
+.drawer.open .c-hamburger--htla span::after,
+.c-hamburger--htla.is-active span::before,
+.c-hamburger--htla.is-active span::after {
+  width: 50%; }
+
+.drawer.open .c-hamburger--htla span::before,
+.c-hamburger--htla.is-active span::before {
+  top: 0;
+  transform: translateX(20px) translateY(2px) rotate(45deg); }
+
+.drawer.open .c-hamburger--htla span::after,
+.c-hamburger--htla.is-active span::after {
+  bottom: 0;
+  transform: translateX(20px) translateY(-2px) rotate(-45deg); }
+
+/**
+ * Style 4
+ *
+ * Hamburger to right-arrow (htra). Hamburger menu transforms to a
+ * right-pointing arrow. Usually indicates an off canvas menu sliding in from
+ * right that will be close on re-click of the icon.
+ */
+.c-hamburger--htra {
+  background-color: black; }
+
+.c-hamburger--htra span {
+  transition: transform 0.3s; }
+
+.c-hamburger--htra span::before {
+  transform-origin: top left;
+  transition: transform 0.3s, width 0.3s, top 0.3s; }
+
+.c-hamburger--htra span::after {
+  transform-origin: bottom left;
+  transition: transform 0.3s, width 0.3s, bottom 0.3s; }
+
+/* active state, i.e. menu open */
+.drawer.open .c-hamburger--htra,
+.c-hamburger--htra.is-active {
+  background-color: black; }
+
+.drawer.open .c-hamburger--htra span,
+.c-hamburger--htra.is-active span {
+  transform: rotate(180deg); }
+
+.drawer.open .c-hamburger--htra span::before,
+.drawer.open .c-hamburger--htra span::after,
+.c-hamburger--htra.is-active span::before,
+.c-hamburger--htra.is-active span::after {
+  width: 50%; }
+
+.drawer.open .c-hamburger--htra span::before,
+.c-hamburger--htra.is-active span::before {
+  top: 0;
+  transform: translateX(-4px) translateY(2px) rotate(-45deg); }
+
+.drawer.open .c-hamburger--htra span::after,
+.c-hamburger--htra.is-active span::after {
+  bottom: 0;
+  transform: translateX(-4px) translateY(-2px) rotate(45deg); }
+
+@media only screen and (max-width: 767px) {
+  .drawer {
+    position: fixed;
+    right: 0;
+    height: 100%;
+    width: 300px;
+    margin-right: -300px;
+    display: block;
+    top: 0;
+    z-index: 1035; }
+
+  .drawer-controls {
+    float: left;
+    margin-left: -48px;
+    padding-top: 10px;
+    height: 100%;
+    position: relative;
+    width: 48px;
+    z-index: 500; }
+
+  .drawer-contents {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: #f8f8f8;
+    color: #333;
+    border-left: 1px solid #dfdfdf; }
+
+  .fold {
+    margin-left: 0; }
+
+  .folding {
+    height: 100%;
+    -webkit-transition-property: margin-right;
+    transition-property: margin-right;
+    -webkit-transition-duration: .35s;
+    transition-duration: .35s;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease; }
+
+  .fold.open {
+    margin-left: 0;
+    margin-right: 0; } }
 /* column
   $color-rare: #A58E4A;
 */

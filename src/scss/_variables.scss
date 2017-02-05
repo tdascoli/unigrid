@@ -12,8 +12,8 @@ $media-tablet: "only screen and (min-width: 768px)";
 $media-desktop: "only screen and (min-width: 1024px)";
 
 //* vars.import */
-@import 'core/_core-variables';
 @import 'grid/_grid-variables';
+@import 'core/_core-variables';
 @import 'typography/_typography-variables';
 @import 'forms/_forms-variables';
 @import 'piktos/_piktos-variables';

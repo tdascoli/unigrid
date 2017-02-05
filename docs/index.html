@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>blueprint.grid</title>
+    <title>Unigrid</title>
     <meta name="description" content="grid">
     <meta name="viewport" content="width=device-width">
 
@@ -15,8 +15,8 @@
     <div class="container unigrid--row">
 
         <div class="brick brick--12 brick-mobile--6">
-            <div class="navbar-brand">
-                <a href="index.html">Unigrid</a>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Unigrid</a>
             </div>
         </div>
         <div class="brick brick--12 brick-mobile--6 unigrid--row">
@@ -41,311 +41,354 @@
 
 <div class="container footer-fixed">
 
-        <h2>
-            Grid
-        </h2>
-        <p>
-            This is a standard 24-brick grid.<br/>
-        </p>
-        <div class="card card-narrow show-border" id="show-grid">
-            <div class="grid unigrid--row"></div>
+    <h2>
+        Grid
+    </h2>
+    <p>
+        This is a standard 24-brick grid.<br/>
+    </p>
+    <div class="card card-narrow show-border" id="show-grid">
+        <div class="grid unigrid--row"></div>
 
-            <div class="demo1"></div>
+        <div class="demo1"></div>
 
-            <div class="demo2"></div>
-            <hr/>
-            <div class="demo3 unigrid--row"></div>
-            <div class="demo4 unigrid--row"></div>
+        <div class="demo2"></div>
+        <hr/>
+        <div class="demo3 unigrid--row"></div>
+        <div class="demo4 unigrid--row"></div>
 
-            <h3>Nested Grid</h3>
-            <div class="unigrid--row">
+        <h3>Nested Grid</h3>
+        <div class="unigrid--row">
 
-                <div class="brick brick--8 unigrid--row">
-                    <div class="brick brick--4">R</div>
-                    <div class="brick brick--4 last">R</div>
-                </div>
-
-                <div class="brick brick--8 unigrid--row">
-                    <div class="brick brick--2">R</div>
-                    <div class="brick brick--2">R</div>
-                    <div class="brick brick--2">R</div>
-                    <div class="brick brick--2 last">R</div>
-                </div>
-
-                <div class="brick brick--8 unigrid--row">
-                    <div class="brick brick--7">R</div>
-                    <div class="brick brick--1 last">R</div>
-                </div>
-
-            </div>
-            <h3>Images and Grid</h3>
-            <div class="unigrid--row">
-                <img src="img/pantone.gif" class="brick brick--3"/>
-                <div class="brick brick--img brick--3">
-                    <img src="img/pantone.gif"/>
-                </div>
-                <div class="brick brick--3">
-                    <img src="img/pantone.gif"/>
-                </div>
-                <div class="brick brick--15">
-                    <div class="content">15</div>
-                </div>
-            </div>
-        </div>
-
-        <h2>
-            Icons
-            <small>(Piktogramme)</small>
-        </h2>
-        <p>
-            <code>pikto-before</code>: <span class="pikto--ai pikto-before">Link with pikto before</span><br/>
-            or <br/>
-            <code>pikto-after</code>: <span class="pikto--ai pikto-after">Link with pikto after</span>
-        </p>
-        <div class="card card-narrow">
-
-            <div class="unigrid--row">
-                <div class="brick brick--4 pikto-thumbnail">
-                    <span class="pikto--ai pikto-before"></span>
-                    <br/>
-                    <small><code>pikto--ai</code></small>
-                    <br/>
-                    <small><code>pikto[href$='.ai']</code></small>
-                </div>
-                <div class="brick brick--4 pikto-thumbnail">
-                    <span class="pikto--audio pikto-before"></span>
-                    <br/>
-                    <small><code>pikto--audio</code></small>
-                    <br/>
-                    <small><code>pikto[href$='.wav']<br/>pikto[href$='.mp3']</code></small>
-                </div>
-                <div class="brick brick--4 pikto-thumbnail">
-                    <span class="pikto--image pikto-before"></span>
-                    <br/>
-                    <small><code>pikto--image</code></small>
-                </div>
-                <div class="brick brick--4 pikto-thumbnail">
-                    <span class="pikto--mail pikto-before"></span>
-                    <br/>
-                    <small><code>pikto--mail</code></small>
-                    <br/>
-                    <small><code>pikto[href^='mailto:']</code></small>
-                </div>
-                <div class="brick brick--4 pikto-thumbnail">
-                    <span class="pikto--emf pikto-before"></span>
-                    <br/>
-                    <small><code>pikto--emf</code></small>
-                    <br/>
-                    <small><code>pikto[href$='.emf']</code></small>
-                </div>
-                <div class="brick brick--4 pikto-thumbnail">
-                    <span class="pikto--eps pikto-before"></span>
-                    <br/>
-                    <small><code>pikto--eps</code></small>
-                    <br/>
-                    <small><code>pikto[href$='.eps']</code></small>
-                </div>
+            <div class="brick brick--8 unigrid--row">
+                <div class="brick brick--4">R</div>
+                <div class="brick brick--4 last">R</div>
             </div>
 
-            <div class="unigrid--row">
-                <div class="brick brick--4 pikto-thumbnail">
-                    <span class="pikto--excel pikto-before"></span>
-                    <br/>
-                    <small><code>pikto--excel</code></small>
-                    <br/>
-                    <small><code>pikto[href$='.xls']<br/>pikto[href$='.xlsx']</code></small>
-                </div>
-                <div class="brick brick--4 pikto-thumbnail">
-                    <span class="pikto--video pikto-before"></span>
-                    <br/>
-                    <small><code>pikto--video</code></small>
-                    <br/>
-                    <small><code>pikto[href$='.avi']<br/>
-                        pikto[href$='.flv']<br/>
-                        pikto[href$='.mpg']<br/>
-                        pikto[href$='.mpeg']<br/>
-                        pikto[href$='.wmv']</code></small>
-                </div>
-                <div class="brick brick--4 pikto-thumbnail">
-                    <span class="pikto--gif pikto-before"></span>
-                    <br/>
-                    <small><code>pikto--gif</code></small>
-                    <br/>
-                    <small><code>pikto[href$='.gif']</code></small>
-                </div>
-                <div class="brick brick--4 pikto-thumbnail">
-                    <span class="pikto--indd pikto-before"></span>
-                    <br/>
-                    <small><code>pikto--indd</code></small>
-                    <br/>
-                    <small><code>pikto[href$='.indd']</code></small>
-                </div>
-                <div class="brick brick--4 pikto-thumbnail">
-                    <span class="pikto--link-intern pikto-before"></span>
-                    <br/>
-                    <small><code>pikto--link-intern</code></small>
-                    <br/>
-                    <small><code>pikto[href^='http']</code></small>
-                </div>
-                <div class="brick brick--4 pikto-thumbnail">
-                    <span class="pikto--link pikto-before"></span>
-                    <br/>
-                    <small><code>pikto--link</code></small>
-                    <br/>
-                    <small><code>pikto[target='_blank']</code></small>
-                </div>
+            <div class="brick brick--8 unigrid--row">
+                <div class="brick brick--2">R</div>
+                <div class="brick brick--2">R</div>
+                <div class="brick brick--2">R</div>
+                <div class="brick brick--2 last">R</div>
             </div>
 
-            <div class="unigrid--row">
-                <div class="brick brick--4 pikto-thumbnail">
-                    <span class="pikto--jpg pikto-before"></span>
-                    <br/>
-                    <small><code>pikto--jpg</code></small>
-                    <br/>
-                    <small><code>pikto[href$='.jpg']<br/>pikto[href$='.jpeg']</code></small>
-                </div>
-                <div class="brick brick--4 pikto-thumbnail">
-                    <span class="pikto--pdf pikto-before"></span>
-                    <br/>
-                    <small><code>pikto--pdf</code></small>
-                    <br/>
-                    <small><code>pikto[href$='.pdf']</code></small>
-                </div>
-                <div class="brick brick--4 pikto-thumbnail">
-                    <span class="pikto--png pikto-before"></span>
-                    <br/>
-                    <small><code>pikto--png</code></small>
-                    <br/>
-                    <small><code>pikto[href$='.png']</code></small>
-                </div>
-                <div class="brick brick--4 pikto-thumbnail">
-                    <span class="pikto--ppt pikto-before"></span>
-                    <br/>
-                    <small><code>pikto--ppt</code></small>
-                    <br/>
-                    <small><code>pikto[href$='.ppt']<br/>pikto[href$='.pptx']</code></small>
-                </div>
-                <div class="brick brick--4 pikto-thumbnail">
-                    <span class="pikto--psd pikto-before"></span>
-                    <br/>
-                    <small><code>pikto--psd</code></small>
-                    <br/>
-                    <small><code>pikto[href$='.psd']</code></small>
-                </div>
-                <div class="brick brick--4 pikto-thumbnail">
-                    <span class="pikto--qt pikto-before"></span>
-                    <br/>
-                    <small><code>pikto--qt</code></small>
-                </div>
-            </div>
-
-            <div class="unigrid--row">
-                <div class="brick brick--4 pikto-thumbnail">
-                    <span class="pikto--swf pikto-before"></span>
-                    <br/>
-                    <small><code>pikto--swf</code></small>
-                    <br/>
-                    <small><code>pikto[href$='.swf']</code></small>
-                </div>
-                <div class="brick brick--4 pikto-thumbnail">
-                    <span class="pikto--tif pikto-before"></span>
-                    <br/>
-                    <small><code>pikto--tif</code></small>
-                    <br/>
-                    <small><code>pikto[href$='.tif']</code></small>
-                </div>
-                <div class="brick brick--4 pikto-thumbnail">
-                    <span class="pikto--word pikto-before"></span>
-                    <br/>
-                    <small><code>pikto--word</code></small>
-                    <br/>
-                    <small><code>pikto[href$='.doc']<br/>pikto[href$='.docx']</code></small>
-                </div>
-                <div class="brick brick--4 pikto-thumbnail">
-                    <span class="pikto--zip pikto-before"></span>
-                    <br/>
-                    <small><code>pikto--zip</code></small>
-                    <br/>
-                    <small><code>pikto[href$='.zip']</code></small>
-                </div>
+            <div class="brick brick--8 unigrid--row">
+                <div class="brick brick--7">R</div>
+                <div class="brick brick--1 last">R</div>
             </div>
 
         </div>
-
-        <h2>
-            Forms
-        </h2>
-        <div class="card card-narrow">
-            <form>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox"> Check me out
-                    </label>
-                </div>
-                <button type="submit">Submit</button>
-                <button>Reset</button>
-            </form>
-            <hr/>
-            <form class="pifa-form jqtransform" id="pifa-form-1" name="pifa-form" method="post"
-                  action="http://www.fcbreitenrain.ch/fcb/front_content.php?idart=89&lang=1"><input type="hidden"
-                                                                                                    name="idform"
-                                                                                                    value="1">
-                <div id="pifa-field-16" class="pifa-field-5 full-row"><label class="pifa-field-lbl"
-                                                                             for="pifa-field-elm-16">Mitgliedschaft</label><span
-                        id="m12"><div id="m5" class="checkbox_wrapper"><input id="m3" name="mitgliedschaft[]"
-                                                                              type="checkbox" value="mitgliedschaft_a"/><label
-                        id="m4" for="m3">Mitgliedschaft A (inkl. Saisonkarte): CHF 100/Saison</label></div><div id="m8"
-                                                                                                                class="checkbox_wrapper"><input
-                        id="m6" name="mitgliedschaft[]" type="checkbox" value="mitgliedschaft_b"/><label id="m7"
-                                                                                                         for="m6">Mitgliedschaft B (exkl. Saisonkarte): CHF 60/Saison</label></div><div
-                        id="m11" class="checkbox_wrapper"><input id="m9" name="mitgliedschaft[]" type="checkbox"
-                                                                 value="donatoren"/><label id="m10" for="m9">Donatoren (inkl. Saisonkarte): CHF 120/Jahr</label></div></span>
-                </div>
-                <div id="pifa-field-5" class="pifa-field-5 full-row"><label class="pifa-field-lbl"
-                                                                            for="pifa-field-elm-5">Ich interessiere mich
-                    ...</label><span id="m27"><div id="m17" class="checkbox_wrapper"><input id="m15" name="interesse[]"
-                                                                                            type="checkbox"
-                                                                                            value="sponsoring"/><label
-                        id="m16" for="m15">für ein Sponsoring</label></div><div id="m20" class="checkbox_wrapper"><input
-                        id="m18" name="interesse[]" type="checkbox" value="werbung"/><label id="m19" for="m18">für die Werbemöglichkeiten</label></div><div
-                        id="m23" class="checkbox_wrapper"><input id="m21" name="interesse[]" type="checkbox"
-                                                                 value="patronat"/><label id="m22" for="m21">für ein Spieler-Patronat</label></div><div
-                        id="m26" class="checkbox_wrapper"><input id="m24" name="interesse[]" type="checkbox"
-                                                                 value="engagement"/><label id="m25" for="m24">für ein ehrenamtliches Engagement</label></div></span>
-                </div>
-                <div id="pifa-field-9" class="pifa-field-1"><label class="pifa-field-lbl"
-                                                                   for="pifa-field-elm-9">Firma</label><input
-                        name="firma" value="" size="50" type="text" id="pifa-field-elm-9"/></div>
-                <div id="pifa-field-10" class="pifa-field-1 pifa-obligatory"><label class="pifa-field-lbl"
-                                                                                    for="pifa-field-elm-10">Kontaktperson</label><input
-                        name="name" value="" size="50" type="text" id="pifa-field-elm-10"/></div>
-                <div id="pifa-field-11" class="pifa-field-1 pifa-obligatory"><label class="pifa-field-lbl"
-                                                                                    for="pifa-field-elm-11">Strasse</label><input
-                        name="strasse" value="" size="50" type="text" id="pifa-field-elm-11"/></div>
-                <div id="pifa-field-12" class="pifa-field-1 pifa-obligatory"><label class="pifa-field-lbl"
-                                                                                    for="pifa-field-elm-12">PLZ,
-                    Ort</label><input name="ort" value="" size="50" type="text" id="pifa-field-elm-12"/></div>
-                <div id="pifa-field-13" class="pifa-field-1 pifa-obligatory"><label class="pifa-field-lbl"
-                                                                                    for="pifa-field-elm-13">E-Mail</label><input
-                        name="email" value="" size="50" type="text" id="pifa-field-elm-13"/></div>
-                <div id="pifa-field-14" class="pifa-field-1 pifa-obligatory"><label class="pifa-field-lbl"
-                                                                                    for="pifa-field-elm-14">Telefon</label><input
-                        name="telefon" value="" size="50" type="text" id="pifa-field-elm-14"/></div>
-                <div id="pifa-field-2" class="pifa-field-13 half-row"><input name="" value="Senden" type="submit"
-                                                                             id="pifa-field-elm-2"/></div>
-                <div id="pifa-field-73" class="pifa-field-14"><input name="" class="text_medium" value="Abbrechen"
-                                                                     type="reset" id="pifa-field-elm-73"></div>
-            </form>
-
+        <h3>Images and Grid</h3>
+        <div class="unigrid--row">
+            <img src="img/pantone.gif" class="brick brick--3"/>
+            <div class="brick brick--img brick--3">
+                <img src="img/pantone.gif"/>
+            </div>
+            <div class="brick brick--3">
+                <img src="img/pantone.gif"/>
+            </div>
+            <div class="brick brick--15">
+                <div class="content">15</div>
+            </div>
         </div>
+    </div>
+
+    <h2>
+        Icons
+        <small>(Piktogramme)</small>
+    </h2>
+    <p>
+        <code>pikto-before</code>: <span class="pikto--ai pikto-before">Link with pikto before</span><br/>
+        or <br/>
+        <code>pikto-after</code>: <span class="pikto--ai pikto-after">Link with pikto after</span>
+    </p>
+    <div class="card card-narrow">
+
+        <div class="unigrid--row">
+            <div class="brick brick--4 pikto-thumbnail">
+                <span class="pikto--ai pikto-before"></span>
+                <br/>
+                <small><code>pikto--ai</code></small>
+                <br/>
+                <small><code>pikto[href$='.ai']</code></small>
+            </div>
+            <div class="brick brick--4 pikto-thumbnail">
+                <span class="pikto--audio pikto-before"></span>
+                <br/>
+                <small><code>pikto--audio</code></small>
+                <br/>
+                <small><code>pikto[href$='.wav']<br/>pikto[href$='.mp3']</code></small>
+            </div>
+            <div class="brick brick--4 pikto-thumbnail">
+                <span class="pikto--image pikto-before"></span>
+                <br/>
+                <small><code>pikto--image</code></small>
+            </div>
+            <div class="brick brick--4 pikto-thumbnail">
+                <span class="pikto--mail pikto-before"></span>
+                <br/>
+                <small><code>pikto--mail</code></small>
+                <br/>
+                <small><code>pikto[href^='mailto:']</code></small>
+            </div>
+            <div class="brick brick--4 pikto-thumbnail">
+                <span class="pikto--emf pikto-before"></span>
+                <br/>
+                <small><code>pikto--emf</code></small>
+                <br/>
+                <small><code>pikto[href$='.emf']</code></small>
+            </div>
+            <div class="brick brick--4 pikto-thumbnail">
+                <span class="pikto--eps pikto-before"></span>
+                <br/>
+                <small><code>pikto--eps</code></small>
+                <br/>
+                <small><code>pikto[href$='.eps']</code></small>
+            </div>
+        </div>
+
+        <div class="unigrid--row">
+            <div class="brick brick--4 pikto-thumbnail">
+                <span class="pikto--excel pikto-before"></span>
+                <br/>
+                <small><code>pikto--excel</code></small>
+                <br/>
+                <small><code>pikto[href$='.xls']<br/>pikto[href$='.xlsx']</code></small>
+            </div>
+            <div class="brick brick--4 pikto-thumbnail">
+                <span class="pikto--video pikto-before"></span>
+                <br/>
+                <small><code>pikto--video</code></small>
+                <br/>
+                <small><code>pikto[href$='.avi']<br/>
+                    pikto[href$='.flv']<br/>
+                    pikto[href$='.mpg']<br/>
+                    pikto[href$='.mpeg']<br/>
+                    pikto[href$='.wmv']</code></small>
+            </div>
+            <div class="brick brick--4 pikto-thumbnail">
+                <span class="pikto--gif pikto-before"></span>
+                <br/>
+                <small><code>pikto--gif</code></small>
+                <br/>
+                <small><code>pikto[href$='.gif']</code></small>
+            </div>
+            <div class="brick brick--4 pikto-thumbnail">
+                <span class="pikto--indd pikto-before"></span>
+                <br/>
+                <small><code>pikto--indd</code></small>
+                <br/>
+                <small><code>pikto[href$='.indd']</code></small>
+            </div>
+            <div class="brick brick--4 pikto-thumbnail">
+                <span class="pikto--link-intern pikto-before"></span>
+                <br/>
+                <small><code>pikto--link-intern</code></small>
+                <br/>
+                <small><code>pikto[href^='http']</code></small>
+            </div>
+            <div class="brick brick--4 pikto-thumbnail">
+                <span class="pikto--link pikto-before"></span>
+                <br/>
+                <small><code>pikto--link</code></small>
+                <br/>
+                <small><code>pikto[target='_blank']</code></small>
+            </div>
+        </div>
+
+        <div class="unigrid--row">
+            <div class="brick brick--4 pikto-thumbnail">
+                <span class="pikto--jpg pikto-before"></span>
+                <br/>
+                <small><code>pikto--jpg</code></small>
+                <br/>
+                <small><code>pikto[href$='.jpg']<br/>pikto[href$='.jpeg']</code></small>
+            </div>
+            <div class="brick brick--4 pikto-thumbnail">
+                <span class="pikto--pdf pikto-before"></span>
+                <br/>
+                <small><code>pikto--pdf</code></small>
+                <br/>
+                <small><code>pikto[href$='.pdf']</code></small>
+            </div>
+            <div class="brick brick--4 pikto-thumbnail">
+                <span class="pikto--png pikto-before"></span>
+                <br/>
+                <small><code>pikto--png</code></small>
+                <br/>
+                <small><code>pikto[href$='.png']</code></small>
+            </div>
+            <div class="brick brick--4 pikto-thumbnail">
+                <span class="pikto--ppt pikto-before"></span>
+                <br/>
+                <small><code>pikto--ppt</code></small>
+                <br/>
+                <small><code>pikto[href$='.ppt']<br/>pikto[href$='.pptx']</code></small>
+            </div>
+            <div class="brick brick--4 pikto-thumbnail">
+                <span class="pikto--psd pikto-before"></span>
+                <br/>
+                <small><code>pikto--psd</code></small>
+                <br/>
+                <small><code>pikto[href$='.psd']</code></small>
+            </div>
+            <div class="brick brick--4 pikto-thumbnail">
+                <span class="pikto--qt pikto-before"></span>
+                <br/>
+                <small><code>pikto--qt</code></small>
+            </div>
+        </div>
+
+        <div class="unigrid--row">
+            <div class="brick brick--4 pikto-thumbnail">
+                <span class="pikto--swf pikto-before"></span>
+                <br/>
+                <small><code>pikto--swf</code></small>
+                <br/>
+                <small><code>pikto[href$='.swf']</code></small>
+            </div>
+            <div class="brick brick--4 pikto-thumbnail">
+                <span class="pikto--tif pikto-before"></span>
+                <br/>
+                <small><code>pikto--tif</code></small>
+                <br/>
+                <small><code>pikto[href$='.tif']</code></small>
+            </div>
+            <div class="brick brick--4 pikto-thumbnail">
+                <span class="pikto--word pikto-before"></span>
+                <br/>
+                <small><code>pikto--word</code></small>
+                <br/>
+                <small><code>pikto[href$='.doc']<br/>pikto[href$='.docx']</code></small>
+            </div>
+            <div class="brick brick--4 pikto-thumbnail">
+                <span class="pikto--zip pikto-before"></span>
+                <br/>
+                <small><code>pikto--zip</code></small>
+                <br/>
+                <small><code>pikto[href$='.zip']</code></small>
+            </div>
+        </div>
+
+    </div>
+
+    <h2>
+        Forms
+    </h2>
+    <div class="card card-narrow">
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Check me out
+                </label>
+            </div>
+            <button type="submit">Submit</button>
+            <button>Reset</button>
+        </form>
+        <hr/>
+        <form class="pifa-form jqtransform" id="pifa-form-1" name="pifa-form" method="post"
+              action="http://www.fcbreitenrain.ch/fcb/front_content.php?idart=89&lang=1"><input type="hidden"
+                                                                                                name="idform"
+                                                                                                value="1">
+            <div id="pifa-field-16" class="pifa-field-5 full-row"><label class="pifa-field-lbl"
+                                                                         for="pifa-field-elm-16">Mitgliedschaft</label><span
+                    id="m12"><div id="m5" class="checkbox_wrapper"><input id="m3" name="mitgliedschaft[]"
+                                                                          type="checkbox"
+                                                                          value="mitgliedschaft_a"/><label
+                    id="m4" for="m3">Mitgliedschaft A (inkl. Saisonkarte): CHF 100/Saison</label></div><div id="m8"
+                                                                                                            class="checkbox_wrapper"><input
+                    id="m6" name="mitgliedschaft[]" type="checkbox" value="mitgliedschaft_b"/><label id="m7"
+                                                                                                     for="m6">Mitgliedschaft B (exkl. Saisonkarte): CHF 60/Saison</label></div><div
+                    id="m11" class="checkbox_wrapper"><input id="m9" name="mitgliedschaft[]" type="checkbox"
+                                                             value="donatoren"/><label id="m10" for="m9">Donatoren (inkl. Saisonkarte): CHF 120/Jahr</label></div></span>
+            </div>
+            <div id="pifa-field-5" class="pifa-field-5 full-row"><label class="pifa-field-lbl"
+                                                                        for="pifa-field-elm-5">Ich interessiere mich
+                ...</label><span id="m27"><div id="m17" class="checkbox_wrapper"><input id="m15" name="interesse[]"
+                                                                                        type="checkbox"
+                                                                                        value="sponsoring"/><label
+                    id="m16" for="m15">für ein Sponsoring</label></div><div id="m20" class="checkbox_wrapper"><input
+                    id="m18" name="interesse[]" type="checkbox" value="werbung"/><label id="m19" for="m18">für die Werbemöglichkeiten</label></div><div
+                    id="m23" class="checkbox_wrapper"><input id="m21" name="interesse[]" type="checkbox"
+                                                             value="patronat"/><label id="m22" for="m21">für ein Spieler-Patronat</label></div><div
+                    id="m26" class="checkbox_wrapper"><input id="m24" name="interesse[]" type="checkbox"
+                                                             value="engagement"/><label id="m25" for="m24">für ein ehrenamtliches Engagement</label></div></span>
+            </div>
+            <div id="pifa-field-9" class="pifa-field-1"><label class="pifa-field-lbl"
+                                                               for="pifa-field-elm-9">Firma</label><input
+                    name="firma" value="" size="50" type="text" id="pifa-field-elm-9"/></div>
+            <div id="pifa-field-10" class="pifa-field-1 pifa-obligatory"><label class="pifa-field-lbl"
+                                                                                for="pifa-field-elm-10">Kontaktperson</label><input
+                    name="name" value="" size="50" type="text" id="pifa-field-elm-10"/></div>
+            <div id="pifa-field-11" class="pifa-field-1 pifa-obligatory"><label class="pifa-field-lbl"
+                                                                                for="pifa-field-elm-11">Strasse</label><input
+                    name="strasse" value="" size="50" type="text" id="pifa-field-elm-11"/></div>
+            <div id="pifa-field-12" class="pifa-field-1 pifa-obligatory"><label class="pifa-field-lbl"
+                                                                                for="pifa-field-elm-12">PLZ,
+                Ort</label><input name="ort" value="" size="50" type="text" id="pifa-field-elm-12"/></div>
+            <div id="pifa-field-13" class="pifa-field-1 pifa-obligatory"><label class="pifa-field-lbl"
+                                                                                for="pifa-field-elm-13">E-Mail</label><input
+                    name="email" value="" size="50" type="text" id="pifa-field-elm-13"/></div>
+            <div id="pifa-field-14" class="pifa-field-1 pifa-obligatory"><label class="pifa-field-lbl"
+                                                                                for="pifa-field-elm-14">Telefon</label><input
+                    name="telefon" value="" size="50" type="text" id="pifa-field-elm-14"/></div>
+            <div id="pifa-field-2" class="pifa-field-13 half-row"><input name="" value="Senden" type="submit"
+                                                                         id="pifa-field-elm-2"/></div>
+            <div id="pifa-field-73" class="pifa-field-14"><input name="" class="text_medium" value="Abbrechen"
+                                                                 type="reset" id="pifa-field-elm-73"></div>
+        </form>
+
+    </div>
+
+
+    <h2>
+        Downloads
+    </h2>
+    <div class="card card-narrow">
+        <div class=" golden-ratio--row">
+            <div class="row--small">
+                <strong>
+                    <ul>
+                        <li>unigrid-core,</li>
+                        <li>-forms,</li>
+                        <li>-grid,</li>
+                        <li>-piktos,</li>
+                        <li>-typography or</li>
+                        <li>unigrid-all</li>
+                    </ul>
+                </strong>
+            </div>
+            <div class="row--tall">
+                <ul class="no-bullets">
+                    <li><a class="pikto--link pikto-after" target="_blank" href="unigrid/unigrid-core.css">unigrid-core.css</a></li>
+                    <li><a class="pikto--link pikto-after" target="_blank" href="unigrid/unigrid-forms.css">unigrid-forms.css</a></li>
+                    <li><a class="pikto--link pikto-after" target="_blank" href="unigrid/unigrid-grid.css">unigrid-grid.css</a></li>
+                    <li><a class="pikto--link pikto-after" target="_blank" href="unigrid/unigrid-piktos.css">unigrid-piktos.css</a> and <a href="upload/piktos.zip" class="pikto--zip pikto-after" target="_blank">pikto-files</a></li>
+                    <li><a class="pikto--link pikto-after" target="_blank" href="unigrid/unigrid-typography.css">unigrid-typography.css</a></li>
+                    <li><a class="pikto--link pikto-after" target="_blank" href="unigrid/unigrid.css">unigrid.css</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <hr />
+
+        <strong>Additional downloads:</strong>
+        <ul>
+            <li>latest <a href="https://jquery.com" class="pikto--link pikto-after" target="_blank"><strong>jquery library</strong> from official site</a></li>
+            <li>latest <a href="https://getbootstrap.com/" class="pikto--link pikto-after" target="_blank"><strong>bootstrap component suite</strong> from official site</a></li>
+            <li><strong>drawer.js</strong> from bootstrap-drawer project - <a href="https://github.com/clineamb/bootstrap-drawer" target="_blank" class="pikto--link pikto-after">see github repository</a></li>
+        </ul>
+    </div>
+
+
 </div>
 
 <footer class="footer footer-default">
