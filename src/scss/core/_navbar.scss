@@ -4,8 +4,7 @@ body {
 
 .navbar {
   z-index: 1035;
-
-  margin-bottom: -($grid-half-gutter);
+  height: ((2*$grid-brick-height)+$grid-gutter);
 }
 
 .navbar > .container {
@@ -16,8 +15,6 @@ body {
   background: $navbar-default-background;
 
   color: $navbar-default-color;
-
-  height: ((2*$grid-brick-height)+$grid-gutter);
 }
 
 .navbar-fixed {
@@ -27,7 +24,7 @@ body {
 }
 
 .navbar-fixed + .container {
-  margin-top: (((2*$grid-brick-height)+$grid-gutter) - $grid-half-gutter);
+  margin-top: ((2*$grid-brick-height)+$grid-gutter);
 }
 
 .navbar-header {
@@ -86,7 +83,7 @@ a.navbar-brand {
 
 //* footer */
 .footer {
-  margin-top: -($grid-half-gutter);
+
 }
 
 .footer-fixed {

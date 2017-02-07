@@ -42,34 +42,33 @@
 @mixin grid-col ($var) {
   @for $i from 1 through $var {
 
-    .brick--col--#{$i} {
+    .brick--col--#{$i},
+    .brick--col--#{$i} > .brick {
       height: (($grid-brick-height+$grid-gutter)*$i)-(2*$grid-brick-padding-ttb)-$grid-gutter;
       max-height: (($grid-brick-height+$grid-gutter)*$i)-(2*$grid-brick-padding-ttb)-$grid-gutter;
-      flex-basis: (($grid-brick-height+$grid-gutter)*$i)-(2*$grid-brick-padding-ttb)-$grid-gutter;
 
       width: 100%;
+      display: inline-block;
     }
 
     .brick--col--#{$i}.unigrid--row {
       height: (($grid-brick-height+$grid-gutter)*$i);
       max-height: (($grid-brick-height+$grid-gutter)*$i);
-      flex-basis: (($grid-brick-height+$grid-gutter)*$i);
+
+      display: flex;
     }
-
-    /*.unigrid--row.brick--col--#{$i} {
-      height: (($grid-brick-height+$grid-gutter)*$i);
-      max-height: (($grid-brick-height+$grid-gutter)*$i);
-      flex-basis: (($grid-brick-height+$grid-gutter)*$i);
-
-      width: 100%;
-    }*/
 
     .brick--col--#{$i} > img.brick,
     .unigrid--col > img.brick--col--#{$i},
     .unigrid--col > .brick--img.brick--col--#{$i} {
       height: (($grid-brick-height+$grid-gutter)*$i)-$grid-gutter;
       max-height: (($grid-brick-height+$grid-gutter)*$i)-$grid-gutter;
-      flex-basis: (($grid-brick-height+$grid-gutter)*$i)-$grid-gutter;
+
+      display: block;
+    }
+
+    .unigrid--col > .brick--img.brick--col--#{$i} {
+      display: inline-block;
     }
 
     .unigrid--col > .brick.prepend--col--#{$i},
@@ -141,13 +140,15 @@
     .brick-mobile--col--#{$i} {
       height: ((($mobile-grid-brick-height+$grid-gutter)*$i) - (2*$grid-brick-padding-ttb))-$grid-gutter;
       max-height: ((($mobile-grid-brick-height+$grid-gutter)*$i) - (2*$grid-brick-padding-ttb))-$grid-gutter;
-      flex-basis: ((($mobile-grid-brick-height+$grid-gutter)*$i) - (2*$grid-brick-padding-ttb))-$grid-gutter;
+
+      display: inline-block;
     }
 
     .unigrid--row.brick-mobile--col--#{$i} {
       height: (($mobile-grid-brick-height+$grid-gutter)*$i);
       max-height: (($mobile-grid-brick-height+$grid-gutter)*$i);
-      flex-basis: (($mobile-grid-brick-height+$grid-gutter)*$i);
+
+      display: flex;
     }
 
     .unigrid--col > .brick.prepend--col--#{$i} {

@@ -23,9 +23,4 @@ $(function () {
         $(this).toggleClass('is-active');
         $('.col-grid').toggleClass('show-grid');
     });
-
-    $('#hamburger').click(function () {
-        $(this).toggleClass('is-active');
-        //$('#drawerExample2').toggleClass('open');
-    });
 });

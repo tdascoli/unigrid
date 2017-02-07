@@ -35,11 +35,15 @@
 }
 
 .show-grid.grid,
-.show-grid.col-grid,
-.show-grid.mobile-grid,
-.show-grid.mobile-col-grid{
+.show-grid.mobile-grid {
   display: flex;
 }
+
+.show-grid.col-grid,
+.show-grid.mobile-col-grid {
+  display: block;
+}
+
 .grid .brick {
   border-right: 1px solid red;
   border-left: 1px solid red;
@@ -69,12 +73,13 @@
   border-top: 1px solid red;
   border-bottom: 1px solid red;
 
+  width: 100%;
   max-width: 100%;
 
   padding: ($grid-brick-padding-ttb - 1) 0;
 
+  height: ($grid-brick-height - (2*$grid-brick-padding-ttb));
   max-height: ($grid-brick-height - (2*$grid-brick-padding-ttb));
-  flex-basis: ($grid-brick-height - (2*$grid-brick-padding-ttb));
 
   background: none;
 

@@ -8,12 +8,12 @@
 
   padding: 0;
 
-  display: flex;
+  /*display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  align-content: flex-start;
+  align-content: flex-start;*/
 }
 
 .unigrid--col > .brick {
@@ -42,7 +42,7 @@ hr.brick--col {
 
   height: ($grid-brick-height+$grid-gutter);
   max-height: ($grid-brick-height+$grid-gutter);
-  flex-basis: ($grid-brick-height+$grid-gutter);
+  //flex-basis: ($grid-brick-height+$grid-gutter);
 
   width: 100%;
 }

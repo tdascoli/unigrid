@@ -41,10 +41,12 @@
   margin-right: 0; }
 
 .show-grid.grid,
-.show-grid.col-grid,
-.show-grid.mobile-grid,
-.show-grid.mobile-col-grid {
+.show-grid.mobile-grid {
   display: flex; }
+
+.show-grid.col-grid,
+.show-grid.mobile-col-grid {
+  display: block; }
 
 .grid .brick {
   border-right: 1px solid red;
@@ -65,10 +67,11 @@
 .col-grid .brick {
   border-top: 1px solid red;
   border-bottom: 1px solid red;
+  width: 100%;
   max-width: 100%;
   padding: 3px 0;
+  height: 26px;
   max-height: 26px;
-  flex-basis: 26px;
   background: none; }
   .col-grid .brick div {
     border-top: 1px solid orange;

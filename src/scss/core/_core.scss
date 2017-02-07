@@ -5,3 +5,39 @@
 ul.no-bullets {
   list-style-type: none;
 }
+
+@media #{$media-phone} {
+  .show-mobile {
+    display: block;
+  }
+  .show-mobile-flex {
+    display: flex;
+  }
+  .show-mobile-inline {
+    display: inline-block;
+  }
+  .show-desktop,
+  .show-desktop-flex,
+  .show-desktop-inline,
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media #{$media-desktop} {
+  .show-desktop {
+    display: block;
+  }
+  .show-desktop-flex {
+    display: flex;
+  }
+  .show-desktop-inline {
+    display: inline-block;
+  }
+  .show-mobile,
+  .show-mobile-flex,
+  .show-mobile-inline,
+  .hide-desktop {
+    display: none !important;
+  }
+}

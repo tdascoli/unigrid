@@ -71,15 +71,14 @@ body {
 
 .navbar {
   z-index: 1035;
-  margin-bottom: -2px; }
+  height: 72px; }
 
 .navbar > .container {
   display: flex; }
 
 .navbar-default {
   background: #000;
-  color: #fff;
-  height: 72px; }
+  color: #fff; }
 
 .navbar-fixed {
   width: 100%;
@@ -87,7 +86,7 @@ body {
   top: 0; }
 
 .navbar-fixed + .container {
-  margin-top: 70px; }
+  margin-top: 72px; }
 
 .navbar-header {
   width: 38.1966%;
@@ -125,9 +124,6 @@ a.navbar-brand {
 
 .nav > li:last-child {
   margin-right: 0; }
-
-.footer {
-  margin-top: -2px; }
 
 .footer-fixed {
   margin-bottom: 32px !important; }
@@ -374,10 +370,12 @@ div.pifa-error {
   margin-right: 0; }
 
 .show-grid.grid,
-.show-grid.col-grid,
-.show-grid.mobile-grid,
-.show-grid.mobile-col-grid {
+.show-grid.mobile-grid {
   display: flex; }
+
+.show-grid.col-grid,
+.show-grid.mobile-col-grid {
+  display: block; }
 
 .grid .brick {
   border-right: 1px solid red;
@@ -398,10 +396,11 @@ div.pifa-error {
 .col-grid .brick {
   border-top: 1px solid red;
   border-bottom: 1px solid red;
+  width: 100%;
   max-width: 100%;
   padding: 3px 0;
+  height: 26px;
   max-height: 26px;
-  flex-basis: 26px;
   background: none; }
   .col-grid .brick div {
     border-top: 1px solid orange;
