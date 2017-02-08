@@ -1,0 +1,73 @@
+/*------------------------------------*\
+  #UNIGRID-CORE
+\*------------------------------------*/
+
+
+.brick {
+  margin: $grid-half-gutter;
+  padding: $grid-brick-padding-ttb $grid-brick-padding-rtl;
+
+  min-height: ($grid-brick-height - $grid-gutter - $grid-brick-padding-ttb);
+}
+
+.brick--inverse {
+  background: $default-color-inverse;
+  color: $default-color;
+}
+
+.brick--hide,
+.brick-mobile--show {
+  display: none;
+}
+.brick--show {
+  display: flex;
+}
+
+.brick > img {
+  width: 100%;
+  max-height: 100%;
+}
+
+.unigrid--col > .brick > img {
+  vertical-align: top;
+  width: auto;
+}
+
+.unigrid--col {
+  height: 100%;
+
+  width: 100%;
+
+  padding: 0;
+}
+
+.unigrid--row {
+  width: 100%;
+
+  padding: 0;
+}
+
+img.brick,
+.brick--img {
+  vertical-align: top;
+  padding: 0;
+}
+
+.unigrid--col > img.brick {
+  width: auto;
+}
+
+hr {
+  margin: ((($grid-brick-height + $grid-gutter)/2) - $grid-hr-border) 0;
+
+  border: $grid-hr-border solid #000000;
+}
+
+.container {
+  max-width: (($grid-brick-width+$grid-gutter)*$grid)-$grid-gutter;
+  width: (($grid-brick-width+$grid-gutter)*$grid)-$grid-gutter;
+
+  height: 100%;
+
+  margin: 0 auto;
+}

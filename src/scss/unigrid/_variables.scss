@@ -1,0 +1,28 @@
+//* vars.grid */
+
+$grid: 24;
+$grid-gutter: 4px;
+$grid-half-gutter: ($grid-gutter/2);
+$grid-brick-padding-ttb: 4px;
+$grid-brick-padding-rtl: 4px;
+$grid-brick-width: 34px;
+$grid-brick-height: 34px;
+
+//* vars.mobile.grid */
+
+$mobile-grid: 12;
+$mobile-grid-width: (1/$mobile-grid)*100%;
+$mobile-grid-brick-height: $grid-brick-height;
+
+//* vars.grid divers */
+
+$grid-hr-border: 1px;
+
+//* vars.colors */
+$default-color-inverse: #000;
+$default-color: #fff;
+
+//* vars.responsive */
+$media-phone: "only screen and (max-width : 767px)";
+$media-tablet: "only screen and (min-width: 768px)";
+$media-desktop: "only screen and (min-width: 1024px)";

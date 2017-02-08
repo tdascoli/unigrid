@@ -12,7 +12,7 @@ $media-tablet: "only screen and (min-width: 768px)";
 $media-desktop: "only screen and (min-width: 1024px)";
 
 //* vars.import */
-@import 'grid/_grid-variables';
+@import 'unigrid/_variables';
 @import 'core/_core-variables';
 @import 'typography/_typography-variables';
 @import 'forms/_forms-variables';
