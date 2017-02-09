@@ -2,9 +2,39 @@
   #VARIABLES-FORMS
 \*------------------------------------*/
 
+@import '../_mixins';
+
+//* vars.buttons */
+$button-color: #e6e6e6;
+$button-shadow-color: #adadad;
+$button-primary-color: #337ab7;
+$button-primary-shadow-color: #23527c;
+
 //* vars.forms */
 $form-gutter: $grid-gutter;
 $form-half-gutter: ($form-gutter/2);
 $form-padding: $grid-brick-padding-rtl;
 $form-border-width: 2px;
 $form-border-color: $text-color;
+$form-margin-bottom: 15px;
+
+//* vars.radio- and checkboxes */
+$form-box-size: $line-height-computed;
+$form-box-margin: 6px;
+$form-box-check-width: 4px;
+$form-box-check-height: 10px;
+$form-box-check-border: 3px;
+$form-box-check-deg: 45deg;
+
+$form-box-check-top: ceil( ($form-box-check-height * cos($form-box-check-deg)) / 2);
+$form-box-check-left: ceil( ($form-box-check-width * cos($form-box-check-deg)) / 2);
+
+$form-box-radio-size: 13px;
+$form-box-radio-top: ($form-box-size - $form-box-radio-size) / 2;
+$form-box-radio-left: $form-box-radio-top + $form-border-width;
+
+$form-select-arrow-width: 5px;
+$form-select-arrow-height: 8px;
+$form-select-arrow-postion: ($line-height-computed - $form-select-arrow-height);
+
+//* vars.select */

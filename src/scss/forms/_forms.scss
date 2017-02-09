@@ -6,16 +6,20 @@ The surrounding division has to clear the floating though. */
 
 .form-group,
 .pifa-form div {
-  clear: both;
+  display: block;
+
+  margin-bottom: $form-margin-bottom;
 }
 
 .form-group label,
 .pifa-form label {
-  width: calc(#{$golden-ratio-small} - #{2 * $form-padding});
+  width: calc(#{$golden-ratio-small} - #{2 * ($form-padding + $form-border-width)});
 
   float: left;
 
-  padding: $form-padding;
+  padding: $form-padding + $form-border-width;
+
+  line-height: $line-height-computed;
 }
 
 /* == Styling obligatory fields  ==
@@ -81,12 +85,14 @@ is set to all form fields where <n> is its type id. */
 .pifa-field-5 span {
   width: calc(#{$golden-ratio-tall} - #{2 * ($form-border-width + $form-padding)});
 
-  float: left;
+  display: inline-block;
 
   padding: $form-padding;
   border: $form-border-width solid $form-border-color;
 
   font-size: $font-size-base;
+
+  line-height: $line-height-computed;
 }
 
 /* BUTTONSUBMIT */
@@ -120,14 +126,14 @@ button {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
   cursor: pointer;
-  border: 1px solid #e6e6e6;
+  border: 1px solid $button-color;
   border-radius: 4px;
 
-  background-color: #e6e6e6;
+  background-color: $button-color;
 
-  -webkit-box-shadow: 0 4px 0 0 #adadad !important;
-  -moz-box-shadow: 0 4px 0 0 #adadad !important;
-  box-shadow: 0 4px 0 0 #adadad !important;
+  -webkit-box-shadow: 0 4px 0 0 $button-shadow-color !important;
+  -moz-box-shadow: 0 4px 0 0 $button-shadow-color !important;
+  box-shadow: 0 4px 0 0 $button-shadow-color !important;
   transition: 0.1s;
 }
 /* BUTTONSUBMIT */
@@ -135,12 +141,12 @@ button {
 input[type='submit'],
 button[type='submit']{
   color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  background-color: $button-primary-color;
+  border-color: $button-primary-color;
 
-  -webkit-box-shadow: 0 4px 0 0 #23527c !important;
-  -moz-box-shadow: 0 4px 0 0 #23527c !important;
-  box-shadow: 0 4px 0 0 #23527c !important;
+  -webkit-box-shadow: 0 4px 0 0 $button-primary-shadow-color !important;
+  -moz-box-shadow: 0 4px 0 0 $button-primary-shadow-color !important;
+  box-shadow: 0 4px 0 0 $button-primary-shadow-color !important;
   font-weight: bold;
 }
 

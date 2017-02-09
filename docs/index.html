@@ -276,6 +276,7 @@
         Forms
     </h2>
     <div class="card card-narrow">
+
         <form>
             <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
@@ -285,9 +286,9 @@
                 <label for="exampleInputPassword1">Password</label>
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
             </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox"> Check me out
+            <div class="checkbox checkbox2">
+                <label for="testCheckbox">
+                    <input type="checkbox" id="testCheckbox"> Check me out
                 </label>
             </div>
             <button type="submit">Submit</button>
@@ -345,6 +346,86 @@
             <div id="pifa-field-73" class="pifa-field-14"><input name="" class="text_medium" value="Abbrechen"
                                                                  type="reset" id="pifa-field-elm-73"></div>
         </form>
+        <hr />
+
+        <h3>Custom Radio- and Checkboxes</h3>
+        <form>
+            <h4>Checkboxes</h4>
+            <div class="checkbox">
+                <input id="first" type="checkbox" checked="checked"/>
+                <label for="first">
+                    First checkbox
+                </label>
+            </div>
+            <div class="checkbox">
+                <input id="second" type="checkbox" />
+                <label for="second">
+                    Second checkbox
+                </label>
+            </div>
+            <div class="checkbox">
+                <input id="disabled" type="checkbox" disabled="disabled"/>
+                <label for="disabled">
+                    Disabled checkbox
+                </label>
+            </div>
+            <div class="checkbox">
+                <input id="disabledchecked" type="checkbox" disabled="disabled" checked="checked"/>
+                <label for="disabledchecked">
+                    Disabled & checked checkbox
+                </label>
+            </div>
+
+            <h4>Radio buttons</h4>
+            <div class="radio">
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="checked" />
+                <label for="optionsRadios1">
+                    First radio
+                </label>
+            </div>
+            <div class="radio">
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" />
+                <label for="optionsRadios2">
+                    Second radio
+                </label>
+            </div>
+
+            <div class="radio">
+                <input type="radio" name="optionsRadiosDisabled" id="optionsRadiosDisabled1" value="option1" disabled="disabled" />
+                <label for="optionsRadiosDisabled1">
+                    Disabled radio
+                </label>
+            </div>
+            <div class="radio">
+                <input type="radio" name="optionsRadiosDisabled" id="optionsRadiosDisabled2" value="option2" disabled="disabled" checked="checked" />
+                <label for="optionsRadiosDisabled2">
+                    Disabled & checked radio
+                </label>
+            </div>
+
+            <button type="submit">Submit</button>
+            <button>Reset</button>
+        </form>
+
+        <h3>Custom Select boxes</h3>
+        <form>
+            <div class="form-group">
+                <label for="exampleSelect1">Select Box</label>
+                <div class="select">
+                    <select id="exampleSelect1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <div class="select__arrow"></div>
+                </div>
+            </div>
+
+            <button type="submit">Submit</button>
+            <button>Reset</button>
+        </form>
 
     </div>
 
@@ -368,23 +449,34 @@
             </div>
             <div class="row--tall">
                 <ul class="no-bullets">
-                    <li><a class="pikto--link pikto-after" target="_blank" href="unigrid/unigrid-core.css">unigrid-core.css</a></li>
-                    <li><a class="pikto--link pikto-after" target="_blank" href="unigrid/unigrid-forms.css">unigrid-forms.css</a></li>
-                    <li><a class="pikto--link pikto-after" target="_blank" href="unigrid/unigrid-grid.css">unigrid-grid.css</a></li>
-                    <li><a class="pikto--link pikto-after" target="_blank" href="unigrid/unigrid-piktos.css">unigrid-piktos.css</a> and <a href="upload/piktos.zip" class="pikto--zip pikto-after" target="_blank">pikto-files</a></li>
-                    <li><a class="pikto--link pikto-after" target="_blank" href="unigrid/unigrid-typography.css">unigrid-typography.css</a></li>
-                    <li><a class="pikto--link pikto-after" target="_blank" href="unigrid/unigrid.css">unigrid.css</a></li>
+                    <li><a class="pikto--link pikto-after" target="_blank" href="unigrid/unigrid-core.css">unigrid-core.css</a>
+                    </li>
+                    <li><a class="pikto--link pikto-after" target="_blank" href="unigrid/unigrid-forms.css">unigrid-forms.css</a>
+                    </li>
+                    <li><a class="pikto--link pikto-after" target="_blank" href="unigrid/unigrid-grid.css">unigrid-grid.css</a>
+                    </li>
+                    <li><a class="pikto--link pikto-after" target="_blank" href="unigrid/unigrid-piktos.css">unigrid-piktos.css</a>
+                        and <a href="upload/piktos.zip" class="pikto--zip pikto-after" target="_blank">pikto-files</a>
+                    </li>
+                    <li><a class="pikto--link pikto-after" target="_blank" href="unigrid/unigrid-typography.css">unigrid-typography.css</a>
+                    </li>
+                    <li><a class="pikto--link pikto-after" target="_blank" href="unigrid/unigrid.css">unigrid.css</a>
+                    </li>
                 </ul>
             </div>
         </div>
 
-        <hr />
+        <hr/>
 
         <strong>Additional downloads:</strong>
         <ul>
-            <li>latest <a href="https://jquery.com" class="pikto--link pikto-after" target="_blank"><strong>jquery library</strong> from official site</a></li>
-            <li>latest <a href="https://getbootstrap.com/" class="pikto--link pikto-after" target="_blank"><strong>bootstrap component suite</strong> from official site</a></li>
-            <li><strong>drawer.js</strong> from bootstrap-drawer project - <a href="https://github.com/clineamb/bootstrap-drawer" target="_blank" class="pikto--link pikto-after">see github repository</a></li>
+            <li>latest <a href="https://jquery.com" class="pikto--link pikto-after" target="_blank"><strong>jquery
+                library</strong> from official site</a></li>
+            <li>latest <a href="https://getbootstrap.com/" class="pikto--link pikto-after" target="_blank"><strong>bootstrap
+                component suite</strong> from official site</a></li>
+            <li><strong>drawer.js</strong> from bootstrap-drawer project - <a
+                    href="https://github.com/clineamb/bootstrap-drawer" target="_blank" class="pikto--link pikto-after">see
+                github repository</a></li>
         </ul>
     </div>
 

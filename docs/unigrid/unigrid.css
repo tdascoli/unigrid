@@ -198,7 +198,7 @@ a.navbar-brand {
     margin: auto 0; }
 
   .navbar-header + div {
-    width: 300px;
+    width: 61.8034%;
     display: block; } }
 /* -----------------------------------------------------------------------------
 
@@ -428,8 +428,8 @@ a.navbar-brand {
     position: fixed;
     right: 0;
     height: 100%;
-    width: 300px;
-    margin-right: -300px;
+    width: 61.8034%;
+    margin-right: -61.8034%;
     display: block;
     top: 0;
     z-index: 1035; }
@@ -655,13 +655,15 @@ All labels should be displayed left of their form fields.
 The surrounding division has to clear the floating though. */
 .form-group,
 .pifa-form div {
-  clear: both; }
+  display: block;
+  margin-bottom: 15px; }
 
 .form-group label,
 .pifa-form label {
-  width: calc(38.1966% - 8px);
+  width: calc(38.1966% - 12px);
   float: left;
-  padding: 4px; }
+  padding: 6px;
+  line-height: 23px; }
 
 /* == Styling obligatory fields  ==
 The class pifa-obligatory is set to all divisions containing an obligatory field.
@@ -709,10 +711,11 @@ is set to all form fields where <n> is its type id. */
 .pifa-field-4 span,
 .pifa-field-5 span {
   width: calc(61.8034% - 12px);
-  float: left;
+  display: inline-block;
   padding: 4px;
   border: 2px solid #333;
-  font-size: 14px; }
+  font-size: 14px;
+  line-height: 23px; }
 
 /* BUTTONSUBMIT */
 .pifa-field-13,
@@ -754,7 +757,7 @@ input[type='submit'],
 button[type='submit'] {
   color: #fff;
   background-color: #337ab7;
-  border-color: #2e6da4;
+  border-color: #337ab7;
   -webkit-box-shadow: 0 4px 0 0 #23527c !important;
   -moz-box-shadow: 0 4px 0 0 #23527c !important;
   box-shadow: 0 4px 0 0 #23527c !important;
@@ -779,6 +782,151 @@ The class pifa-error is set to all divisions containing a field with erroneous
 data. */
 div.pifa-error {
   border: 1px solid red; }
+
+.checkbox,
+.radio {
+  margin-left: 38.1966%; }
+
+.checkbox > label,
+.radio > label {
+  display: block;
+  position: relative;
+  padding-left: 33px;
+  margin-bottom: 15px;
+  cursor: pointer; }
+
+.checkbox > label::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  height: 23px;
+  width: 23px;
+  border: 2px solid #333;
+  background: white; }
+
+.checkbox > input:checked ~ label:after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 4px;
+  border: solid #333;
+  width: 4px;
+  height: 10px;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg); }
+
+.checkbox2 > label > input {
+  margin-left: -22px; }
+
+.checkbox2 > label > input:checked:after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 4px;
+  border: solid #333;
+  width: 4px;
+  height: 10px;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg); }
+
+.checkbox > input:not([disabled]):focus ~ label::before,
+.radio > input:not([disabled]):focus ~ label::before {
+  -webkit-box-shadow: 0 0 0 2px #e7a61a;
+  -moz-box-shadow: 0 0 0 2px #e7a61a;
+  box-shadow: 0 0 0 2px #e7a61a; }
+
+.checkbox > input,
+.radio > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0; }
+
+.checkbox > input:disabled ~ label:before,
+.checkbox > input:disabled ~ label:after,
+.radio > input:disabled ~ label:before {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none; }
+
+.radio > input:disabled ~ label:after {
+  opacity: 0.6; }
+
+.checkbox > input:not([disabled]) ~ label:hover::before,
+.radio > input:not([disabled]) ~ label:hover::before {
+  -webkit-box-shadow: 0 0 0 2px #e7a61a;
+  -moz-box-shadow: 0 0 0 2px #e7a61a;
+  box-shadow: 0 0 0 2px #e7a61a; }
+
+.radio > label::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  height: 23px;
+  width: 23px;
+  border-radius: 50%;
+  border: 2px solid #333; }
+
+.radio > input:checked ~ label:after {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 5px;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background: #333; }
+
+.select {
+  position: relative;
+  display: inline-block;
+  width: 61.8034%; }
+
+.select select {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  padding: 6px;
+  line-height: 23px;
+  outline: 0;
+  border: 0;
+  border-radius: 0;
+  background: #e6e6e6;
+  font-size: 14px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+
+.select select::-ms-expand {
+  display: none; }
+
+.select select:hover,
+.select select:focus {
+  color: #000;
+  background: #adadad; }
+
+.select select:disabled {
+  opacity: 0.5;
+  pointer-events: none; }
+
+.select__arrow {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 8px 5px 0 5px;
+  border-color: #333 transparent transparent transparent; }
+
+.select select:hover ~ .select__arrow,
+.select select:focus ~ .select__arrow {
+  border-top-color: #000; }
+
+.select select:disabled ~ .select__arrow {
+  border-top-color: #adadad; }
 
 /*------------------------------------*\
   #GRID-MIXINS_REGULAR

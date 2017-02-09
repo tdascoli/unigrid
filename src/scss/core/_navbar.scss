@@ -141,7 +141,7 @@ a.navbar-brand {
   }
 
   .navbar-header + div {
-    width: 300px;
+    width: $golden-ratio-tall;
 
     display: block;
   }

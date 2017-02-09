@@ -1,0 +1,189 @@
+.checkbox,
+.radio {
+  margin-left: $golden-ratio-small;
+}
+
+.checkbox > label,
+.radio > label{
+  display: block;
+  position: relative;
+  padding-left: ($form-box-size + (2*$form-border-width) + $form-box-margin);
+  margin-bottom: $form-margin-bottom;
+  cursor: pointer;
+}
+//* CHECKBOX */
+.checkbox > label {
+  &::before{
+    content: '';
+    position: absolute;
+    top: ($form-border-width - $form-padding);
+    left: 0;
+
+    height: $form-box-size;
+    width: $form-box-size;
+
+    border: $form-border-width solid $form-border-color;
+
+    background: white;
+  }
+}
+
+.checkbox > input:checked ~ label:after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: $form-box-check-top;
+
+  border: solid $form-border-color;
+
+  width: $form-box-check-width;
+  height: $form-box-check-height;
+
+  border-width: 0 $form-box-check-border $form-box-check-border 0;
+  transform: rotate(45deg);
+}
+
+.checkbox2 > label > input {
+ margin-left: -22px;
+}
+.checkbox2 > label > input:checked:after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: $form-box-check-top;
+
+  border: solid $form-border-color;
+
+  width: $form-box-check-width;
+  height: $form-box-check-height;
+
+  border-width: 0 $form-box-check-border $form-box-check-border 0;
+  transform: rotate(45deg);
+}
+
+//* similar */
+
+.checkbox > input:not([disabled]):focus ~ label,
+.radio > input:not([disabled]):focus ~ label{
+  &::before{
+    -webkit-box-shadow: 0 0 0 2px rgba(231,166,26,1);
+    -moz-box-shadow: 0 0 0 2px rgba(231,166,26,1);
+    box-shadow: 0 0 0 2px rgba(231,166,26,1);
+  }
+}
+.checkbox > input,
+.radio > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.checkbox > input:disabled ~ label:before,
+.checkbox > input:disabled ~ label:after,
+.radio > input:disabled ~ label:before{
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.radio > input:disabled ~ label:after {
+  opacity: 0.6;
+}
+
+.checkbox > input:not([disabled]) ~ label,
+.radio > input:not([disabled]) ~ label {
+  &:hover {
+    &::before{
+      -webkit-box-shadow: 0 0 0 2px rgba(231,166,26,1);
+      -moz-box-shadow: 0 0 0 2px rgba(231,166,26,1);
+      box-shadow: 0 0 0 2px rgba(231,166,26,1);
+    }
+  }
+}
+
+//* RADIO */
+.radio > label {
+  &::before{
+    content: '';
+    position: absolute;
+    top: ($form-border-width - $form-padding);
+    left: 0;
+
+    height: $form-box-size;
+    width: $form-box-size;
+
+    border-radius: 50%;
+
+    border: $form-border-width solid $form-border-color;
+  }
+}
+
+.radio > input:checked ~ label:after {
+  content: '';
+  position: absolute;
+  left: $form-box-radio-left;
+  top: $form-box-radio-top;
+  height: $form-box-radio-size;
+  width: $form-box-radio-size;
+  border-radius: 50%;
+  background: $form-border-color;
+}
+
+//* select */
+.select {
+  position: relative;
+  display: inline-block;
+
+  width: $golden-ratio-tall;
+}
+.select select {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+
+  padding: $form-padding + $form-border-width;
+
+  line-height: $line-height-computed;
+
+  outline: 0;
+  border: 0;
+  border-radius: 0;
+
+  background: $button-color;
+
+  font-size: $font-size-base;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.select select::-ms-expand {
+  display: none;
+}
+.select select:hover,
+.select select:focus {
+  color: #000;
+  background: $button-shadow-color;
+}
+.select select:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.select__arrow {
+  position: absolute;
+  top: $form-select-arrow-postion;
+  right: $form-select-arrow-postion;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-style: solid;
+  border-width: $form-select-arrow-height $form-select-arrow-width 0 $form-select-arrow-width;
+  border-color: $form-border-color transparent transparent transparent;
+}
+.select select:hover ~ .select__arrow,
+.select select:focus ~ .select__arrow {
+  border-top-color: #000;
+}
+.select select:disabled ~ .select__arrow {
+  border-top-color: $button-shadow-color;
+}

@@ -162,7 +162,7 @@ a.navbar-brand {
     margin: auto 0; }
 
   .navbar-header + div {
-    width: 300px;
+    width: 61.8034%;
     display: block; } }
 /* column
   $color-rare: #A58E4A;
@@ -218,13 +218,15 @@ All labels should be displayed left of their form fields.
 The surrounding division has to clear the floating though. */
 .form-group,
 .pifa-form div {
-  clear: both; }
+  display: block;
+  margin-bottom: 15px; }
 
 .form-group label,
 .pifa-form label {
-  width: calc(38.1966% - 8px);
+  width: calc(38.1966% - 12px);
   float: left;
-  padding: 4px; }
+  padding: 6px;
+  line-height: 23px; }
 
 /* == Styling obligatory fields  ==
 The class pifa-obligatory is set to all divisions containing an obligatory field.
@@ -272,10 +274,11 @@ is set to all form fields where <n> is its type id. */
 .pifa-field-4 span,
 .pifa-field-5 span {
   width: calc(61.8034% - 12px);
-  float: left;
+  display: inline-block;
   padding: 4px;
   border: 2px solid #333;
-  font-size: 14px; }
+  font-size: 14px;
+  line-height: 23px; }
 
 /* BUTTONSUBMIT */
 .pifa-field-13,
@@ -317,7 +320,7 @@ input[type='submit'],
 button[type='submit'] {
   color: #fff;
   background-color: #337ab7;
-  border-color: #2e6da4;
+  border-color: #337ab7;
   -webkit-box-shadow: 0 4px 0 0 #23527c !important;
   -moz-box-shadow: 0 4px 0 0 #23527c !important;
   box-shadow: 0 4px 0 0 #23527c !important;
