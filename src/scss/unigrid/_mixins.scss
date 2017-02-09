@@ -22,19 +22,19 @@
     }
 
     .prepend--#{$i} {
-      margin-left: ((($grid-brick-width+$grid-gutter)*$i) + $grid-half-gutter);
+      margin-left: ((($grid-brick-width+$grid-gutter)*$i) + $grid-half-gutter) !important;
     }
     .first.prepend--#{$i},
     .brick:first-child.prepend--#{$i}{
-      margin-left: ((($grid-brick-width+$grid-gutter)*$i));
+      margin-left: ((($grid-brick-width+$grid-gutter)*$i)) !important;
     }
 
     .append--#{$i} {
-      margin-right: ((($grid-brick-width+$grid-gutter)*$i) + $grid-half-gutter);
+      margin-right: ((($grid-brick-width+$grid-gutter)*$i) + $grid-half-gutter) !important;
     }
     .last.append--#{$i},
     .brick:last-child.append--#{$i}{
-      margin-right: ((($grid-brick-width+$grid-gutter)*$i));
+      margin-right: ((($grid-brick-width+$grid-gutter)*$i)) !important;
     }
   }
 }

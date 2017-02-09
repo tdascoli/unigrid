@@ -1,5 +1,5 @@
 /*------------------------------------*\
-  #MOBILE-UNIGRID
+  #DESKTOP-UNIGRID
 \*------------------------------------*/
 
 @media #{$media-desktop} {
@@ -51,7 +51,7 @@
   @include grid-row($grid);
 
   /*------------------------------------*\
-    #MOBILE-GRID-COLUMN
+    #GRID-COLUMN
   \*------------------------------------*/
 
 
@@ -99,7 +99,7 @@
   @include grid-col($grid);
 
   /*------------------------------------*\
-    #MOBILE-GRID-ORDER
+    #GRID-ORDER
   \*------------------------------------*/
 
   @include grid-order($grid);

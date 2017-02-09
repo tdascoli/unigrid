@@ -1,6 +1,6 @@
 .checkbox,
 .radio {
-  margin-left: $golden-ratio-small;
+  margin-left: calc(#{$golden-ratio-small} - #{$form-padding});
 }
 
 .checkbox > label,
