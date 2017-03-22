@@ -1,6 +1,6 @@
 .checkbox,
 .radio {
-  margin-left: calc(#{$golden-ratio-small} - #{$form-padding});
+  //margin-left: calc(#{$golden-ratio-small} - #{$form-padding});
 }
 
 .checkbox > label,
@@ -134,7 +134,8 @@
   position: relative;
   display: inline-block;
 
-  width: $golden-ratio-tall;
+  //width: $golden-ratio-tall;
+  width: 100%;
 }
 .select select {
   display: inline-block;

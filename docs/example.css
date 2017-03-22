@@ -20,7 +20,7 @@
 .show-border .content {
   color: #fff;
   background-color: #cccccc;
-  min-height: 26px;
+  min-height: 32px;
   height: 100%;
   width: 100%; }
 
@@ -55,8 +55,8 @@
   height: 100%;
   padding-top: 0;
   padding-bottom: 0;
-  max-width: 26px;
-  flex-basis: 26px;
+  max-width: 34px;
+  flex-basis: 34px;
   background: none; }
   .grid .brick div {
     border-right: 1px solid orange;
@@ -69,9 +69,9 @@
   border-bottom: 1px solid red;
   width: 100%;
   max-width: 100%;
-  padding: 3px 0;
-  height: 26px;
-  max-height: 26px;
+  padding: 1px 0;
+  height: 36px;
+  max-height: 36px;
   background: none; }
   .col-grid .brick div {
     border-top: 1px solid orange;
@@ -87,8 +87,8 @@
   height: 100%;
   padding-top: 0;
   padding-bottom: 0;
-  max-width: calc(8.33333% - 12px);
-  flex-basis: calc(8.33333% - 12px);
+  max-width: calc(8.33333% - 13px);
+  flex-basis: calc(8.33333% - 13px);
   background: none; }
   .mobile-grid .brick div {
     border-right: 1px solid orange;
@@ -100,9 +100,9 @@
   border-top: 1px solid red;
   border-bottom: 1px solid red;
   max-width: 100%;
-  padding: 3px 0;
-  max-height: 26px;
-  flex-basis: 26px;
+  padding: 1px 0;
+  max-height: 36px;
+  flex-basis: 36px;
   background: none; }
   .mobile-col-grid .brick div {
     border-top: 1px solid orange;
@@ -146,7 +146,7 @@ body {
   background-color: #fff; }
 
 .card-narrow {
-  width: 908px; }
+  width: 1146px; }
 
 .content {
   color: #000;
@@ -168,11 +168,11 @@ body {
   line-height: 10px; }
 
 #hamburger-grid {
-  margin-top: 72px; }
+  margin-top: 86px; }
 
 #hamburger-col-grid,
 #show-border {
-  margin-top: 4px; }
+  margin-top: 6px; }
 
 .grid-generator .form-group label {
   width: calc(50% - 8px); }

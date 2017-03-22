@@ -71,7 +71,7 @@ body {
 
 .navbar {
   z-index: 1035;
-  height: 72px; }
+  height: 86px; }
 
 .navbar > .container {
   display: flex; }
@@ -86,21 +86,21 @@ body {
   top: 0; }
 
 .navbar-fixed + .container {
-  margin-top: 72px; }
+  margin-top: 86px; }
 
 .navbar-header {
   width: 38.1966%;
   display: inline-block; }
 
 .navbar-header + div {
-  width: calc(61.8034% - 48px);
+  width: 61.8034%;
   display: inline-block; }
 
 .navbar .c-hamburger {
   margin: auto 0; }
 
 a.navbar-brand {
-  font-size: 45px;
+  font-size: 54px;
   font-weight: 700;
   color: #fff;
   text-decoration: none;
@@ -108,15 +108,34 @@ a.navbar-brand {
   line-height: normal; }
 
 .navbar-nav {
-  list-style-type: none; }
+  list-style-type: none;
+  padding: 0;
+  margin: 23px 0 0 0;
+  height: 40px; }
   .navbar-nav a,
   .navbar-nav a:visited {
-    color: #fff; }
+    color: #fff;
+    text-decoration: none;
+    box-shadow: inset 0 -3px 0 #fff;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    padding-bottom: 3px; }
+  .navbar-nav a:hover {
+    box-shadow: inset 0 -3px 0 #dfdfdf; }
   .navbar-nav a.is-active {
-    background: darkgrey; }
+    background: #dfdfdf; }
+
+.navbar-right {
+  float: right; }
+
+.navbar-nav .navbar-search a,
+.navbar-nav .navbar-account a {
+  box-shadow: none; }
 
 .nav > li {
-  margin: 2px;
+  margin: 9px 3px;
   display: inline-block; }
 
 .nav > li:first-child {
@@ -126,7 +145,7 @@ a.navbar-brand {
   margin-right: 0; }
 
 .footer-fixed {
-  margin-bottom: 32px !important; }
+  margin-bottom: 43px !important; }
 
 .footer-fixed + .footer {
   width: 100%;
@@ -136,15 +155,15 @@ a.navbar-brand {
 .footer-default {
   background: #000;
   color: #fff;
-  height: 34px; }
+  height: 40px; }
 
 @media only screen and (max-width: 767px) {
   .navbar-header {
     width: calc(100% - 48px);
-    margin-top: 12.98684px; }
+    margin-top: 15.27864px; }
 
   a.navbar-brand {
-    font-size: 28px; }
+    font-size: 34px; }
 
   .navbar-nav a,
   .navbar-nav a:visited {
@@ -155,7 +174,7 @@ a.navbar-brand {
   .nav > li,
   .nav > li:first-child,
   .nav > li:last-child {
-    margin: 2px;
+    margin: 3px;
     display: block; }
 
   .navbar .c-hamburger {
@@ -219,34 +238,34 @@ The surrounding division has to clear the floating though. */
 .form-group,
 .pifa-form div {
   display: block;
-  margin-bottom: 15px; }
+  margin-bottom: 3px; }
 
 .form-group label,
 .pifa-form label {
-  width: calc(38.1966% - 4px);
-  float: left;
+  width: 100%;
+  display: block;
   font-weight: 700;
-  padding: 6px 0;
+  padding: 6px 0 0 0;
   line-height: 23px; }
 
 /* == Styling obligatory fields  ==
 The class pifa-obligatory is set to all divisions containing an obligatory field.
 In this case ' *' is appended to any label describing an obligatory field.
-Unfortunately this doesn't seem to work in IE though.*/
+Unfortunately this doesn't seem to work in IE though.*
 .pifa-obligatory .pifa-field-lbl:after {
-  content: ' *'; }
-
-/*
-gov.uk: dont indicate obligatory fields, indicate OPTIONAL fields!
-.form-group label:after,
-.pifa-field-lbl:after {
-  content: ' (optional)';
-}
-
-.pifa-obligatory .pifa-field-lbl:after {
-  content: '';
+  content: ' *';
 }
 */
+/*
+gov.uk: dont indicate obligatory fields, indicate OPTIONAL fields!*/
+.form-group label:after,
+.pifa-field-lbl:after {
+  content: ' (optional)'; }
+
+.pifa-obligatory .pifa-field-lbl:after,
+.form-required label:after {
+  content: ''; }
+
 .checkbox_wrapper {
   display: inline-block;
   padding: 0;
@@ -275,7 +294,8 @@ is set to all form fields where <n> is its type id. */
 .pifa-field-15 span,
 .pifa-field-4 span,
 .pifa-field-5 span {
-  width: calc(61.8034% - 12px);
+  width: calc(100% - 12px);
+  display: block;
   padding: 4px;
   border: 2px solid #333;
   font-size: 14px;
@@ -292,7 +312,8 @@ is set to all form fields where <n> is its type id. */
 .pifa-field-14 input,
 input[type='submit'],
 input[type='button'],
-button {
+button,
+.btn-default {
   float: none;
   width: auto;
   display: inline-block;
@@ -318,7 +339,8 @@ button {
 /* BUTTONSUBMIT */
 .pifa-field-13 input,
 input[type='submit'],
-button[type='submit'] {
+button[type='submit'],
+.btn-primary {
   color: #fff;
   background-color: #337ab7;
   border-color: #337ab7;
@@ -353,7 +375,7 @@ div.pifa-error {
 .show-border .content {
   color: #fff;
   background-color: #cccccc;
-  min-height: 26px;
+  min-height: 32px;
   height: 100%;
   width: 100%; }
 
@@ -388,8 +410,8 @@ div.pifa-error {
   height: 100%;
   padding-top: 0;
   padding-bottom: 0;
-  max-width: 26px;
-  flex-basis: 26px;
+  max-width: 34px;
+  flex-basis: 34px;
   background: none; }
   .grid .brick div {
     border-right: 1px solid orange;
@@ -402,9 +424,9 @@ div.pifa-error {
   border-bottom: 1px solid red;
   width: 100%;
   max-width: 100%;
-  padding: 3px 0;
-  height: 26px;
-  max-height: 26px;
+  padding: 1px 0;
+  height: 36px;
+  max-height: 36px;
   background: none; }
   .col-grid .brick div {
     border-top: 1px solid orange;
@@ -420,8 +442,8 @@ div.pifa-error {
   height: 100%;
   padding-top: 0;
   padding-bottom: 0;
-  max-width: calc(8.33333% - 12px);
-  flex-basis: calc(8.33333% - 12px);
+  max-width: calc(8.33333% - 13px);
+  flex-basis: calc(8.33333% - 13px);
   background: none; }
   .mobile-grid .brick div {
     border-right: 1px solid orange;
@@ -433,9 +455,9 @@ div.pifa-error {
   border-top: 1px solid red;
   border-bottom: 1px solid red;
   max-width: 100%;
-  padding: 3px 0;
-  max-height: 26px;
-  flex-basis: 26px;
+  padding: 1px 0;
+  max-height: 36px;
+  flex-basis: 36px;
   background: none; }
   .mobile-col-grid .brick div {
     border-top: 1px solid orange;

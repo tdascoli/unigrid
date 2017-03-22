@@ -1,12 +1,12 @@
 //* vars.grid */
 
 $grid: 24;
-$grid-gutter: 4px;
+$grid-gutter: 6px;
 $grid-half-gutter: ($grid-gutter/2);
-$grid-brick-padding-ttb: 4px;
+$grid-brick-padding-ttb: 2px;
 $grid-brick-padding-rtl: 4px;
-$grid-brick-width: 34px;
-$grid-brick-height: 34px;
+$grid-brick-width: 42px;
+$grid-brick-height: 40px;
 
 //* vars.mobile.grid */
 
@@ -26,3 +26,7 @@ $default-color: #fff;
 $media-phone: "only screen and (max-width : 767px)";
 $media-tablet: "only screen and (min-width: 768px)";
 $media-desktop: "only screen and (min-width: 1024px)";
+
+//* vars.border */
+$grid-border-width: 2px;
+$grid-border-color: #000;

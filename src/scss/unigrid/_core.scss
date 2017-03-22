@@ -10,6 +10,36 @@
   min-height: ($grid-brick-height - $grid-gutter - $grid-brick-padding-ttb);
 }
 
+.unigrid--border {
+  // todo
+  border: $grid-border-width solid $grid-border-color;
+}
+
+.unigrid--border ~ .unigrid--border {
+  border-top: none;
+}
+
+.unigrid--row.unigrid--border {
+  width: calc(100% - #{(2 * $grid-border-width)});
+  // todo height when col!
+}
+.unigrid--border .brick {
+  margin: 0 $grid-half-gutter;
+  padding: ($grid-brick-padding-ttb + $grid-half-gutter) ($grid-brick-padding-rtl - $grid-border-width) ($grid-brick-padding-ttb + $grid-half-gutter) $grid-brick-padding-rtl;
+
+  border-left: $grid-border-width solid $grid-border-color;
+}
+.unigrid--border .brick:first-child,
+.unigrid--border .brick.first{
+  margin-left: 0;
+  border-left: none;
+}
+.unigrid--border .brick:last-child,
+.unigrid--border .brick.last{
+  margin-right: 0;
+  padding-right: 0;
+}
+
 .brick--inverse {
   background: $default-color-inverse;
   color: $default-color;
@@ -25,6 +55,11 @@
 
 .brick > img {
   width: 100%;
+  max-height: 100%;
+}
+
+.brick--col--flex {
+  height: auto;
   max-height: 100%;
 }
 

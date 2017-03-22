@@ -13,15 +13,15 @@ The surrounding division has to clear the floating though. */
 
 .form-group label,
 .pifa-form label {
-  width: calc(#{$golden-ratio-small} - #{2*$form-border-width});
+  //width: calc(#{$golden-ratio-small} - #{2*$form-border-width});
 
-  float: left;
-  //width: 100%;
-  //display: block;
+  //float: left;
+  width: 100%;
+  display: block;
 
   font-weight: 700;
 
-  padding: ($form-padding + $form-border-width) 0;
+  padding: ($form-padding + $form-border-width) 0 0 0;
 
   line-height: $line-height-computed;
 }
@@ -29,24 +29,24 @@ The surrounding division has to clear the floating though. */
 /* == Styling obligatory fields  ==
 The class pifa-obligatory is set to all divisions containing an obligatory field.
 In this case ' *' is appended to any label describing an obligatory field.
-Unfortunately this doesn't seem to work in IE though.*/
+Unfortunately this doesn't seem to work in IE though.*
 .pifa-obligatory .pifa-field-lbl:after {
   content: ' *';
 }
+*/
 
 
 /*
-gov.uk: dont indicate obligatory fields, indicate OPTIONAL fields!
+gov.uk: dont indicate obligatory fields, indicate OPTIONAL fields!*/
 .form-group label:after,
 .pifa-field-lbl:after {
   content: ' (optional)';
 }
 
-.pifa-obligatory .pifa-field-lbl:after {
+.pifa-obligatory .pifa-field-lbl:after,
+.form-required label:after {
   content: '';
 }
-*/
-
 
 .checkbox_wrapper {
   display: inline-block;
@@ -89,10 +89,10 @@ is set to all form fields where <n> is its type id. */
 .pifa-field-4 span,
  /* INPUTCHECKBOX */
 .pifa-field-5 span {
-  width: calc(#{$golden-ratio-tall} - #{2 * ($form-border-width + $form-padding)});
+  //width: calc(#{$golden-ratio-tall} - #{2 * ($form-border-width + $form-padding)});
 
-  //width: calc(100% - #{2 * ($form-border-width + $form-padding)});
-  //display: block;
+  width: calc(100% - #{2 * ($form-border-width + $form-padding)});
+  display: block;
 
   padding: $form-padding;
   border: $form-border-width solid $form-border-color;
@@ -117,7 +117,8 @@ is set to all form fields where <n> is its type id. */
 .pifa-field-14 input,
 input[type='submit'],
 input[type='button'],
-button {
+button,
+.btn-default {
   float: none;
   width: auto;
 
@@ -146,7 +147,8 @@ button {
 /* BUTTONSUBMIT */
 .pifa-field-13 input,
 input[type='submit'],
-button[type='submit']{
+button[type='submit'],
+.btn-primary{
   color: #fff;
   background-color: $button-primary-color;
   border-color: $button-primary-color;

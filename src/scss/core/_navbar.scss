@@ -34,8 +34,8 @@ body {
 }
 
 .navbar-header + div {
-  width: calc(#{$golden-ratio-tall} - #{$hamburger-button-width});
-
+  //width: calc(#{$golden-ratio-tall} - #{$hamburger-button-width});
+  width: $golden-ratio-tall;
   display: inline-block;
 }
 
@@ -56,19 +56,43 @@ a.navbar-brand {
 
 .navbar-nav {
   list-style-type: none;
+  padding: 0;
+  margin: (($grid-brick-height+$grid-gutter)/2) 0 0 0;
+  height: $grid-brick-height;
 
   a,
   a:visited {
     color: $navbar-default-color;
+    text-decoration: none;
+    box-shadow: inset 0 (-$grid-half-gutter) 0 $navbar-default-color;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+
+    padding-bottom: $grid-half-gutter;
+  }
+
+  a:hover {
+    box-shadow: inset 0 (-$grid-half-gutter) 0 $navbar-hover-color;
   }
 
   a.is-active {
-    background: darkgrey;
+    background: $navbar-hover-color;
   }
 }
 
+.navbar-right {
+  float: right;
+}
+
+.navbar-nav .navbar-search a,
+.navbar-nav .navbar-account a{
+  box-shadow: none;
+}
+
 .nav > li {
-  margin: $grid-half-gutter;
+  margin: (3*$grid-half-gutter) $grid-half-gutter;
 
   display: inline-block;
 }
@@ -87,7 +111,7 @@ a.navbar-brand {
 }
 
 .footer-fixed {
-  margin-bottom: ($grid-brick-height - $grid-half-gutter) !important;
+  margin-bottom: ($grid-brick-height + $grid-half-gutter) !important;
 }
 
 .footer-fixed + .footer {

@@ -20,34 +20,34 @@ The surrounding division has to clear the floating though. */
 .form-group,
 .pifa-form div {
   display: block;
-  margin-bottom: 15px; }
+  margin-bottom: 3px; }
 
 .form-group label,
 .pifa-form label {
-  width: calc(38.1966% - 4px);
-  float: left;
+  width: 100%;
+  display: block;
   font-weight: 700;
-  padding: 6px 0;
+  padding: 6px 0 0 0;
   line-height: 23px; }
 
 /* == Styling obligatory fields  ==
 The class pifa-obligatory is set to all divisions containing an obligatory field.
 In this case ' *' is appended to any label describing an obligatory field.
-Unfortunately this doesn't seem to work in IE though.*/
+Unfortunately this doesn't seem to work in IE though.*
 .pifa-obligatory .pifa-field-lbl:after {
-  content: ' *'; }
-
-/*
-gov.uk: dont indicate obligatory fields, indicate OPTIONAL fields!
-.form-group label:after,
-.pifa-field-lbl:after {
-  content: ' (optional)';
-}
-
-.pifa-obligatory .pifa-field-lbl:after {
-  content: '';
+  content: ' *';
 }
 */
+/*
+gov.uk: dont indicate obligatory fields, indicate OPTIONAL fields!*/
+.form-group label:after,
+.pifa-field-lbl:after {
+  content: ' (optional)'; }
+
+.pifa-obligatory .pifa-field-lbl:after,
+.form-required label:after {
+  content: ''; }
+
 .checkbox_wrapper {
   display: inline-block;
   padding: 0;
@@ -76,7 +76,8 @@ is set to all form fields where <n> is its type id. */
 .pifa-field-15 span,
 .pifa-field-4 span,
 .pifa-field-5 span {
-  width: calc(61.8034% - 12px);
+  width: calc(100% - 12px);
+  display: block;
   padding: 4px;
   border: 2px solid #333;
   font-size: 14px;
@@ -93,7 +94,8 @@ is set to all form fields where <n> is its type id. */
 .pifa-field-14 input,
 input[type='submit'],
 input[type='button'],
-button {
+button,
+.btn-default {
   float: none;
   width: auto;
   display: inline-block;
@@ -119,7 +121,8 @@ button {
 /* BUTTONSUBMIT */
 .pifa-field-13 input,
 input[type='submit'],
-button[type='submit'] {
+button[type='submit'],
+.btn-primary {
   color: #fff;
   background-color: #337ab7;
   border-color: #337ab7;
@@ -148,16 +151,12 @@ data. */
 div.pifa-error {
   border: 1px solid red; }
 
-.checkbox,
-.radio {
-  margin-left: calc(38.1966% - 4px); }
-
 .checkbox > label,
 .radio > label {
   display: block;
   position: relative;
   padding-left: 33px;
-  margin-bottom: 15px;
+  margin-bottom: 3px;
   cursor: pointer; }
 
 .checkbox > label::before {
@@ -246,7 +245,7 @@ div.pifa-error {
 .select {
   position: relative;
   display: inline-block;
-  width: 61.8034%; }
+  width: 100%; }
 
 .select select {
   display: inline-block;

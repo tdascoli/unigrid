@@ -1,3 +1,8 @@
 // unigrid
-@import '_desktop';
-@import '_mobile';
+@import '_variables';
+@import '_mixins';
+@import '_core';
+// desktop grid
+@import 'desktop/_grid';
+// mobile grid
+@import 'mobile/_grid';

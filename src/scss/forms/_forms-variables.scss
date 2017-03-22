@@ -16,7 +16,7 @@ $form-half-gutter: ($form-gutter/2);
 $form-padding: $grid-brick-padding-rtl;
 $form-border-width: 2px;
 $form-border-color: $text-color;
-$form-margin-bottom: 15px;
+$form-margin-bottom: $form-half-gutter;
 
 //* vars.radio- and checkboxes */
 $form-box-size: $line-height-computed;
