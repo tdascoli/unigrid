@@ -5,3 +5,4 @@
 * js?
 * setup github and repo
 * look at boilerplate and simplify
+* npm audit: replace cssnano

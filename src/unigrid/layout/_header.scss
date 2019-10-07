@@ -1,3 +1,107 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+/// navbar
+.navbar {
+  z-index: 1035;
+  height: ((2*$grid-brick-height)+$grid-gutter);
+}
+
+.navbar > .container {
+  display: flex;
+}
+
+.navbar-default {
+  background: $navbar-default-background;
+
+  color: $navbar-default-color;
+}
+
+.navbar-fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.navbar-fixed + .container {
+  margin-top: ((2*$grid-brick-height)+$grid-gutter);
+}
+
+.navbar-header {
+  width: $golden-ratio-small;
+
+  display: inline-block;
+}
+
+.navbar-header + div {
+  //width: calc(#{$golden-ratio-tall} - #{$hamburger-button-width});
+  width: $golden-ratio-tall;
+  display: inline-block;
+}
+
+.navbar .c-hamburger {
+  margin: auto 0;
+}
+
+a.navbar-brand {
+  font-size: $navbar-brand-font-size;
+  font-weight: 700;
+
+  color: $navbar-default-color;
+  text-decoration: none;
+
+  display: inline-block;
+  line-height: normal;
+}
+
+.navbar-nav {
+  list-style-type: none;
+  padding: 0;
+  margin: (($grid-brick-height+$grid-gutter)/2) 0 0 0;
+  height: $grid-brick-height;
+
+  a,
+  a:visited {
+    color: $navbar-default-color;
+    text-decoration: none;
+    box-shadow: inset 0 (-$grid-half-gutter) 0 $navbar-default-color;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+
+    padding-bottom: $grid-half-gutter;
+  }
+
+  a:hover {
+    box-shadow: inset 0 (-$grid-half-gutter) 0 $navbar-hover-color;
+  }
+
+  a.is-active {
+    background: $navbar-hover-color;
+  }
+}
+
+.navbar-right {
+  float: right;
+}
+
+.navbar-nav .navbar-search a,
+.navbar-nav .navbar-account a{
+  box-shadow: none;
+}
+
+.nav > li {
+  margin: (3*$grid-half-gutter) $grid-half-gutter;
+
+  display: inline-block;
+}
+
+.nav > li:first-child {
+  margin-left: 0;
+}
+
+.nav > li:last-child {
+  margin-right: 0;
+}
