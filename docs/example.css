@@ -20,7 +20,7 @@
 .show-border .content {
   color: #fff;
   background-color: #cccccc;
-  min-height: 32px;
+  min-height: 38px;
   height: 100%;
   width: 100%; }
 
@@ -55,8 +55,8 @@
   height: 100%;
   padding-top: 0;
   padding-bottom: 0;
-  max-width: 34px;
-  flex-basis: 34px;
+  max-width: 32px;
+  flex-basis: 32px;
   background: none; }
   .grid .brick div {
     border-right: 1px solid orange;
@@ -87,8 +87,8 @@
   height: 100%;
   padding-top: 0;
   padding-bottom: 0;
-  max-width: calc(8.33333% - 13px);
-  flex-basis: calc(8.33333% - 13px);
+  max-width: calc(8.33333% - 10px);
+  flex-basis: calc(8.33333% - 10px);
   background: none; }
   .mobile-grid .brick div {
     border-right: 1px solid orange;
@@ -146,7 +146,7 @@ body {
   background-color: #fff; }
 
 .card-narrow {
-  width: 1146px; }
+  width: 1280px; }
 
 .content {
   color: #000;
@@ -168,11 +168,11 @@ body {
   line-height: 10px; }
 
 #hamburger-grid {
-  margin-top: 86px; }
+  margin-top: 80px; }
 
 #hamburger-col-grid,
 #show-border {
-  margin-top: 6px; }
+  margin-top: 0; }
 
 .grid-generator .form-group label {
   width: calc(50% - 8px); }
