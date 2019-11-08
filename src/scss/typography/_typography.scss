@@ -5,6 +5,7 @@
 
 -------------------------------------------------------------- */
 
+/*
 @font-face {
   font-family: 'Example-Font';
   src: url( '#{$path-to-fonts}/example-font.eot' );
@@ -14,6 +15,9 @@
   font-weight: normal;
   font-style: normal;
 }
+*/
+
+@import url('https://rsms.me/inter/inter.css');
 
 html {
   font-size:100.01%;
