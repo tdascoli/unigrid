@@ -1,0 +1,38 @@
+.debug {
+
+
+  > .unigrid.show-grid {
+    position: absolute;
+    height: 100%;
+    width: $max-width;
+
+    .column {
+      padding: 0 $unigrid-brick-padding-rtl;
+
+      box-shadow: inset 1px 0px 1px -1px #f00, inset -1px 0px 1px -1px #f00;
+
+      height: 100%;
+
+      > div {
+        border-right: 1px solid orange;
+        border-left: 1px solid orange;
+
+        font-size: 0.75em;
+        font-weight: 700;
+        height: 100%;
+      }
+    }
+  }
+
+  > .unigrid.show-border .column {
+    padding: 0 !important;
+
+    border-top: $unigrid-brick-padding-ttb solid #ccc;
+    border-bottom: $unigrid-brick-padding-ttb solid #ccc;
+    border-right: $unigrid-brick-padding-rtl solid #ccc;
+    border-left: $unigrid-brick-padding-rtl solid #ccc;
+
+    background: #eee;
+  }
+
+}

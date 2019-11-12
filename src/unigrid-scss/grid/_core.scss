@@ -1,0 +1,26 @@
+/*------------------------------------*\
+  #UNIGRID-CORE
+\*------------------------------------*/
+
+.unigrid {
+  display: flex;
+}
+
+.column {
+  margin: $unigrid-half-gutter;
+  padding: $unigrid-brick-padding-ttb $unigrid-brick-padding-rtl;
+
+  min-height: ($unigrid-brick-height - $unigrid-gutter - $unigrid-brick-padding-ttb);
+
+  width: (($max-width / $unigrid) - $unigrid-gutter);
+}
+
+.column:first-child,
+.column.first {
+  margin-left: 0;
+}
+
+.column:last-child,
+.column.last {
+  margin-right: 0;
+}

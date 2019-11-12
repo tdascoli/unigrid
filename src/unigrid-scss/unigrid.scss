@@ -11,7 +11,10 @@
   'base/helpers',
   'base/typography';
 
-
-  // 4. Layout-related sections
+// 4. Layout-related sections
   @import
     'layout/header';
+
+// 5. Components
+    @import
+      'grid/grid';
