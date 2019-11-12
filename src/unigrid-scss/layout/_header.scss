@@ -1,0 +1,65 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+/// navbar
+.navbar {
+  z-index: 1035;
+
+  background: black;
+  color: white;
+
+  @include rfs((2 * ($unigrid-title-font-size + $unigrid-gutter-test)), height);
+}
+
+.navbar-container {
+  height: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+}
+
+.navbar-brand {
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+
+  @include font-size($unigrid-title-font-size);
+
+  height: 60%;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.navbar-collapse {
+  height: 60%;
+  width: 50%;
+}
+
+.navbar-nav {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.nav-item {
+    @include padding-right($unigrid-gutter-test);
+}
+
+.nav-link {
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

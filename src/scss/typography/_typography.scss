@@ -5,15 +5,9 @@
 
 -------------------------------------------------------------- */
 
-@font-face {
-  font-family: 'Example-Font';
-  src: url( '#{$path-to-fonts}/example-font.eot' );
-  src: url( '#{$path-to-fonts}/example-font.woff' ) format( 'woff' ),
-  url( '#{$path-to-fonts}/example-font.ttf' ) format( 'truetype' ),
-  url( '#{$path-to-fonts}/example-font.svg' ) format( 'svg' );
-  font-weight: normal;
-  font-style: normal;
-}
+@import url('https://rsms.me/inter/inter.css');
+
+body { font-family: 'Inter', sans-serif !important; }
 
 html {
   font-size:100.01%;

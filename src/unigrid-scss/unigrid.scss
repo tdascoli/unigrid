@@ -1,0 +1,17 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'variables',
+  'mixins/typography';
+
+// 3. Base stuff
+@import
+  'base/base',
+  'base/helpers',
+  'base/typography';
+
+
+  // 4. Layout-related sections
+  @import
+    'layout/header';

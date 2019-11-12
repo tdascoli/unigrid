@@ -1,0 +1,62 @@
+/*------------------------------------*\
+  #GOLDEN RATIO
+\*------------------------------------*/
+
+$phi: 1.61803398875;
+$golden-ratio: 0.61803398875;
+$golden-ratio-tall: percentage($golden-ratio);
+$golden-ratio-small: 100 - percentage($golden-ratio);
+
+/*------------------------------------*\
+  #COLOUR
+\*------------------------------------*/
+
+$black: #000;
+$white: #fff;
+
+/*------------------------------------*\
+  #BODY
+\*------------------------------------*/
+
+$font-family-base: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size-base: 1.2rem;
+$font-weight-base: 400;
+$line-height-base: $phi;
+
+
+$body-text-align: left;
+$body-color: $black;
+$body-bg: $white;
+
+$max-width: 1024px;
+
+
+/*------------------------------------*\
+  #GRID
+\*------------------------------------*/
+
+$unigrid: 12;
+$unigrid-title-font-size: 2rem;
+$unigrid-gutter-test: ($unigrid-title-font-size / 4);
+// todo halfgutter = 1/4 gutter!!
+$unigrid-brick-gutter: 5px;
+$unigrid-half-gutter: (2*$unigrid-brick-gutter);
+$unigrid-gutter: (2*$unigrid-half-gutter);
+
+$unigrid-brick-padding-ttb: 4px;
+$unigrid-brick-padding-rtl: 4px;
+
+$unigrid-brick-height: ($unigrid-gutter*4);
+$unigrid-brick-width: ($unigrid-gutter*4);
+
+/*------------------------------------*\
+  #NAVBAR
+\*------------------------------------*/
+
+$navbar-height: $unigrid-brick-height;
+
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+$footer-height: ($unigrid-brick-height / 2);
