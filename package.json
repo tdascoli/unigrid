@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/tdascoli/unigrid#readme",
   "devDependencies": {
+    "kind-of": ">=6.0.3",
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
